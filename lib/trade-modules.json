@@ -1,28 +1,990 @@
 [
   {
-    "name" : "Template",
-    "type" : "shield",
+    "name" : "Cargo Bay Extension",
+    "type" : "trade",
     "unique" : [
         {
-            "key" : "mirror",
-            "info" : "Damage reflect",
-            "append" : "%"
-        },
-        {
-            "key" : "speed",
-            "info" : "Speed increase",
-            "append" : "%"
+            "key" : "cargo",
+            "info" : "Extra trade slots",
+            "append" : ""
         }
     ],
     "data" : [
-        {
-            "level" : 1,
-            "cost" : 100,
-            "activate" : 100,
-            "hydro" : 0,
-            "strength" : 100,
-            "mirror" : 10
-        }
+      {
+        "level" : 1,
+        "cost" : 500,
+        "activate" : 0,
+        "hydro" : 2,
+        "cargo" : 1
+      },
+      {
+        "level" : 2,
+        "cost" : 750,
+        "activate" : 0,
+        "hydro" : 5,
+        "cargo" : 2
+      },
+      {
+        "level" : 3,
+        "cost" : 1000,
+        "activate" : 0,
+        "hydro" : 8,
+        "cargo" : 3
+      },
+      {
+        "level" : 4,
+        "cost" : 1500,
+        "activate" : 0,
+        "hydro" : 12,
+        "cargo" : 5
+      },
+      {
+        "level" : 5,
+        "cost" : 2500,
+        "activate" : 0,
+        "hydro" : 17,
+        "cargo" : 7
+      },
+      {
+        "level" : 6,
+        "cost" : 5000,
+        "activate" : 0,
+        "hydro" : 22,
+        "cargo" : 9
+      },
+      {
+        "level" : 7,
+        "cost" : 10000,
+        "activate" : 0,
+        "hydro" : 28,
+        "cargo" : 12
+      },
+      {
+        "level" : 8,
+        "cost" : 20000,
+        "activate" : 0,
+        "hydro" : 34,
+        "cargo" : 15
+      },
+      {
+        "level" : 9,
+        "cost" : 35000,
+        "activate" : 0,
+        "hydro" : 42,
+        "cargo" : 19
+      },
+      {
+        "level" : 10,
+        "cost" : 50000,
+        "activate" : 0,
+        "hydro" : 50,
+        "cargo" : 25
+      },
+      {
+        "level" : 11,
+        "cost" : 100000,
+        "activate" : 0,
+        "hydro" : 58,
+        "cargo" : 31
+      },
+      {
+        "level" : 12,
+        "cost" : 200000,
+        "activate" : 0,
+        "hydro" : 70,
+        "cargo" : 46
+      }
+    ]
+  },
+  {
+    "name" : "Shipment Computer",
+    "type" : "trade",
+    "unique" : [
+      {
+        "key" : "bonus",
+        "info" : "Bonus reward",
+        "append" : "%"
+      }
+    ],
+    "data" : [
+      {
+        "level" : 1,
+        "cost" : 1000,
+        "activate" : 0,
+        "hydro" : 0.8,
+        "bonus" : 8
+      },
+      {
+        "level" : 2,
+        "cost" : 1500,
+        "activate" : 0,
+        "hydro" : 2,
+        "bonus" : 10
+      },
+      {
+        "level" : 3,
+        "cost" : 2000,
+        "activate" : 0,
+        "hydro" : 3.2,
+        "bonus" : 12
+      },
+      {
+        "level" : 4,
+        "cost" : 3000,
+        "activate" : 0,
+        "hydro" : 4.6,
+        "bonus" : 14
+      },
+      {
+        "level" : 5,
+        "cost" : 5000,
+        "activate" : 0,
+        "hydro" : 5.6,
+        "bonus" : 16
+      },
+      {
+        "level" : 6,
+        "cost" : 7500,
+        "activate" : 0,
+        "hydro" : 6.8,
+        "bonus" : 18
+      },
+      {
+        "level" : 7,
+        "cost" : 10000,
+        "activate" : 0,
+        "hydro" : 8,
+        "bonus" : 20
+      },
+      {
+        "level" : 8,
+        "cost" : 12500,
+        "activate" : 0,
+        "hydro" : 9.4,
+        "bonus" : 22
+      },
+      {
+        "level" : 9,
+        "cost" : 15000,
+        "activate" : 0,
+        "hydro" : 10.8,
+        "bonus" : 24
+      },
+      {
+        "level" : 10,
+        "cost" : 17500,
+        "activate" : 0,
+        "hydro" : 12.2,
+        "bonus" : 26
+      },
+      {
+        "level" : 11,
+        "cost" : 20000,
+        "activate" : 0,
+        "hydro" : 13.6,
+        "bonus" : 28
+      },
+      {
+        "level" : 12,
+        "cost" : 25000,
+        "activate" : 0,
+        "hydro" : 15,
+        "bonus" : 30
+      }
+    ]
+  },
+  {
+    "name" : "Trade Boost",
+    "type" : "trade",
+    "unique" : [
+      {
+        "key" : "bonus",
+        "info" : "Shipment bonus reward",
+        "append" : "%"
+      }
+    ],
+    "data" : [
+      {
+        "level" : 1,
+        "cost" : 2500,
+        "activate" : 50,
+        "hydro" : 0,
+        "bonus" : 6
+      },
+      {
+        "level" : 2,
+        "cost" : 3125,
+        "activate" : 60,
+        "hydro" : 0,
+        "bonus" : 8
+      },
+      {
+        "level" : 3,
+        "cost" : 4000,
+        "activate" : 72,
+        "hydro" : 0,
+        "bonus" : 10
+      },
+      {
+        "level" : 4,
+        "cost" : 5000,
+        "activate" : 86,
+        "hydro" : 0,
+        "bonus" : 12
+      },
+      {
+        "level" : 5,
+        "cost" : 6000,
+        "activate" : 103,
+        "hydro" : 0,
+        "bonus" : 14
+      },
+      {
+        "level" : 6,
+        "cost" : 7500,
+        "activate" : 123,
+        "hydro" : 0,
+        "bonus" : 16
+      },
+      {
+        "level" : 7,
+        "cost" : 9500,
+        "activate" : 147,
+        "hydro" : 0,
+        "bonus" : 18
+      },
+      {
+        "level" : 8,
+        "cost" : 12000,
+        "activate" : 176,
+        "hydro" : 0,
+        "bonus" : 20
+      },
+      {
+        "level" : 9,
+        "cost" : 15000,
+        "activate" : 211,
+        "hydro" : 0,
+        "bonus" : 22
+      },
+      {
+        "level" : 10,
+        "cost" : 20000,
+        "activate" : 250,
+        "hydro" : 0,
+        "bonus" : 24
+      },
+      {
+        "level" : 11,
+        "cost" : 25000,
+        "activate" : 275,
+        "hydro" : 0,
+        "bonus" : 26
+      },
+      {
+        "level" : 12,
+        "cost" : 30000,
+        "activate" : 300,
+        "hydro" : 0,
+        "bonus" : 28
+      }
+    ]
+  },
+  {
+    "name" : "Rush",
+    "type" : "trade",
+    "unique" : [
+      {
+        "key" : "speed",
+        "info" : "Speed boost per shipment",
+        "append" : "%"
+      }
+    ],
+    "data" : [
+      {
+        "level" : 1,
+        "cost" : 2000,
+        "activate" : 0,
+        "hydro" : 0.8,
+        "speed" : 6
+      },
+      {
+        "level" : 2,
+        "cost" : 4000,
+        "activate" : 0,
+        "hydro" : 2,
+        "speed" : 10
+      },
+      {
+        "level" : 3,
+        "cost" : 6000,
+        "activate" : 0,
+        "hydro" : 3.2,
+        "speed" : 14
+      },
+      {
+        "level" : 4,
+        "cost" : 8000,
+        "activate" : 0,
+        "hydro" : 4.6,
+        "speed" : 18
+      },
+      {
+        "level" : 5,
+        "cost" : 10000,
+        "activate" : 0,
+        "hydro" : 5.6,
+        "speed" : 20
+      },
+      {
+        "level" : 6,
+        "cost" : 12000,
+        "activate" : 0,
+        "hydro" : 6.8,
+        "speed" : 24
+      },
+      {
+        "level" : 7,
+        "cost" : 14000,
+        "activate" : 0,
+        "hydro" : 8,
+        "speed" : 28
+      },
+      {
+        "level" : 8,
+        "cost" : 16000,
+        "activate" : 0,
+        "hydro" : 9.4,
+        "speed" : 32
+      },
+      {
+        "level" : 9,
+        "cost" : 18000,
+        "activate" : 0,
+        "hydro" : 10.8,
+        "speed" : 36
+      },
+      {
+        "level" : 10,
+        "cost" : 20000,
+        "activate" : 0,
+        "hydro" : 12.2,
+        "speed" : 40
+      },
+      {
+        "level" : 11,
+        "cost" : 22000,
+        "activate" : 0,
+        "hydro" : 14,
+        "speed" : 44
+      },
+      {
+        "level" : 12,
+        "cost" : 24000,
+        "activate" : 0,
+        "hydro" : 16,
+        "speed" : 48
+      }
+    ]
+  },
+  {
+    "name" : "Trade Burst",
+    "type" : "trade",
+    "unique" : [
+      {
+        "key" : "bonus",
+        "info" : "Shipment bonus reward",
+        "append" : "%"
+      },
+      {
+        "key" : "threshold",
+        "info" : "Threshold",
+        "append" : ""
+      }
+    ],
+    "data" : [
+      {
+        "level" : 1,
+        "cost" : 5000,
+        "activate" : 250,
+        "hydro" : 0,
+        "bonus" : 20,
+        "threshold" : 12
+      },
+      {
+        "level" : 2,
+        "cost" : 6000,
+        "activate" : 300,
+        "hydro" : 0,
+        "bonus" : 22,
+        "threshold" : 13
+      },
+      {
+        "level" : 3,
+        "cost" : 7200,
+        "activate" : 350,
+        "hydro" : 0,
+        "bonus" : 24,
+        "threshold" : 14
+      },
+      {
+        "level" : 4,
+        "cost" : 8500,
+        "activate" : 400,
+        "hydro" : 0,
+        "bonus" : 26,
+        "threshold" : 15
+      },
+      {
+        "level" : 5,
+        "cost" : 10000,
+        "activate" : 500,
+        "hydro" : 0,
+        "bonus" : 28,
+        "threshold" : 16
+      },
+      {
+        "level" : 6,
+        "cost" : 12500,
+        "activate" : 600,
+        "hydro" : 0,
+        "bonus" : 30,
+        "threshold" : 17
+      },
+      {
+        "level" : 7,
+        "cost" : 15000,
+        "activate" : 700,
+        "hydro" : 0,
+        "bonus" : 32,
+        "threshold" : 18
+      },
+      {
+        "level" : 8,
+        "cost" : 18000,
+        "activate" : 800,
+        "hydro" : 0,
+        "bonus" : 34,
+        "threshold" : 19
+      },
+      {
+        "level" : 9,
+        "cost" : 22000,
+        "activate" : 900,
+        "hydro" : 0,
+        "bonus" : 36,
+        "threshold" : 20
+      },
+      {
+        "level" : 10,
+        "cost" : 25000,
+        "activate" : 1000,
+        "hydro" : 0,
+        "bonus" : 38,
+        "threshold" : 21
+      },
+      {
+        "level" : 11,
+        "cost" : 27500,
+        "activate" : 1100,
+        "hydro" : 0,
+        "bonus" : 40,
+        "threshold" : 22
+      },
+      {
+        "level" : 12,
+        "cost" : 30000,
+        "activate" : 1200,
+        "hydro" : 0,
+        "bonus" : 42,
+        "threshold" : 23
+      }
+    ]
+  },
+  {
+    "name" : "Shipment Drone",
+    "type" : "trade",
+    "unique" : [
+      {
+        "key" : "cargo",
+        "info" : "Total cargo slots",
+        "append" : ""
+      },
+      {
+        "key" : "bonus",
+        "info" : "Bonus per additional shipment",
+        "append" : "%"
+      }
+    ],
+    "data" : [
+      {
+        "level" : 1,
+        "cost" : 25000,
+        "activate" : 500,
+        "hydro" : 0,
+        "cargo" : 4,
+        "bonus" : 3
+      },
+      {
+        "level" : 2,
+        "cost" : 30000,
+        "activate" : 1000,
+        "hydro" : 0,
+        "cargo" : 5,
+        "bonus" : 5
+      },
+      {
+        "level" : 3,
+        "cost" : 35000,
+        "activate" : 1500,
+        "hydro" : 0,
+        "cargo" : 5,
+        "bonus" : 7
+      },
+      {
+        "level" : 4,
+        "cost" : 40000,
+        "activate" : 2000,
+        "hydro" : 0,
+        "cargo" : 6,
+        "bonus" : 8
+      },
+      {
+        "level" : 5,
+        "cost" : 45000,
+        "activate" : 3000,
+        "hydro" : 0,
+        "cargo" : 6,
+        "bonus" : 9
+      },
+      {
+        "level" : 6,
+        "cost" : 50000,
+        "activate" : 4000,
+        "hydro" : 0,
+        "cargo" : 7,
+        "bonus" : 10
+      },
+      {
+        "level" : 7,
+        "cost" : 55000,
+        "activate" : 5000,
+        "hydro" : 0,
+        "cargo" : 7,
+        "bonus" : 12
+      },
+      {
+        "level" : 8,
+        "cost" : 60000,
+        "activate" : 7500,
+        "hydro" : 0,
+        "cargo" : 7,
+        "bonus" : 14
+      },
+      {
+        "level" : 9,
+        "cost" : 65000,
+        "activate" : 10000,
+        "hydro" : 0,
+        "cargo" : 8,
+        "bonus" : 15
+      },
+      {
+        "level" : 10,
+        "cost" : 70000,
+        "activate" : 12500,
+        "hydro" : 0,
+        "cargo" : 9,
+        "bonus" : 16
+      },
+      {
+        "level" : 11,
+        "cost" : 75000,
+        "activate" : 15000,
+        "hydro" : 0,
+        "cargo" : 10,
+        "bonus" : 17
+      },
+      {
+        "level" : 12,
+        "cost" : 80000,
+        "activate" : 17500,
+        "hydro" : 0,
+        "cargo" : 11,
+        "bonus" : 18
+      }
+    ]
+  },
+  {
+    "name" : "Offload",
+    "type" : "trade",
+    "unique" : [
+      {
+        "key" : "bonus",
+        "info" : "% of full value",
+        "append" : "%"
+      }
+    ],
+    "data" : [
+      {
+        "level" : 1,
+        "cost" : 10000,
+        "activate" : 400,
+        "hydro" : 0,
+        "bonus" : 50
+      },
+      {
+        "level" : 2,
+        "cost" : 12000,
+        "activate" : 450,
+        "hydro" : 0,
+        "bonus" : 55
+      },
+      {
+        "level" : 3,
+        "cost" : 14000,
+        "activate" : 500,
+        "hydro" : 0,
+        "bonus" : 60
+      },
+      {
+        "level" : 4,
+        "cost" : 16000,
+        "activate" : 550,
+        "hydro" : 0,
+        "bonus" : 65
+      },
+      {
+        "level" : 5,
+        "cost" : 18000,
+        "activate" : 600,
+        "hydro" : 0,
+        "bonus" : 70
+      },
+      {
+        "level" : 6,
+        "cost" : 20000,
+        "activate" : 700,
+        "hydro" : 0,
+        "bonus" : 75
+      },
+      {
+        "level" : 7,
+        "cost" : 22000,
+        "activate" : 800,
+        "hydro" : 0,
+        "bonus" : 80
+      },
+      {
+        "level" : 8,
+        "cost" : 24000,
+        "activate" : 900,
+        "hydro" : 0,
+        "bonus" : 85
+      },
+      {
+        "level" : 9,
+        "cost" : 26000,
+        "activate" : 1000,
+        "hydro" : 0,
+        "bonus" : 90
+      },
+      {
+        "level" : 10,
+        "cost" : 28000,
+        "activate" : 1100,
+        "hydro" : 0,
+        "bonus" : 95
+      }
+    ]
+  },
+  {
+    "name" : "Shipment Beam",
+    "type" : "trade",
+    "unique" : [
+      {
+        "key" : "shipments",
+        "info" : "Max shipments",
+        "append" : ""
+      }
+    ],
+    "data" : [
+      {
+        "level" : 1,
+        "cost" : 2000,
+        "activate" : 200,
+        "hydro" : 0,
+        "shipments" : 4
+      },
+      {
+        "level" : 2,
+        "cost" : 4000,
+        "activate" : 300,
+        "hydro" : 0,
+        "shipments" : 6
+      },
+      {
+        "level" : 3,
+        "cost" : 8000,
+        "activate" : 400,
+        "hydro" : 0,
+        "shipments" : 8
+      },
+      {
+        "level" : 4,
+        "cost" : 12000,
+        "activate" : 500,
+        "hydro" : 0,
+        "shipments" : 10
+      },
+      {
+        "level" : 5,
+        "cost" : 16000,
+        "activate" : 600,
+        "hydro" : 0,
+        "shipments" : 12
+      },
+      {
+        "level" : 6,
+        "cost" : 20000,
+        "activate" : 700,
+        "hydro" : 0,
+        "shipments" : 14
+      },
+      {
+        "level" : 7,
+        "cost" : 25000,
+        "activate" : 800,
+        "hydro" : 0,
+        "shipments" : 16
+      },
+      {
+        "level" : 8,
+        "cost" : 30000,
+        "activate" : 900,
+        "hydro" : 0,
+        "shipments" : 18
+      },
+      {
+        "level" : 9,
+        "cost" : 35000,
+        "activate" : 1000,
+        "hydro" : 0,
+        "shipments" : 20
+      },
+      {
+        "level" : 10,
+        "cost" : 40000,
+        "activate" : 1100,
+        "hydro" : 0,
+        "shipments" : 22
+      },
+      {
+        "level" : 11,
+        "cost" : 45000,
+        "activate" : 1500,
+        "hydro" : 0,
+        "shipments" : 26
+      },
+      {
+        "level" : 12,
+        "cost" : 50000,
+        "activate" : 2000,
+        "hydro" : 0,
+        "shipments" : 32
+      }
+    ]
+  },
+  {
+    "name" : "Entrust",
+    "type" : "trade",
+    "unique" : [
+      {
+        "key" : "range",
+        "info" : "Effect range",
+        "append" : "AU"
+      }
+    ],
+    "data" : [
+      {
+        "level" : 1,
+        "cost" : 20000,
+        "activate" : 400,
+        "hydro" : 0,
+        "range" : 320
+      },
+      {
+        "level" : 2,
+        "cost" : 22000,
+        "activate" : 450,
+        "hydro" : 0,
+        "range" : 345.6
+      },
+      {
+        "level" : 3,
+        "cost" : 24000,
+        "activate" : 500,
+        "hydro" : 0,
+        "range" : 372.8
+      },
+      {
+        "level" : 4,
+        "cost" : 26000,
+        "activate" : 600,
+        "hydro" : 0,
+        "range" : 403.2
+      },
+      {
+        "level" : 5,
+        "cost" : 28000,
+        "activate" : 700,
+        "hydro" : 0,
+        "range" : 436
+      },
+      {
+        "level" : 6,
+        "cost" : 30000,
+        "activate" : 800,
+        "hydro" : 0,
+        "range" : 468
+      },
+      {
+        "level" : 7,
+        "cost" : 32000,
+        "activate" : 900,
+        "hydro" : 0,
+        "range" : 508
+      },
+      {
+        "level" : 8,
+        "cost" : 34000,
+        "activate" : 1000,
+        "hydro" : 0,
+        "range" : 548
+      },
+      {
+        "level" : 9,
+        "cost" : 36000,
+        "activate" : 1200,
+        "hydro" : 0,
+        "range" : 592
+      },
+      {
+        "level" : 10,
+        "cost" : 38000,
+        "activate" : 1400,
+        "hydro" : 0,
+        "range" : 640
+      },
+      {
+        "level" : 11,
+        "cost" : 40000,
+        "activate" : 1800,
+        "hydro" : 0,
+        "range" : 700
+      },
+      {
+        "level" : 12,
+        "cost" : 42000,
+        "activate" : 2500,
+        "hydro" : 0,
+        "range" : 770
+      }
+    ]
+  },
+  {
+    "name" : "Dispatch",
+    "type" : "trade",
+    "unique" : [
+      {
+        "key" : "time",
+        "info" : "Preparation time per item",
+        "append" : "s"
+      }
+    ],
+    "data" : [
+      {
+        "level" : 1,
+        "cost" : 40000,
+        "activate" : 1000,
+        "hydro" : 0,
+        "time" : 24
+      },
+      {
+        "level" : 2,
+        "cost" : 42000,
+        "activate" : 1500,
+        "hydro" : 0,
+        "time" : 17.6
+      },
+      {
+        "level" : 3,
+        "cost" : 44000,
+        "activate" : 2000,
+        "hydro" : 0,
+        "time" : 13
+      },
+      {
+        "level" : 4,
+        "cost" : 46000,
+        "activate" : 2500,
+        "hydro" : 0,
+        "time" : 9.6
+      },
+      {
+        "level" : 5,
+        "cost" : 48000,
+        "activate" : 3000,
+        "hydro" : 0,
+        "time" : 7
+      },
+      {
+        "level" : 6,
+        "cost" : 50000,
+        "activate" : 3500,
+        "hydro" : 0,
+        "time" : 5
+      },
+      {
+        "level" : 7,
+        "cost" : 52000,
+        "activate" : 4000,
+        "hydro" : 0,
+        "time" : 3.6
+      },
+      {
+        "level" : 8,
+        "cost" : 54000,
+        "activate" : 4500,
+        "hydro" : 0,
+        "time" : 2.6
+      },
+      {
+        "level" : 9,
+        "cost" : 56000,
+        "activate" : 5000,
+        "hydro" : 0,
+        "time" : 1.8
+      },
+      {
+        "level" : 10,
+        "cost" : 58000,
+        "activate" : 6000,
+        "hydro" : 0,
+        "time" : 1.2
+      }
+    ]
+  },
+  {
+    "name" : "Recall",
+    "type" : "trade",
+    "data" : [
+      {
+        "level" : 1,
+        "cost" : 20000,
+        "activate" : 500,
+        "hydro" : 0
+      }
     ]
   }
 ]

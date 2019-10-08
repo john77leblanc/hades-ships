@@ -1,0 +1,279 @@
+[
+  {
+    "name" : "EMP",
+    "type" : "support",
+    "unique" : [
+      {
+        "key" : "duration",
+        "info" : "Effect duration",
+        "append" : "s"
+      }
+    ],
+    "data" : [
+      {
+        "level" : 1,
+        "cost" : 500,
+        "activate" : 40,
+        "hydro" : 0,
+        "duration" : 30
+      },
+      {
+        "level" : 2,
+        "cost" : 750,
+        "activate" : 80,
+        "hydro" : 0,
+        "duration" : 33
+      },
+      {
+        "level" : 3,
+        "cost" : 1000,
+        "activate" : 150,
+        "hydro" : 0,
+        "duration" : 36
+      },
+      {
+        "level" : 4,
+        "cost" : 1500,
+        "activate" : 250,
+        "hydro" : 0,
+        "duration" : 38
+      },
+      {
+        "level" : 5,
+        "cost" : 2500,
+        "activate" : 400,
+        "hydro" : 0,
+        "duration" : 40
+      },
+      {
+        "level" : 6,
+        "cost" : 5000,
+        "activate" : 600,
+        "hydro" : 0,
+        "duration" : 42
+      },
+      {
+        "level" : 7,
+        "cost" : 7500,
+        "activate" : 800,
+        "hydro" : 0,
+        "duration" : 44
+      },
+      {
+        "level" : 8,
+        "cost" : 10000,
+        "activate" : 1000,
+        "hydro" : 0,
+        "duration" : 46
+      },
+      {
+        "level" : 9,
+        "cost" : 12500,
+        "activate" : 1250,
+        "hydro" : 0,
+        "duration" : 48
+      },
+      {
+        "level" : 10,
+        "cost" : 15000,
+        "activate" : 1500,
+        "hydro" : 0,
+        "duration" : 50
+      },
+      {
+        "level" : 11,
+        "cost" : 17500,
+        "activate" : 1750,
+        "hydro" : 0,
+        "duration" : 52
+      },
+      {
+        "level" : 12,
+        "cost" : 20000,
+        "activate" : 2000,
+        "hydro" : 0,
+        "duration" : 54
+      }
+    ]
+  },
+  {
+    "name" : "Teleport",
+    "type" : "support",
+    "unique" : [
+      {
+        "key" : "range",
+        "info" : "Effect range",
+        "append" : "AU"
+      }
+    ],
+    "data" : [
+      {
+        "level" : 1,
+        "cost" : 500,
+        "activate" : 50,
+        "hydro" : 0,
+        "range" : 200
+      },
+      {
+        "level" : 2,
+        "cost" : 750,
+        "activate" : 80,
+        "hydro" : 0,
+        "range" : 270
+      },
+      {
+        "level" : 3,
+        "cost" : 1000,
+        "activate" : 150,
+        "hydro" : 0,
+        "range" : 364.5
+      },
+      {
+        "level" : 4,
+        "cost" : 1500,
+        "activate" : 200,
+        "hydro" : 0,
+        "range" : 492
+      },
+      {
+        "level" : 5,
+        "cost" : 2500,
+        "activate" : 250,
+        "hydro" : 0,
+        "range" : 664.2
+      },
+      {
+        "level" : 6,
+        "cost" : 5000,
+        "activate" : 300,
+        "hydro" : 0,
+        "range" : 896.6
+      },
+      {
+        "level" : 7,
+        "cost" : 7500,
+        "activate" : 350,
+        "hydro" : 0,
+        "range" : 1210.4
+      },
+      {
+        "level" : 8,
+        "cost" : 10000,
+        "activate" : 500,
+        "hydro" : 0,
+        "range" : 1634
+      },
+      {
+        "level" : 9,
+        "cost" : 15000,
+        "activate" : 800,
+        "hydro" : 0,
+        "range" : 2250
+      },
+      {
+        "level" : 10,
+        "cost" : 20000,
+        "activate" : 1000,
+        "hydro" : 0,
+        "range" : 3000
+      },
+      {
+        "level" : 11,
+        "cost" : 22500,
+        "activate" : 1250,
+        "hydro" : 0,
+        "range" : 3000
+      },
+      {
+        "level" : 12,
+        "cost" : 25000,
+        "activate" : 1500,
+        "hydro" : 0,
+        "range" : 3000
+      }
+    ]
+  },
+  {
+    "name" : "Red Star Life Extender",
+    "type" : "support",
+    "unique" : [
+      {
+        "key" : "extension",
+        "info" : "Life extension",
+        "append" : "s"
+      }
+    ],
+    "data" : [
+      {
+        "level" : 1,
+        "cost" : 1000,
+        "activate" : 80,
+        "hydro" : 0,
+        "extension" : 15
+      },
+      {
+        "level" : 2,
+        "cost" : 1500,
+        "activate" : 120,
+        "hydro" : 0,
+        "extension" : 22
+      },
+      {
+        "level" : 3,
+        "cost" : 2500,
+        "activate" : 160,
+        "hydro" : 0,
+        "extension" : 30
+      },
+      {
+        "level" : 4,
+        "cost" : 4000,
+        "activate" : 200,
+        "hydro" : 0,
+        "extension" : 35
+      },
+      {
+        "level" : 5,
+        "cost" : 7500,
+        "activate" : 250,
+        "hydro" : 0,
+        "extension" : 40
+      },
+      {
+        "level" : 6,
+        "cost" : 10000,
+        "activate" : 320,
+        "hydro" : 0,
+        "extension" : 45
+      },
+      {
+        "level" : 7,
+        "cost" : 15000,
+        "activate" : 400,
+        "hydro" : 0,
+        "extension" : 50
+      },
+      {
+        "level" : 8,
+        "cost" : 20000,
+        "activate" : 500,
+        "hydro" : 0,
+        "extension" : 60
+      },
+      {
+        "level" : 9,
+        "cost" : 25000,
+        "activate" : 600,
+        "hydro" : 0,
+        "extension" : 75
+      },
+      {
+        "level" : 10,
+        "cost" : 30000,
+        "activate" : 750,
+        "hydro" : 0,
+        "extension" : 90
+      }
+    ]
+  }
+]
