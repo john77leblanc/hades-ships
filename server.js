@@ -13,15 +13,19 @@ function getShips() {
 }
 
 function getShipsByType(ships, type) {
-    return ships.find(ship => ship.type == type);
+    return ships.find(ship => ship.type.toLowerCase() == type.toLowerCase());
 }
 
 function getShipByLevel(ship, level) {
-    return ship.filter(s => s.level == level);
+    return ship.find(s => s.level == level);
 }
 
 function getMods(modules) {
     return JSON.parse(fs.readFileSync(`./lib/${modules}.json`,'utf8'));
+}
+
+function getAllMods() {
+    return fs.readdirSync('./lib').filter(file => file.indexOf('modules') > 0);
 }
 
 function getAllModNames(mods) {
@@ -32,7 +36,7 @@ function getAllModNames(mods) {
 }
 
 function getModByName(mod, name) {
-    return mod.find(m => m.name == name);
+    return mod.find(m => m.name.toLowerCase() == name.toLowerCase());
 }
 
 function getModByLevel(mod, level) {
@@ -62,6 +66,16 @@ app.get('/ships', (req, res) => {
         response = getShipsByType(ships, req.query.type);
         if (req.query.level) response = getShipByLevel(response.data, req.query.level);
     }
+    res.status(200).send(response);
+});
+
+app.get('/modules', (req, res) => {
+    let response = req.query.type 
+        ? handleQuery(getMods(`${req.query.type}-modules`), req) 
+        : Object.assign(
+            {},
+            getAllMods().map(file => JSON.parse(fs.readFileSync('./lib/' + file,'utf8')))
+        );
     res.status(200).send(response);
 });
 

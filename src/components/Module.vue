@@ -38,7 +38,7 @@ export default {
       getModule() {
           if (this.name && this.level) {
               let vm = this;
-              axios.get(`http://localhost:8081/${vm.type}-modules?name=${vm.name}&level=${vm.level}`)
+              axios.get(`http://localhost:8081/modules?type=${vm.type}&name=${vm.name}&level=${vm.level}`)
                 .then(res => {
                     Object.assign(vm.data, res.data);
                 });

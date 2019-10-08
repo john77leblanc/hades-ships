@@ -24,6 +24,7 @@
             </div>
             <Module :type="'Weapon'" :modules=modules.weapons></Module>
             <Module :type="'Shield'" :modules=modules.shields></Module>
+            <Module :type="'Mining'" :modules=modules.mining></Module>
             <div v-for="(mod, index) in support" :key=index>
                 <span>Support</span>
                 <span>{{mod.name}}</span>
@@ -138,7 +139,7 @@ export default {
               let vm = this;
               axios.get(`http://localhost:8081/ships?type=${vm.ship.type}&level=${vm.ship.level}`)
                 .then(res => {
-                    Object.assign(vm.ship, res.data[0]);
+                    Object.assign(vm.ship, res.data);
                 });
           }
       },
@@ -164,7 +165,7 @@ export default {
           return this.shipModules.map(this.getHydro).reduce((sum, mod)=> {return sum + mod},0);
       },
       getModByType(type) {
-          return this.shipModules.filter(mod=>mod.type==type);
+          return this.shipModules.find(mod=>mod.type==type);
       },
       collapse() {
           this.classes.collapse = !this.classes.collapse;
@@ -177,8 +178,8 @@ export default {
       this.shipTypes    = this.getShipTypes();
       this.modCost      = this.getModCost();
       this.modHydro     = this.getModHydro();
-      this.weapon       = this.getModByType('weapon')[0];
-      this.shield       = this.getModByType('shield')[0];
+      this.weapon       = this.getModByType('weapon');
+      this.shield       = this.getModByType('shield');
       this.support      = this.getModByType('support');
   },
   beforeUpdate() {

@@ -17,7 +17,8 @@ export default {
       ships: [],
       modules: {
         weapons: [],
-        shields: []
+        shields: [],
+        mining: []
       }
     }
   },
@@ -30,21 +31,28 @@ export default {
     },
     getWeaponModules() {
       let vm = this;
-      axios.get('http://localhost:8081/weapon-modules?name=all').then(res => {
+      axios.get('http://localhost:8081/modules?type=weapon&name=all').then(res => {
         vm.modules.weapons = res.data;
       });
     },
     getShieldModules() {
       let vm = this;
-      axios.get('http://localhost:8081/shield-modules?name=all').then(res => {
+      axios.get('http://localhost:8081/modules?type=shield&name=all').then(res => {
         vm.modules.shields = res.data;
-      })
+      });
+    },
+    getMiningModules() {
+      let vm = this;
+      axios.get('http://localhost:8081/modules?type=mining&name=all').then(res => {
+        vm.modules.mining = res.data;
+      });
     }
   },
   created() {
     this.getShips();
     this.getWeaponModules();
     this.getShieldModules();
+    this.getMiningModules();
   }
 }
 </script>
