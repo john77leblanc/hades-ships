@@ -1,0 +1,578 @@
+[
+    {
+        "name" : "Battery",
+        "type" : "weapon",
+        "data" : [
+            {
+                "level" : 1,
+                "cost" : 500,
+                "hydro" : 0.4,
+                "dps" : 100,
+                "targets" : 1
+            },
+            {
+                "level" : 2,
+                "cost" : 1500,
+                "hydro" : 0.8,
+                "dps" : 120,
+                "targets" : 1
+            },
+            {
+                "level" : 3,
+                "cost" : 2500,
+                "hydro" : 1.6,
+                "dps" : 140,
+                "targets" : 1
+            },
+            {
+                "level" : 4,
+                "cost" : 4000,
+                "hydro" : 2.8,
+                "dps" : 160,
+                "targets" : 1
+            },
+            {
+                "level" : 5,
+                "cost" : 7500,
+                "hydro" : 4,
+                "dps" : 180,
+                "targets" : 1
+            },
+            {
+                "level" : 6,
+                "cost" : 10000,
+                "hydro" : 6,
+                "dps" : 210,
+                "targets" : 1
+            },
+            {
+                "level" : 7,
+                "cost" : 15000,
+                "hydro" : 9,
+                "dps" : 250,
+                "targets" : 1
+            },
+            {
+                "level" : 8,
+                "cost" : 17500,
+                "hydro" : 12,
+                "dps" : 285,
+                "targets" : 1
+            },
+            {
+                "level" : 9,
+                "cost" : 20000,
+                "hydro" : 16,
+                "dps" : 315,
+                "targets" : 1
+            },
+            {
+                "level" : 10,
+                "cost" : 22500,
+                "hydro" : 20,
+                "dps" : 340,
+                "targets" : 1
+            },
+            {
+                "level" : 11,
+                "cost" : 25000,
+                "hydro" : 24,
+                "dps" : 365,
+                "targets" : 1
+            },
+            {
+                "level" : 12,
+                "cost" : 27500,
+                "hydro" : 28,
+                "dps" : 390,
+                "targets" : 1
+            }
+        ]
+    },
+    {
+        "name" : "Laser",
+        "type" : "weapon",
+        "data" : [
+            {
+                "level" : 1,
+                "cost" : 1000,
+                "hydro" : 1,
+                "dps" : 80,
+                "maxdps" : 200,
+                "targets" : 1
+            },
+            {
+                "level" : 2,
+                "cost" : 1500,
+                "hydro" : 2,
+                "dps" : 90,
+                "maxdps" : 240,
+                "targets" : 1
+            },
+            {
+                "level" : 3,
+                "cost" : 2500,
+                "hydro" : 3,
+                "dps" : 100,
+                "maxdps" : 280,
+                "targets" : 1
+            },
+            {
+                "level" : 4,
+                "cost" : 4000,
+                "hydro" : 4,
+                "dps" : 120,
+                "maxdps" : 325,
+                "targets" : 1
+            },
+            {
+                "level" : 5,
+                "cost" : 7500,
+                "hydro" : 7,
+                "dps" : 140,
+                "maxdps" : 360,
+                "targets" : 1
+            },
+            {
+                "level" : 6,
+                "cost" : 10000,
+                "hydro" : 10,
+                "dps" : 160,
+                "maxdps" : 400,
+                "targets" : 1
+            },
+            {
+                "level" : 7,
+                "cost" : 15000,
+                "hydro" : 13,
+                "dps" : 180,
+                "maxdps" : 500,
+                "targets" : 1
+            },
+            {
+                "level" : 8,
+                "cost" : 20000,
+                "hydro" : 16,
+                "dps" : 200,
+                "maxdps" : 600,
+                "targets" : 1
+            },
+            {
+                "level" : 9,
+                "cost" : 25000,
+                "hydro" : 20,
+                "dps" : 225,
+                "maxdps" : 700,
+                "targets" : 1
+            },
+            {
+                "level" : 10,
+                "cost" : 27500,
+                "hydro" : 24,
+                "dps" : 250,
+                "maxdps" : 800,
+                "targets" : 1
+            },
+            {
+                "level" : 11,
+                "cost" : 30000,
+                "hydro" : 25,
+                "dps" : 275,
+                "maxdps" : 900,
+                "targets" : 1
+            },
+            {
+                "level" : 12,
+                "cost" : 32500,
+                "hydro" : 26,
+                "dps" : 300,
+                "maxdps" : 1000,
+                "targets" : 1
+            }
+        ]
+    },
+    {
+        "name" : "Mass Battery",
+        "type" : "weapon",
+        "data" : [
+            {
+                "level" : 1,
+                "cost" : 1000,
+                "hydro" : 2,
+                "dps" : 60,
+                "targets" : 3
+            },
+            {
+                "level" : 2,
+                "cost" : 1500,
+                "hydro" : 5,
+                "dps" : 75,
+                "targets" : 3
+            },
+            {
+                "level" : 3,
+                "cost" : 5000,
+                "hydro" : 8,
+                "dps" : 90,
+                "targets" : 3
+            },
+            {
+                "level" : 4,
+                "cost" : 7500,
+                "hydro" : 11,
+                "dps" : 110,
+                "targets" : 3
+            },
+            {
+                "level" : 5,
+                "cost" : 10000,
+                "hydro" : 14,
+                "dps" : 120,
+                "targets" : 4
+            },
+            {
+                "level" : 6,
+                "cost" : 15000,
+                "hydro" : 17,
+                "dps" : 140,
+                "targets" : 4
+            },
+            {
+                "level" : 7,
+                "cost" : 20000,
+                "hydro" : 20,
+                "dps" : 160,
+                "targets" : 4
+            },
+            {
+                "level" : 8,
+                "cost" : 25000,
+                "hydro" : 23,
+                "dps" : 180,
+                "targets" : 5
+            },
+            {
+                "level" : 9,
+                "cost" : 30000,
+                "hydro" : 26,
+                "dps" : 210,
+                "targets" : 5
+            },
+            {
+                "level" : 10,
+                "cost" : 35000,
+                "hydro" : 29,
+                "dps" : 240,
+                "targets" : 5
+            },
+            {
+                "level" : 11,
+                "cost" : 37500,
+                "hydro" : 32,
+                "dps" : 270,
+                "targets" : 6
+            },
+            {
+                "level" : 12,
+                "cost" : 40000,
+                "hydro" : 35,
+                "dps" : 300,
+                "targets" : 6
+            }
+        ]
+    },
+    {
+        "name" : "Dual Laser",
+        "type" : "weapon",
+        "data" : [
+            {
+                "level" : 1,
+                "cost" : 5000,
+                "hydro" : 2,
+                "dps" : 80,
+                "maxdps" : 250,
+                "targets" : 2
+            },
+            {
+                "level" : 2,
+                "cost" : 7500,
+                "hydro" : 5,
+                "dps" : 90,
+                "maxdps" : 300,
+                "targets" : 2
+            },
+            {
+                "level" : 3,
+                "cost" : 10000,
+                "hydro" : 8,
+                "dps" : 100,
+                "maxdps" : 350,
+                "targets" : 2
+            },
+            {
+                "level" : 4,
+                "cost" : 12500,
+                "hydro" : 11,
+                "dps" : 110,
+                "maxdps" : 400,
+                "targets" : 2
+            },
+            {
+                "level" : 5,
+                "cost" : 15000,
+                "hydro" : 14,
+                "dps" : 120,
+                "maxdps" : 450,
+                "targets" : 2
+            },
+            {
+                "level" : 6,
+                "cost" : 17500,
+                "hydro" : 17,
+                "dps" : 130,
+                "maxdps" : 500,
+                "targets" : 2
+            },
+            {
+                "level" : 7,
+                "cost" : 20000,
+                "hydro" : 20,
+                "dps" : 140,
+                "maxdps" : 550,
+                "targets" : 2
+            },
+            {
+                "level" : 8,
+                "cost" : 25000,
+                "hydro" : 23,
+                "dps" : 160,
+                "maxdps" : 600,
+                "targets" : 2
+            },
+            {
+                "level" : 9,
+                "cost" : 30000,
+                "hydro" : 26,
+                "dps" : 180,
+                "maxdps" : 650,
+                "targets" : 2
+            },
+            {
+                "level" : 10,
+                "cost" : 35000,
+                "hydro" : 29,
+                "dps" : 200,
+                "maxdps" : 700,
+                "targets" : 2
+            },
+            {
+                "level" : 11,
+                "cost" : 37500,
+                "hydro" : 32,
+                "dps" : 220,
+                "maxdps" : 750,
+                "targets" : 2
+            },
+            {
+                "level" : 12,
+                "cost" : 40000,
+                "hydro" : 35,
+                "dps" : 240,
+                "maxdps" : 800,
+                "targets" : 2
+            }
+        ]
+    },
+    {
+        "name" : "Barrage",
+        "type" : "weapon",
+        "data" : [
+            {
+                "level" : 1,
+                "cost" : 5000,
+                "hydro" : 4,
+                "dps" : 80,
+                "adddps" : 60,
+                "maxdps" : 1040,
+                "targets" : 1
+            },
+            {
+                "level" : 2,
+                "cost" : 7500,
+                "hydro" : 8,
+                "dps" : 90,
+                "adddps" : 65,
+                "maxdps" : 1130,
+                "targets" : 1
+            },
+            {
+                "level" : 3,
+                "cost" : 10000,
+                "hydro" : 12,
+                "dps" : 100,
+                "adddps" : 70,
+                "maxdps" : 1220,
+                "targets" : 1
+            },
+            {
+                "level" : 4,
+                "cost" : 12500,
+                "hydro" : 16,
+                "dps" : 110,
+                "adddps" : 80,
+                "maxdps" : 1390,
+                "targets" : 1
+            },
+            {
+                "level" : 5,
+                "cost" : 15000,
+                "hydro" : 20,
+                "dps" : 120,
+                "adddps" : 90,
+                "maxdps" : 1560,
+                "targets" : 1
+            },
+            {
+                "level" : 6,
+                "cost" : 17500,
+                "hydro" : 24,
+                "dps" : 135,
+                "adddps" : 100,
+                "maxdps" : 1735,
+                "targets" : 1
+            },
+            {
+                "level" : 7,
+                "cost" : 20000,
+                "hydro" : 28,
+                "dps" : 150,
+                "adddps" : 110,
+                "maxdps" : 1910,
+                "targets" : 1
+            },
+            {
+                "level" : 8,
+                "cost" : 25000,
+                "hydro" : 32,
+                "dps" : 170,
+                "adddps" : 120,
+                "maxdps" : 2090,
+                "targets" : 1
+            },
+            {
+                "level" : 9,
+                "cost" : 30000,
+                "hydro" : 36,
+                "dps" : 185,
+                "adddps" : 130,
+                "maxdps" : 2265,
+                "targets" : 1
+            },
+            {
+                "level" : 10,
+                "cost" : 35000,
+                "hydro" : 40,
+                "dps" : 200,
+                "adddps" : 140,
+                "maxdps" : 2440,
+                "targets" : 1
+            },
+            {
+                "level" : 11,
+                "cost" : 37500,
+                "hydro" : 44,
+                "dps" : 220,
+                "adddps" : 150,
+                "maxdps" : 2620,
+                "targets" : 1
+            },
+            {
+                "level" : 12,
+                "cost" : 40000,
+                "hydro" : 48,
+                "dps" : 240,
+                "adddps" : 160,
+                "maxdps" : 2800,
+                "targets" : 1
+            }
+        ]
+    },
+    {
+        "name" : "Dart Launcher",
+        "type" : "weapon",
+        "data" : [
+            {
+                "level" : 1,
+                "cost" : 40000,
+                "hydro" : 24,
+                "expdmg" : 4100
+            },
+            {
+                "level" : 2,
+                "cost" : 42000,
+                "hydro" : 28,
+                "expdmg" : 4500
+            },
+            {
+                "level" : 3,
+                "cost" : 44000,
+                "hydro" : 32,
+                "expdmg" : 4900
+            },
+            {
+                "level" : 4,
+                "cost" : 46000,
+                "hydro" : 36,
+                "expdmg" : 5300
+            },
+            {
+                "level" : 5,
+                "cost" : 48000,
+                "hydro" : 40,
+                "expdmg" : 5700
+            },
+            {
+                "level" : 6,
+                "cost" : 50000,
+                "hydro" : 44,
+                "expdmg" : 6100
+            },
+            {
+                "level" : 7,
+                "cost" : 52000,
+                "hydro" : 48,
+                "expdmg" : 6500
+            },
+            {
+                "level" : 8,
+                "cost" : 54000,
+                "hydro" : 52,
+                "expdmg" : 7000
+            },
+            {
+                "level" : 9,
+                "cost" : 56000,
+                "hydro" : 56,
+                "expdmg" : 7500
+            },
+            {
+                "level" : 10,
+                "cost" : 58000,
+                "hydro" : 60,
+                "expdmg" : 8000
+            },
+            {
+                "level" : 11,
+                "cost" : 60000,
+                "hydro" : 64,
+                "expdmg" : 9000
+            },
+            {
+                "level" : 12,
+                "cost" : 62000,
+                "hydro" : 68,
+                "expdmg" : 1000
+            }
+        ]
+    }
+]

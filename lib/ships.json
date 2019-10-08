@@ -1,0 +1,120 @@
+[
+    {
+        "type" : "Battleship",
+        "data" : [
+            {
+                "image" : "Battleship1",
+                "level" : 1,
+                "cost" : 750,
+                "hull" : 4000,
+                "hydro" : 2.8,
+                "supportmod" : 0
+            },
+            {
+                "image" : "Battleship2",
+                "level" : 2,
+                "cost" : 1500,
+                "hull" : 5000,
+                "hydro" : 4.2,
+                "supportmod" : 1
+            },
+            {
+                "image" : "Battleship3",
+                "level" : 3,
+                "cost" : 20000,
+                "hull" : 6000,
+                "hydro" : 12,
+                "supportmod" : 2
+            },
+            {
+                "image" : "Battleship4",
+                "level" : 4,
+                "cost" : 60000,
+                "hull" : 7500,
+                "hydro" : 24,
+                "supportmod" : 3
+            },
+            {
+                "image" : "Battleship5",
+                "level" : 5,
+                "cost" : 120000,
+                "hull" : 9000,
+                "hydro" : 40,
+                "supportmod" : 4
+            },
+            {
+                "image" : "Battleship6",
+                "level" : 6,
+                "cost" : 150000,
+                "hull" : 9500,
+                "hydro" : 44,
+                "supportmod" : 5
+            }
+        ]
+    },
+    {
+        "type" : "Miner",
+        "data" : [
+            {
+                "level" : 1,
+                "cost" : 500,
+                "hydro" : 1,
+                "capacity" : 50,
+                "sectors" : 1,
+                "minespeed" : 6,
+                "minermod" : 1,
+                "supportmod" : 0
+            },
+            {
+                "level" : 2,
+                "cost" : 1000,
+                "hydro" : 1,
+                "capacity" : 250,
+                "sectors" : 2,
+                "minespeed" : 7.5,
+                "minermod" : 2,
+                "supportmod" : 0
+            },
+            {
+                "level" : 3,
+                "cost" : 10000,
+                "hydro" : 1,
+                "capacity" : 600,
+                "sectors" : 3,
+                "minespeed" : 12,
+                "minermod" : 2,
+                "supportmod" : 1
+            },
+            {
+                "level" : 4,
+                "cost" : 30000,
+                "hydro" : 1,
+                "capacity" : 1200,
+                "sectors" : 4,
+                "minespeed" : 24,
+                "minermod" : 3,
+                "supportmod" : 1
+            },
+            {
+                "level" : 5,
+                "cost" : 60000,
+                "hydro" : 1,
+                "capacity" : 2000,
+                "sectors" : 5,
+                "minespeed" : 60,
+                "minermod" : 4,
+                "supportmod" : 1
+            },
+            {
+                "level" : 6,
+                "cost" : 100000,
+                "hydro" : 1,
+                "capacity" : 2500,
+                "sectors" : 6,
+                "minespeed" : 80,
+                "minermod" : 5,
+                "supportmod" : 1
+            }
+        ]
+    }
+]

@@ -1,0 +1,467 @@
+[
+    {
+        "name" : "Alpha Shield",
+        "type" : "shield",
+        "data" : [
+            {
+                "level" : 1,
+                "cost" : 500,
+                "activate" : 40,
+                "hydro" : 0,
+                "strength" : 2000
+            },
+            {
+                "level" : 2,
+                "cost" : 750,
+                "activate" : 50,
+                "hydro" : 0,
+                "strength" : 2300
+            },
+            {
+                "level" : 3,
+                "cost" : 1000,
+                "activate" : 60,
+                "hydro" : 0,
+                "strength" : 2600
+            },
+            {
+                "level" : 4,
+                "cost" : 1500,
+                "activate" : 70,
+                "hydro" : 0,
+                "strength" : 2900
+            },
+            {
+                "level" : 5,
+                "cost" : 2000,
+                "activate" : 80,
+                "hydro" : 0,
+                "strength" : 3200
+            }
+        ]
+    },
+    {
+        "name" : "Delta Shield",
+        "type" : "shield",
+        "unique" : [
+            {
+                "key" : "speed",
+                "info" : "Speed increase",
+                "append" : "%"
+            }
+        ],
+        "data" : [
+            {
+                "level" : 1,
+                "cost" : 1000,
+                "activate" : 150,
+                "hydro" : 0,
+                "strength" : 3500,
+                "speed" : 6
+            },
+            {
+                "level" : 2,
+                "cost" : 1500,
+                "activate" : 200,
+                "hydro" : 0,
+                "strength" : 3800,
+                "speed" : 10
+            },
+            {
+                "level" : 3,
+                "cost" : 2500,
+                "activate" : 300,
+                "hydro" : 0,
+                "strength" : 4100,
+                "speed" : 14
+            },
+            {
+                "level" : 4,
+                "cost" : 4000,
+                "activate" : 500,
+                "hydro" : 0,
+                "strength" : 4400,
+                "speed" : 18
+            },
+            {
+                "level" : 5,
+                "cost" : 6000,
+                "activate" : 800,
+                "hydro" : 0,
+                "strength" : 4700,
+                "speed" : 22
+            },
+            {
+                "level" : 6,
+                "cost" : 8000,
+                "activate" : 1200,
+                "hydro" : 0,
+                "strength" : 5000,
+                "speed" : 26
+            },
+            {
+                "level" : 7,
+                "cost" : 10000,
+                "activate" : 1500,
+                "hydro" : 0,
+                "strength" : 5300,
+                "speed" : 30
+            },
+            {
+                "level" : 8,
+                "cost" : 12000,
+                "activate" : 2200,
+                "hydro" : 0,
+                "strength" : 5600,
+                "speed" : 33
+            },
+            {
+                "level" : 9,
+                "cost" : 14000,
+                "activate" : 2600,
+                "hydro" : 0,
+                "strength" : 5900,
+                "speed" : 36
+            },
+            {
+                "level" : 10,
+                "cost" : 16000,
+                "activate" : 3000,
+                "hydro" : 0,
+                "strength" : 6200,
+                "speed" : 40
+            },
+            {
+                "level" : 11,
+                "cost" : 18000,
+                "activate" : 3500,
+                "hydro" : 0,
+                "strength" : 6500,
+                "speed" : 45
+            },
+            {
+                "level" : 12,
+                "cost" : 20000,
+                "activate" : 4000,
+                "hydro" : 0,
+                "strength" : 6800,
+                "speed" : 50
+            }
+        ]
+    },
+    {
+        "name" : "Passive Shield",
+        "type" : "shield",
+        "data" : [
+            {
+                "level" : 1,
+                "cost" : 5000,
+                "activate" : 0,
+                "hydro" : 6,
+                "strength" : 5000
+            },
+            {
+                "level" : 2,
+                "cost" : 7500,
+                "activate" : 0,
+                "hydro" : 8.8,
+                "strength" : 6000
+            },
+            {
+                "level" : 3,
+                "cost" : 11000,
+                "activate" : 0,
+                "hydro" : 12.4,
+                "strength" : 7000
+            },
+            {
+                "level" : 4,
+                "cost" : 14000,
+                "activate" : 0,
+                "hydro" : 15.4,
+                "strength" : 8000
+            },
+            {
+                "level" : 5,
+                "cost" : 17000,
+                "activate" : 0,
+                "hydro" : 19.8,
+                "strength" : 9000
+            },
+            {
+                "level" : 6,
+                "cost" : 20000,
+                "activate" : 0,
+                "hydro" : 28.6,
+                "strength" : 10000
+            },
+            {
+                "level" : 7,
+                "cost" : 22000,
+                "activate" : 0,
+                "hydro" : 37.4,
+                "strength" : 11500
+            },
+            {
+                "level" : 8,
+                "cost" : 24000,
+                "activate" : 0,
+                "hydro" : 46.2,
+                "strength" : 13000
+            },
+            {
+                "level" : 9,
+                "cost" : 26000,
+                "activate" : 0,
+                "hydro" : 55,
+                "strength" : 14500
+            },
+            {
+                "level" : 10,
+                "cost" : 28000,
+                "activate" : 0,
+                "hydro" : 66,
+                "strength" : 16000
+            },
+            {
+                "level" : 11,
+                "cost" : 29000,
+                "activate" : 0,
+                "hydro" : 70,
+                "strength" : 17500
+            },
+            {
+                "level" : 12,
+                "cost" : 30000,
+                "activate" : 0,
+                "hydro" : 74,
+                "strength" : 19000
+            }
+        ]
+    },
+    {
+        "name" : "Omega Shield",
+        "type" : "shield",
+        "data" : [
+            {
+                "level" : 1,
+                "cost" : 5000,
+                "activate" : 600,
+                "hydro" : 0,
+                "strength" : 8000
+            },
+            {
+                "level" : 2,
+                "cost" : 7500,
+                "activate" : 800,
+                "hydro" : 0,
+                "strength" : 9000
+            },
+            {
+                "level" : 3,
+                "cost" : 10000,
+                "activate" : 1000,
+                "hydro" : 0,
+                "strength" : 10000
+            },
+            {
+                "level" : 4,
+                "cost" : 12500,
+                "activate" : 1250,
+                "hydro" : 0,
+                "strength" : 11000
+            },
+            {
+                "level" : 5,
+                "cost" : 15000,
+                "activate" : 1500,
+                "hydro" : 0,
+                "strength" : 12000
+            },
+            {
+                "level" : 6,
+                "cost" : 17500,
+                "activate" : 1750,
+                "hydro" : 0,
+                "strength" : 13000
+            },
+            {
+                "level" : 7,
+                "cost" : 20000,
+                "activate" : 2000,
+                "hydro" : 0,
+                "strength" : 14000
+            },
+            {
+                "level" : 8,
+                "cost" : 23000,
+                "activate" : 2500,
+                "hydro" : 0,
+                "strength" : 15500
+            },
+            {
+                "level" : 9,
+                "cost" : 26000,
+                "activate" : 3000,
+                "hydro" : 0,
+                "strength" : 17000
+            },
+            {
+                "level" : 10,
+                "cost" : 30000,
+                "activate" : 3500,
+                "hydro" : 0,
+                "strength" : 18500
+            },
+            {
+                "level" : 11,
+                "cost" : 35000,
+                "activate" : 3750,
+                "hydro" : 0,
+                "strength" : 20000
+            },
+            {
+                "level" : 12,
+                "cost" : 40000,
+                "activate" : 4000,
+                "hydro" : 0,
+                "strength" : 21500
+            }
+        ]
+    },
+    {
+        "name" : "Mirror Shield",
+        "type" : "shield",
+        "unique" : [
+            {
+                "key" : "mirror",
+                "info" : "Damage reflect",
+                "append" : "%"
+            }
+        ],
+        "data" : [
+            {
+                "level" : 1,
+                "cost" : 8000,
+                "activate" : 600,
+                "hydro" : 0,
+                "strength" : 6500,
+                "mirror" : 14
+            },
+            {
+                "level" : 2,
+                "cost" : 10000,
+                "activate" : 800,
+                "hydro" : 0,
+                "strength" : 7000,
+                "mirror" : 16
+            },
+            {
+                "level" : 3,
+                "cost" : 12000,
+                "activate" : 1000,
+                "hydro" : 0,
+                "strength" : 7500,
+                "mirror" : 18
+            },
+            {
+                "level" : 4,
+                "cost" : 14000,
+                "activate" : 1250,
+                "hydro" : 0,
+                "strength" : 8000,
+                "mirror" : 20
+            },
+            {
+                "level" : 5,
+                "cost" : 16000,
+                "activate" : 1500,
+                "hydro" : 0,
+                "strength" : 8500,
+                "mirror" : 22
+            },
+            {
+                "level" : 6,
+                "cost" : 18000,
+                "activate" : 1750,
+                "hydro" : 0,
+                "strength" : 9000,
+                "mirror" : 24
+            },
+            {
+                "level" : 7,
+                "cost" : 20000,
+                "activate" : 2000,
+                "hydro" : 0,
+                "strength" : 10000,
+                "mirror" : 26
+            },
+            {
+                "level" : 8,
+                "cost" : 22000,
+                "activate" : 2500,
+                "hydro" : 0,
+                "strength" : 11500,
+                "mirror" : 28
+            },
+            {
+                "level" : 9,
+                "cost" : 26000,
+                "activate" : 3000,
+                "hydro" : 0,
+                "strength" : 13000,
+                "mirror" : 30
+            },
+            {
+                "level" : 10,
+                "cost" : 30000,
+                "activate" : 3500,
+                "hydro" : 0,
+                "strength" : 14500,
+                "mirror" : 32
+            },
+            {
+                "level" : 11,
+                "cost" : 32000,
+                "activate" : 3750,
+                "hydro" : 0,
+                "strength" : 16000,
+                "mirror" : 34
+            },
+            {
+                "level" : 12,
+                "cost" : 34000,
+                "activate" : 4000,
+                "hydro" : 0,
+                "strength" : 18000,
+                "mirror" : 36
+            }
+        ]
+    },
+    {
+        "name" : "Template",
+        "type" : "shield",
+        "unique" : [
+            {
+                "key" : "mirror",
+                "info" : "Damage reflect",
+                "append" : "%"
+            },
+            {
+                "key" : "speed",
+                "info" : "Speed increase",
+                "append" : "%"
+            }
+        ],
+        "data" : [
+            {
+                "level" : 1,
+                "cost" : 100,
+                "activate" : 100,
+                "hydro" : 0,
+                "strength" : 100,
+                "mirror" : 10
+            }
+        ]
+    }
+]
