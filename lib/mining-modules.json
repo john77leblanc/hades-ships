@@ -1,0 +1,894 @@
+[
+  {
+    "name" : "Template",
+    "type" : "shield",
+    "unique" : [
+        {
+            "key" : "mirror",
+            "info" : "Damage reflect",
+            "append" : "%"
+        },
+        {
+            "key" : "speed",
+            "info" : "Speed increase",
+            "append" : "%"
+        }
+    ],
+    "data" : [
+        {
+            "level" : 1,
+            "cost" : 100,
+            "activate" : 100,
+            "hydro" : 0,
+            "strength" : 100,
+            "mirror" : 10
+        }
+    ]
+  },
+  {
+    "name" : "Mining Boost",
+    "type" : "mining",
+    "unique" : [
+        {
+            "key" : "speed",
+            "info" : "Mining speed increase",
+            "append" : "%"
+        }
+    ],
+    "data" : [
+      {
+        "level" : 1,
+        "cost" : 2500,
+        "activate" : 5,
+        "speed" : 200
+      },
+      {
+        "level" : 2,
+        "cost" : 3125,
+        "activate" : 6,
+        "speed" : 250
+      },
+      {
+        "level" : 3,
+        "cost" : 4000,
+        "activate" : 7,
+        "speed" : 300
+      },
+      {
+        "level" : 4,
+        "cost" : 5000,
+        "activate" : 8,
+        "speed" : 350
+      },
+      {
+        "level" : 5,
+        "cost" : 6000,
+        "activate" : 9,
+        "speed" : 400
+      },
+      {
+        "level" : 6,
+        "cost" : 7500,
+        "activate" : 10,
+        "speed" : 450
+      },
+      {
+        "level" : 7,
+        "cost" : 9500,
+        "activate" : 12,
+        "speed" : 500
+      },
+      {
+        "level" : 8,
+        "cost" : 12000,
+        "activate" : 14,
+        "speed" : 600
+      },
+      {
+        "level" : 9,
+        "cost" : 15000,
+        "activate" : 16,
+        "speed" : 700
+      },
+      {
+        "level" : 10,
+        "cost" : 20000,
+        "activate" : 19,
+        "speed" : 800
+      },
+      {
+        "level" : 11,
+        "cost" : 30000,
+        "activate" : 24,
+        "speed" : 900
+      },
+      {
+        "level" : 12,
+        "cost" : 40000,
+        "activate" : 30,
+        "speed" : 1000
+      }
+    ]
+  },
+  {
+    "name" : "Hydrogen Bay Extension",
+    "type" : "mining",
+    "unique" : [
+      {
+        "key" : "storage",
+        "info" : "Extra storage",
+        "append" : ""
+      }
+    ],
+    "data" : [
+      {
+        "level" : 1,
+        "cost" : 500,
+        "activate" : 0,
+        "storage" : 50
+      },
+      {
+        "level" : 2,
+        "cost" : 750,
+        "activate" : 0,
+        "storage" : 75
+      },
+      {
+        "level" : 3,
+        "cost" : 1100,
+        "activate" : 0,
+        "storage" : 110
+      },
+      {
+        "level" : 4,
+        "cost" : 1650,
+        "activate" : 0,
+        "storage" : 170
+      },
+      {
+        "level" : 5,
+        "cost" : 2500,
+        "activate" : 0,
+        "storage" : 250
+      },
+      {
+        "level" : 6,
+        "cost" : 4000,
+        "activate" : 0,
+        "storage" : 370
+      },
+      {
+        "level" : 7,
+        "cost" : 6000,
+        "activate" : 0,
+        "storage" : 550
+      },
+      {
+        "level" : 8,
+        "cost" : 8000,
+        "activate" : 0,
+        "storage" : 850
+      },
+      {
+        "level" : 9,
+        "cost" : 10000,
+        "activate" : 0,
+        "storage" : 1275
+      },
+      {
+        "level" : 10,
+        "cost" : 15000,
+        "activate" : 0,
+        "storage" : 2000
+      }
+    ]
+  },
+  {
+    "name" : "Enrich",
+    "type" : "mining",
+    "unique" : [
+      {
+        "key" : "increase",
+        "info" : "Hydrogen Increase",
+        "append" : "%"
+      }
+    ],
+    "data" : [
+      {
+        "level" : 1,
+        "cost" : 3000,
+        "activate" : 0,
+        "increase" : 5
+      },
+      {
+        "level" : 2,
+        "cost" : 4000,
+        "activate" : 0,
+        "increase" : 8
+      },
+      {
+        "level" : 3,
+        "cost" : 5000,
+        "activate" : 0,
+        "increase" : 12
+      },
+      {
+        "level" : 4,
+        "cost" : 6500,
+        "activate" : 0,
+        "increase" : 14
+      },
+      {
+        "level" : 5,
+        "cost" : 8500,
+        "activate" : 0,
+        "increase" : 16
+      },
+      {
+        "level" : 6,
+        "cost" : 11000,
+        "activate" : 0,
+        "increase" : 18
+      },
+      {
+        "level" : 7,
+        "cost" : 15000,
+        "activate" : 0,
+        "increase" : 19
+      },
+      {
+        "level" : 8,
+        "cost" : 19000,
+        "activate" : 0,
+        "increase" : 20
+      },
+      {
+        "level" : 9,
+        "cost" : 25000,
+        "activate" : 0,
+        "increase" : 21
+      },
+      {
+        "level" : 10,
+        "cost" : 30000,
+        "activate" : 0,
+        "increase" : 22
+      },
+      {
+        "level" : 11,
+        "cost" : 35000,
+        "activate" : 0,
+        "increase" : 23
+      },
+      {
+        "level" : 12,
+        "cost" : 40000,
+        "activate" : 0,
+        "increase" : 24
+      }
+    ]
+  },
+  {
+    "name" : "Remote Mining",
+    "type" : "mining",
+    "unique" : [
+      {
+        "key" : "speed",
+        "info" : "Mining speed",
+        "append" : "%"
+      }
+    ],
+    "data" : [
+      {
+        "level" : 1,
+        "cost" : 2500,
+        "activate" : 0,
+        "speed" : 36
+      },
+      {
+        "level" : 2,
+        "cost" : 3750,
+        "activate" : 0,
+        "speed" : 40
+      },
+      {
+        "level" : 3,
+        "cost" : 5500,
+        "activate" : 0,
+        "speed" : 45
+      },
+      {
+        "level" : 4,
+        "cost" : 8000,
+        "activate" : 0,
+        "speed" : 51
+      },
+      {
+        "level" : 5,
+        "cost" : 12000,
+        "activate" : 0,
+        "speed" : 57
+      },
+      {
+        "level" : 6,
+        "cost" : 15000,
+        "activate" : 0,
+        "speed" : 64
+      },
+      {
+        "level" : 7,
+        "cost" : 20000,
+        "activate" : 0,
+        "speed" : 72
+      },
+      {
+        "level" : 8,
+        "cost" : 25000,
+        "activate" : 0,
+        "speed" : 81
+      },
+      {
+        "level" : 9,
+        "cost" : 30000,
+        "activate" : 0,
+        "speed" : 90
+      },
+      {
+        "level" : 10,
+        "cost" : 35000,
+        "activate" : 0,
+        "speed" : 100
+      }
+    ]
+  },
+  {
+    "name" : "Hydrogen Upload",
+    "type" : "mining",
+    "unique" : [
+      {
+        "key" : "upload",
+        "info" : "Percent uploaded",
+        "append" : "%"
+      }
+    ],
+    "data" : [
+      {
+        "level" : 1,
+        "cost" : 10000,
+        "activate" : 0,
+        "upload" : 30
+      },
+      {
+        "level" : 2,
+        "cost" : 12500,
+        "activate" : 0,
+        "upload" : 35
+      },
+      {
+        "level" : 3,
+        "cost" : 15000,
+        "activate" : 0,
+        "upload" : 40
+      },
+      {
+        "level" : 4,
+        "cost" : 17500,
+        "activate" : 0,
+        "upload" : 45
+      },
+      {
+        "level" : 5,
+        "cost" : 20000,
+        "activate" : 0,
+        "upload" : 50
+      },
+      {
+        "level" : 6,
+        "cost" : 25000,
+        "activate" : 0,
+        "upload" : 55
+      },
+      {
+        "level" : 7,
+        "cost" : 30000,
+        "activate" : 0,
+        "upload" : 60
+      },
+      {
+        "level" : 8,
+        "cost" : 35000,
+        "activate" : 0,
+        "upload" : 65
+      },
+      {
+        "level" : 9,
+        "cost" : 40000,
+        "activate" : 0,
+        "upload" : 70
+      },
+      {
+        "level" : 10,
+        "cost" : 45000,
+        "activate" : 0,
+        "upload" : 75
+      },
+      {
+        "level" : 11,
+        "cost" : 50000,
+        "activate" : 0,
+        "upload" : 80
+      },
+      {
+        "level" : 12,
+        "cost" : 55000,
+        "activate" : 0,
+        "upload" : 85
+      }
+    ]
+  },
+  {
+    "name" : "Mining Unity",
+    "type" : "mining",
+    "unique" : [
+      {
+        "key" : "speed",
+        "info" : "Speed increase per player",
+        "append" : "%"
+      }
+    ],
+    "data" : [
+      {
+        "level" : 1,
+        "cost" : 5000,
+        "activate" : 100,
+        "speed" : 25
+      },
+      {
+        "level" : 2,
+        "cost" : 7500,
+        "activate" : 120,
+        "speed" : 29
+      },
+      {
+        "level" : 3,
+        "cost" : 10000,
+        "activate" : 144,
+        "speed" : 34
+      },
+      {
+        "level" : 4,
+        "cost" : 12500,
+        "activate" : 172,
+        "speed" : 39
+      },
+      {
+        "level" : 5,
+        "cost" : 15000,
+        "activate" : 206,
+        "speed" : 45
+      },
+      {
+        "level" : 6,
+        "cost" : 17500,
+        "activate" : 247,
+        "speed" : 52
+      },
+      {
+        "level" : 7,
+        "cost" : 20000,
+        "activate" : 296,
+        "speed" : 61
+      },
+      {
+        "level" : 8,
+        "cost" : 25000,
+        "activate" : 355,
+        "speed" : 71
+      },
+      {
+        "level" : 9,
+        "cost" : 30000,
+        "activate" : 426,
+        "speed" : 83
+      },
+      {
+        "level" : 10,
+        "cost" : 35000,
+        "activate" : 511,
+        "speed" : 100
+      }
+    ]
+  },
+  {
+    "name" : "Crunch",
+    "type" : "mining",
+    "unique" : [
+      {
+        "key" : "amount",
+        "info" : "Max amount",
+        "append" : ""
+      }
+    ],
+    "data" : [
+      {
+        "level" : 1,
+        "cost" : 10000,
+        "activate" : 0,
+        "amount" : 300
+      },
+      {
+        "level" : 2,
+        "cost" : 12000,
+        "activate" : 0,
+        "amount" : 350
+      },
+      {
+        "level" : 3,
+        "cost" : 14000,
+        "activate" : 0,
+        "amount" : 400
+      },
+      {
+        "level" : 4,
+        "cost" : 16000,
+        "activate" : 0,
+        "amount" : 450
+      },
+      {
+        "level" : 5,
+        "cost" : 18000,
+        "activate" : 0,
+        "amount" : 500
+      },
+      {
+        "level" : 6,
+        "cost" : 20000,
+        "activate" : 0,
+        "amount" : 600
+      },
+      {
+        "level" : 7,
+        "cost" : 22000,
+        "activate" : 0,
+        "amount" : 700
+      },
+      {
+        "level" : 8,
+        "cost" : 24000,
+        "activate" : 0,
+        "amount" : 800
+      },
+      {
+        "level" : 9,
+        "cost" : 26000,
+        "activate" : 0,
+        "amount" : 900
+      },
+      {
+        "level" : 10,
+        "cost" : 28000,
+        "activate" : 0,
+        "amount" : 1000
+      },
+      {
+        "level" : 11,
+        "cost" : 30000,
+        "activate" : 0,
+        "amount" : 1200
+      },
+      {
+        "level" : 12,
+        "cost" : 32000,
+        "activate" : 0,
+        "amount" : 1400
+      }
+    ]
+  },
+  {
+    "name" : "Genesis",
+    "type" : "mining",
+    "unique" : [
+      {
+        "key" : "asteroids",
+        "info" : "Max new asteroids",
+        "append" : ""
+      },
+      {
+        "key" : "value",
+        "info" : "Value of asteroids",
+        "append" : ""
+      }
+    ],
+    "data" : [
+      {
+        "level" : 1,
+        "cost" : 20000,
+        "activate" : 0,
+        "asteroids" : 2,
+        "value" : 75
+      },
+      {
+        "level" : 2,
+        "cost" : 23000,
+        "activate" : 0,
+        "asteroids" : 2,
+        "value" : 100
+      },
+      {
+        "level" : 3,
+        "cost" : 26000,
+        "activate" : 0,
+        "asteroids" : 3,
+        "value" : 80
+      },
+      {
+        "level" : 4,
+        "cost" : 29000,
+        "activate" : 0,
+        "asteroids" : 3,
+        "value" : 100
+      },
+      {
+        "level" : 5,
+        "cost" : 32000,
+        "activate" : 0,
+        "asteroids" : 4,
+        "value" : 90
+      },
+      {
+        "level" : 6,
+        "cost" : 35000,
+        "activate" : 0,
+        "asteroids" : 4,
+        "value" : 100
+      },
+      {
+        "level" : 7,
+        "cost" : 38000,
+        "activate" : 0,
+        "asteroids" : 5,
+        "value" : 90
+      },
+      {
+        "level" : 8,
+        "cost" : 41000,
+        "activate" : 0,
+        "asteroids" : 5,
+        "value" : 100
+      },
+      {
+        "level" : 9,
+        "cost" : 45000,
+        "activate" : 0,
+        "asteroids" : 6,
+        "value" : 100
+      },
+      {
+        "level" : 10,
+        "cost" : 50000,
+        "activate" : 0,
+        "asteroids" : 6,
+        "value" : 120
+      },
+      {
+        "level" : 11,
+        "cost" : 60000,
+        "activate" : 0,
+        "asteroids" : 7,
+        "value" : 130
+      },
+      {
+        "level" : 12,
+        "cost" : 75000,
+        "activate" : 0,
+        "asteroids" : 7,
+        "value" : 140
+      }
+    ]
+  },
+  {
+    "name" : "Hydrogen Rocket",
+    "type" : "mining",
+    "unique" : [
+      {
+        "key" : "hull",
+        "info" : "Rocket hull",
+        "append" : ""
+      },
+      {
+        "key" : "expdmg",
+        "info" : "Damage",
+        "append" : ""
+      }
+    ],
+    "data" : [
+      {
+        "level" : 1,
+        "cost" : 40000,
+        "activate" : 500,
+        "hull" : 500,
+        "expdmg" : 3000
+      },
+      {
+        "level" : 2,
+        "cost" : 42000,
+        "activate" : 500,
+        "hull" : 550,
+        "expdmg" : 4000
+      },
+      {
+        "level" : 3,
+        "cost" : 44000,
+        "activate" : 500,
+        "hull" : 600,
+        "expdmg" : 5000
+      },
+      {
+        "level" : 4,
+        "cost" : 46000,
+        "activate" : 500,
+        "hull" : 650,
+        "expdmg" : 6500
+      },
+      {
+        "level" : 5,
+        "cost" : 48000,
+        "activate" : 500,
+        "hull" : 700,
+        "expdmg" : 8000
+      },
+      {
+        "level" : 6,
+        "cost" : 50000,
+        "activate" : 500,
+        "hull" : 800,
+        "expdmg" : 9500
+      },
+      {
+        "level" : 7,
+        "cost" : 52000,
+        "activate" : 500,
+        "hull" : 900,
+        "expdmg" : 11000
+      },
+      {
+        "level" : 8,
+        "cost" : 54000,
+        "activate" : 500,
+        "hull" : 1000,
+        "expdmg" : 12500
+      },
+      {
+        "level" : 9,
+        "cost" : 56000,
+        "activate" : 500,
+        "hull" : 1200,
+        "expdmg" : 14000
+      },
+      {
+        "level" : 10,
+        "cost" : 58000,
+        "activate" : 500,
+        "hull" : 1400,
+        "expdmg" : 16000
+      },
+      {
+        "level" : 11,
+        "cost" : 58000,
+        "activate" : 500,
+        "hull" : 1600,
+        "expdmg" : 18000
+      },
+      {
+        "level" : 12,
+        "cost" : 58000,
+        "activate" : 500,
+        "hull" : 1800,
+        "expdmg" : 20000
+      }
+    ]
+  },
+  {
+    "name" : "Mining Drone",
+    "type" : "mining",
+    "unique" : [
+      {
+        "key" : "capacity",
+        "info" : "Hydrogen capacity",
+        "append" : ""
+      },
+      {
+        "key" : "speed",
+        "info" : "Mining speed",
+        "append" : ""
+      },
+      {
+        "key" : "hull",
+        "info" : "Hull strength",
+        "append" : ""
+      }
+    ],
+    "data" : [
+      {
+        "level" : 1,
+        "cost" : 50000,
+        "activate" : 0,
+        "capacity" : 140,
+        "speed" : 29.12,
+        "hull" : 1000
+      },
+      {
+        "level" : 2,
+        "cost" : 55000,
+        "activate" : 0,
+        "capacity" : 160,
+        "speed" : 33.33,
+        "hull" : 1500
+      },
+      {
+        "level" : 3,
+        "cost" : 60000,
+        "activate" : 0,
+        "capacity" : 180,
+        "speed" : 37.5,
+        "hull" : 2200
+      },
+      {
+        "level" : 4,
+        "cost" : 65000,
+        "activate" : 0,
+        "capacity" : 200,
+        "speed" : 41.66,
+        "hull" : 3000
+      },
+      {
+        "level" : 5,
+        "cost" : 70000,
+        "activate" : 0,
+        "capacity" : 220,
+        "speed" : 45.8,
+        "hull" : 4000
+      },
+      {
+        "level" : 6,
+        "cost" : 75000,
+        "activate" : 0,
+        "capacity" : 250,
+        "speed" : 52.17,
+        "hull" : 5000
+      },
+      {
+        "level" : 7,
+        "cost" : 80000,
+        "activate" : 0,
+        "capacity" : 380,
+        "speed" : 58.82,
+        "hull" : 6000
+      },
+      {
+        "level" : 8,
+        "cost" : 85000,
+        "activate" : 0,
+        "capacity" : 310,
+        "speed" : 65.21,
+        "hull" : 7000
+      },
+      {
+        "level" : 9,
+        "cost" : 90000,
+        "activate" : 0,
+        "capacity" : 350,
+        "speed" : 74.07,
+        "hull" : 8000
+      },
+      {
+        "level" : 10,
+        "cost" : 95000,
+        "activate" : 0,
+        "capacity" : 400,
+        "speed" : 85.71,
+        "hull" : 9000
+      }
+    ]
+  }
+]

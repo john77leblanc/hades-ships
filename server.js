@@ -13,7 +13,7 @@ function getShips() {
 }
 
 function getShipsByType(ships, type) {
-    return ships.filter(ship => ship.type == type)[0];
+    return ships.find(ship => ship.type == type);
 }
 
 function getShipByLevel(ship, level) {
@@ -32,11 +32,11 @@ function getAllModNames(mods) {
 }
 
 function getModByName(mod, name) {
-    return mod.filter(m => m.name == name)[0];
+    return mod.find(m => m.name == name);
 }
 
 function getModByLevel(mod, level) {
-    return mod.filter(m => m.level == level)[0];
+    return mod.find(m => m.level == level);
 }
 
 function handleQuery(modules, req) {
