@@ -70,24 +70,14 @@ app.get('/ships', (req, res) => {
 });
 
 app.get('/modules', (req, res) => {
-    let response = req.query.type 
-        ? handleQuery(getMods(`${req.query.type}-modules`), req) 
-        : Object.assign(
-            {},
-            getAllMods().map(file => JSON.parse(fs.readFileSync('./lib/' + file,'utf8')))
-        );
-    res.status(200).send(response);
-});
-
-app.get('/weapon-modules', (req, res) => {
-    let modules = getMods('weapon-modules');
-    let response = handleQuery(modules, req);
-    res.status(200).send(response);
-});
-
-app.get('/shield-modules', (req, res) => {
-    let modules = getMods('shield-modules');
-    let response = handleQuery(modules, req);
+    let response = !!Object.keys(req.query).length && !req.query.type
+        ? "You must specify a type if using other queries"
+        : req.query.type
+            ? handleQuery(getMods(`${req.query.type}-modules`), req) 
+            : Object.assign(
+                {},
+                getAllMods().map(file => JSON.parse(fs.readFileSync('./lib/' + file,'utf8')))
+            );
     res.status(200).send(response);
 });
 

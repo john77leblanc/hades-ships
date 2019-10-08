@@ -137,7 +137,7 @@ export default {
       updateShip() {
           if (this.ship.type && this.ship.level) {
               let vm = this;
-              axios.get(`http://localhost:8081/ships?type=${vm.ship.type}&level=${vm.ship.level}`)
+              axios.get(serverURL + `/ships?type=${vm.ship.type}&level=${vm.ship.level}`)
                 .then(res => {
                     Object.assign(vm.ship, res.data);
                 });
