@@ -275,5 +275,1936 @@
         "extension" : 90
       }
     ]
+  },
+  {
+    "name" : "Remote Repair",
+    "type" : "support",
+    "unique" : [
+      {
+        "key" : "range",
+        "info" : "Effect range",
+        "append" : "AU"
+      },
+      {
+        "key" : "duration",
+        "info" : "Effect duration",
+        "append" : "s"
+      },
+      {
+        "key" : "repair",
+        "info" : "HP repaired",
+        "append" : "/s"
+      }
+    ],
+    "data" : [
+      {
+        "level" : 1,
+        "cost" : 1000,
+        "activate" : 100,
+        "hydro" : 0,
+        "range" : 40,
+        "duration" : 30,
+        "repair" : 60
+      },
+      {
+        "level" : 2,
+        "cost" : 1500,
+        "activate" : 200,
+        "hydro" : 0,
+        "range" : 50,
+        "duration" : 35,
+        "repair" : 70
+      },
+      {
+        "level" : 3,
+        "cost" : 2500,
+        "activate" : 300,
+        "hydro" : 0,
+        "range" : 60,
+        "duration" : 40,
+        "repair" : 80
+      },
+      {
+        "level" : 4,
+        "cost" : 4000,
+        "activate" : 400,
+        "hydro" : 0,
+        "range" : 70,
+        "duration" : 45,
+        "repair" : 100
+      },
+      {
+        "level" : 5,
+        "cost" : 5000,
+        "activate" : 500,
+        "hydro" : 0,
+        "range" : 80,
+        "duration" : 50,
+        "repair" : 120
+      },
+      {
+        "level" : 6,
+        "cost" : 6000,
+        "activate" : 600,
+        "hydro" : 0,
+        "range" : 90,
+        "duration" : 55,
+        "repair" : 140
+      },
+      {
+        "level" : 7,
+        "cost" : 8000,
+        "activate" : 700,
+        "hydro" : 0,
+        "range" : 110,
+        "duration" : 60,
+        "repair" : 170
+      },
+      {
+        "level" : 8,
+        "cost" : 10000,
+        "activate" : 800,
+        "hydro" : 0,
+        "range" : 130,
+        "duration" : 65,
+        "repair" : 200
+      },
+      {
+        "level" : 9,
+        "cost" : 12500,
+        "activate" : 900,
+        "hydro" : 0,
+        "range" : 150,
+        "duration" : 70,
+        "repair" : 240
+      },
+      {
+        "level" : 10,
+        "cost" : 15000,
+        "activate" : 1000,
+        "hydro" : 0,
+        "range" : 170,
+        "duration" : 80,
+        "repair" : 280
+      },
+      {
+        "level" : 11,
+        "cost" : 17500,
+        "activate" : 1250,
+        "hydro" : 0,
+        "range" : 170,
+        "duration" : 90,
+        "repair" : 320
+      },
+      {
+        "level" : 12,
+        "cost" : 20000,
+        "activate" : 1500,
+        "hydro" : 0,
+        "range" : 170,
+        "duration" : 100,
+        "repair" : 360
+      }
+    ]
+  },
+  {
+    "name" : "Timewarp",
+    "type" : "support",
+    "unique" : [
+      {
+        "key" : "factor",
+        "info" : "Time factor",
+        "append" : "x"
+      }
+    ],
+    "data" : [
+      {
+        "level" : 1,
+        "cost" : 1000,
+        "activate" : 50,
+        "hydro" : 0,
+        "factor" : 1.2
+      },
+      {
+        "level" : 2,
+        "cost" : 1500,
+        "activate" : 80,
+        "hydro" : 0,
+        "factor" : 1.3
+      },
+      {
+        "level" : 3,
+        "cost" : 2500,
+        "activate" : 150,
+        "hydro" : 0,
+        "factor" : 1.4
+      },
+      {
+        "level" : 4,
+        "cost" : 4000,
+        "activate" : 200,
+        "hydro" : 0,
+        "factor" : 1.5
+      },
+      {
+        "level" : 5,
+        "cost" : 7500,
+        "activate" : 250,
+        "hydro" : 0,
+        "factor" : 1.6
+      },
+      {
+        "level" : 6,
+        "cost" : 10000,
+        "activate" : 300,
+        "hydro" : 0,
+        "factor" : 1.7
+      },
+      {
+        "level" : 7,
+        "cost" : 15000,
+        "activate" : 350,
+        "hydro" : 0,
+        "factor" : 1.8
+      },
+      {
+        "level" : 8,
+        "cost" : 20000,
+        "activate" : 500,
+        "hydro" : 0,
+        "factor" : 1.9
+      },
+      {
+        "level" : 9,
+        "cost" : 22500,
+        "activate" : 800,
+        "hydro" : 0,
+        "factor" : 2
+      },
+      {
+        "level" : 10,
+        "cost" : 25000,
+        "activate" : 1000,
+        "hydro" : 0,
+        "factor" : 2.2
+      },
+      {
+        "level" : 11,
+        "cost" : 27500,
+        "activate" : 1200,
+        "hydro" : 0,
+        "factor" : 2.4
+      },
+      {
+        "level" : 12,
+        "cost" : 30000,
+        "activate" : 1400,
+        "hydro" : 0,
+        "factor" : 2.6
+      }
+    ]
+  },
+  {
+    "name" : "Unity",
+    "type" : "support",
+    "unique" : [
+      {
+        "key" : "increase",
+        "info" : "Damage increase per player",
+        "append" : "%"
+      }
+    ],
+    "data" : [
+      {
+        "level" : 1,
+        "cost" : 2500,
+        "activate" : 100,
+        "hydro" : 0,
+        "increase" : 18
+      },
+      {
+        "level" : 2,
+        "cost" : 3750,
+        "activate" : 200,
+        "hydro" : 0,
+        "increase" : 20
+      },
+      {
+        "level" : 3,
+        "cost" : 5500,
+        "activate" : 300,
+        "hydro" : 0,
+        "increase" : 22
+      },
+      {
+        "level" : 4,
+        "cost" : 8250,
+        "activate" : 400,
+        "hydro" : 0,
+        "increase" : 24
+      },
+      {
+        "level" : 5,
+        "cost" : 12500,
+        "activate" : 500,
+        "hydro" : 0,
+        "increase" : 26
+      },
+      {
+        "level" : 6,
+        "cost" : 18000,
+        "activate" : 600,
+        "hydro" : 0,
+        "increase" : 28
+      },
+      {
+        "level" : 7,
+        "cost" : 25000,
+        "activate" : 700,
+        "hydro" : 0,
+        "increase" : 30
+      },
+      {
+        "level" : 8,
+        "cost" : 30000,
+        "activate" : 800,
+        "hydro" : 0,
+        "increase" : 33
+      },
+      {
+        "level" : 9,
+        "cost" : 35000,
+        "activate" : 900,
+        "hydro" : 0,
+        "increase" : 36
+      },
+      {
+        "level" : 10,
+        "cost" : 40000,
+        "activate" : 1000,
+        "hydro" : 0,
+        "increase" : 40
+      },
+      {
+        "level" : 11,
+        "cost" : 45000,
+        "activate" : 1250,
+        "hydro" : 0,
+        "increase" : 45
+      },
+      {
+        "level" : 12,
+        "cost" : 50000,
+        "activate" : 1500,
+        "hydro" : 0,
+        "increase" : 50
+      }
+    ]
+  },
+  {
+    "name" : "Sanctuary",
+    "type" : "support",
+    "data" : [
+      {
+        "level" : 1,
+        "cost" : 5000,
+        "activate" : 0,
+        "hydro" : 2
+      }
+    ]
+  },
+  {
+    "name" : "Stealth",
+    "type" : "support",
+    "unique" : [
+      {
+        "key" : "duration",
+        "info" : "Effect duration",
+        "append" : "s"
+      }
+    ],
+    "data" : [
+      {
+        "level" : 1,
+        "cost" : 1000,
+        "activate" : 50,
+        "hydro" : 0,
+        "duration" : 15
+      },
+      {
+        "level" : 2,
+        "cost" : 1500,
+        "activate" : 60,
+        "hydro" : 0,
+        "duration" : 20
+      },
+      {
+        "level" : 3,
+        "cost" : 2200,
+        "activate" : 72,
+        "hydro" : 0,
+        "duration" : 25
+      },
+      {
+        "level" : 4,
+        "cost" : 3300,
+        "activate" : 86,
+        "hydro" : 0,
+        "duration" : 30
+      },
+      {
+        "level" : 5,
+        "cost" : 5000,
+        "activate" : 103,
+        "hydro" : 0,
+        "duration" : 35
+      },
+      {
+        "level" : 6,
+        "cost" : 7500,
+        "activate" : 123,
+        "hydro" : 0,
+        "duration" : 40
+      },
+      {
+        "level" : 7,
+        "cost" : 10000,
+        "activate" : 147,
+        "hydro" : 0,
+        "duration" : 45
+      },
+      {
+        "level" : 8,
+        "cost" : 15000,
+        "activate" : 176,
+        "hydro" : 0,
+        "duration" : 50
+      },
+      {
+        "level" : 9,
+        "cost" : 20000,
+        "activate" : 211,
+        "hydro" : 0,
+        "duration" : 55
+      },
+      {
+        "level" : 10,
+        "cost" : 22500,
+        "activate" : 300,
+        "hydro" : 0,
+        "duration" : 60
+      },
+      {
+        "level" : 11,
+        "cost" : 25000,
+        "activate" : 500,
+        "hydro" : 0,
+        "duration" : 65
+      },
+      {
+        "level" : 12,
+        "cost" : 27500,
+        "activate" : 700,
+        "hydro" : 0,
+        "duration" : 70
+      }
+    ]
+  },
+  {
+    "name" : "Fortify",
+    "type" : "support",
+    "unique" : [
+      {
+        "key" : "reduction",
+        "info" : "Damage reduction",
+        "append" : "%"
+      }
+    ],
+    "data" : [
+      {
+        "level" : 1,
+        "cost" : 2500,
+        "activate" : 100,
+        "hydro" : 0,
+        "reduction" : 8
+      },
+      {
+        "level" : 2,
+        "cost" : 3750,
+        "activate" : 120,
+        "hydro" : 0,
+        "reduction" : 10
+      },
+      {
+        "level" : 3,
+        "cost" : 5500,
+        "activate" : 144,
+        "hydro" : 0,
+        "reduction" : 12
+      },
+      {
+        "level" : 4,
+        "cost" : 8000,
+        "activate" : 172,
+        "hydro" : 0,
+        "reduction" : 15
+      },
+      {
+        "level" : 5,
+        "cost" : 10000,
+        "activate" : 206,
+        "hydro" : 0,
+        "reduction" : 18
+      },
+      {
+        "level" : 6,
+        "cost" : 12000,
+        "activate" : 247,
+        "hydro" : 0,
+        "reduction" : 22
+      },
+      {
+        "level" : 7,
+        "cost" : 16000,
+        "activate" : 296,
+        "hydro" : 0,
+        "reduction" : 27
+      },
+      {
+        "level" : 8,
+        "cost" : 20000,
+        "activate" : 355,
+        "hydro" : 0,
+        "reduction" : 33
+      },
+      {
+        "level" : 9,
+        "cost" : 25000,
+        "activate" : 426,
+        "hydro" : 0,
+        "reduction" : 40
+      },
+      {
+        "level" : 10,
+        "cost" : 30000,
+        "activate" : 511,
+        "hydro" : 0,
+        "reduction" : 50
+      },
+      {
+        "level" : 11,
+        "cost" : 32500,
+        "activate" : 750,
+        "hydro" : 0,
+        "reduction" : 60
+      },
+      {
+        "level" : 12,
+        "cost" : 35000,
+        "activate" : 1000,
+        "hydro" : 0,
+        "reduction" : 70
+      }
+    ]
+  },
+  {
+    "name" : "Impulse",
+    "type" : "support",
+    "unique" : [
+      {
+        "key" : "duration",
+        "info" : "Effect duration",
+        "append" : "s"
+      }
+    ],
+    "data" : [
+      {
+        "level" : 1,
+        "cost" : 5000,
+        "activate" : 60,
+        "hydro" : 0,
+        "duration" : 3
+      },
+      {
+        "level" : 2,
+        "cost" : 7500,
+        "activate" : 100,
+        "hydro" : 0,
+        "duration" : 3.7
+      },
+      {
+        "level" : 3,
+        "cost" : 10000,
+        "activate" : 150,
+        "hydro" : 0,
+        "duration" : 4.5
+      },
+      {
+        "level" : 4,
+        "cost" : 12500,
+        "activate" : 200,
+        "hydro" : 0,
+        "duration" : 5.2
+      },
+      {
+        "level" : 5,
+        "cost" : 15000,
+        "activate" : 250,
+        "hydro" : 0,
+        "duration" : 6
+      },
+      {
+        "level" : 6,
+        "cost" : 17500,
+        "activate" : 300,
+        "hydro" : 0,
+        "duration" : 6.7
+      },
+      {
+        "level" : 7,
+        "cost" : 20000,
+        "activate" : 350,
+        "hydro" : 0,
+        "duration" : 7.5
+      },
+      {
+        "level" : 8,
+        "cost" : 25000,
+        "activate" : 400,
+        "hydro" : 0,
+        "duration" : 8.6
+      },
+      {
+        "level" : 9,
+        "cost" : 30000,
+        "activate" : 450,
+        "hydro" : 0,
+        "duration" : 9.7
+      },
+      {
+        "level" : 10,
+        "cost" : 35000,
+        "activate" : 500,
+        "hydro" : 0,
+        "duration" : 11.2
+      },
+      {
+        "level" : 11,
+        "cost" : 37500,
+        "activate" : 600,
+        "hydro" : 0,
+        "duration" : 13
+      },
+      {
+        "level" : 12,
+        "cost" : 40000,
+        "activate" : 750,
+        "hydro" : 0,
+        "duration" : 15
+      }
+    ]
+  },
+  {
+    "name" : "Alpha Rocket",
+    "type" : "support",
+    "unique" : [
+      {
+        "key" : "expdmg",
+        "info" : "Explosion damage",
+        "append" : ""
+      },
+      {
+        "key" : "hull",
+        "info" : "Hull strength",
+        "append" : ""
+      }
+    ],
+    "data" : [
+      {
+        "level" : 1,
+        "cost" : 8000,
+        "activate" : 350,
+        "hydro" : 0,
+        "expdmg" : 1500,
+        "hull" : 200
+      },
+      {
+        "level" : 2,
+        "cost" : 8800,
+        "activate" : 400,
+        "hydro" : 0,
+        "expdmg" : 1900,
+        "hull" : 220
+      },
+      {
+        "level" : 3,
+        "cost" : 9600,
+        "activate" : 450,
+        "hydro" : 0,
+        "expdmg" : 2400,
+        "hull" : 240
+      },
+      {
+        "level" : 4,
+        "cost" : 11000,
+        "activate" : 500,
+        "hydro" : 0,
+        "expdmg" : 3000,
+        "hull" : 260
+      },
+      {
+        "level" : 5,
+        "cost" : 12000,
+        "activate" : 600,
+        "hydro" : 0,
+        "expdmg" : 3900,
+        "hull" : 280
+      },
+      {
+        "level" : 6,
+        "cost" : 13000,
+        "activate" : 700,
+        "hydro" : 0,
+        "expdmg" : 5000,
+        "hull" : 300
+      },
+      {
+        "level" : 7,
+        "cost" : 15000,
+        "activate" : 800,
+        "hydro" : 0,
+        "expdmg" : 6200,
+        "hull" : 320
+      },
+      {
+        "level" : 8,
+        "cost" : 20000,
+        "activate" : 900,
+        "hydro" : 0,
+        "expdmg" : 8000,
+        "hull" : 340
+      },
+      {
+        "level" : 9,
+        "cost" : 22500,
+        "activate" : 1000,
+        "hydro" : 0,
+        "expdmg" : 9500,
+        "hull" : 360
+      },
+      {
+        "level" : 10,
+        "cost" : 25000,
+        "activate" : 1200,
+        "hydro" : 0,
+        "expdmg" : 11000,
+        "hull" : 380
+      },
+      {
+        "level" : 11,
+        "cost" : 27500,
+        "activate" : 1400,
+        "hydro" : 0,
+        "expdmg" : 12500,
+        "hull" : 400
+      },
+      {
+        "level" : 12,
+        "cost" : 30000,
+        "activate" : 1600,
+        "hydro" : 0,
+        "expdmg" : 14000,
+        "hull" : 420
+      }
+    ]
+  },
+  {
+    "name" : "Salvage",
+    "type" : "support",
+    "unique" : [
+      {
+        "key" : "repair",
+        "info" : "Hull repaired/ship destroyed",
+        "append" : "%"
+      }
+    ],
+    "data" : [
+      {
+        "level" : 1,
+        "cost" : 5000,
+        "activate" : 0,
+        "hydro" : 2,
+        "repair" : 6
+      },
+      {
+        "level" : 2,
+        "cost" : 7500,
+        "activate" : 0,
+        "hydro" : 5,
+        "repair" : 7
+      },
+      {
+        "level" : 3,
+        "cost" : 10000,
+        "activate" : 0,
+        "hydro" : 8,
+        "repair" : 8
+      },
+      {
+        "level" : 4,
+        "cost" : 12500,
+        "activate" : 0,
+        "hydro" : 11,
+        "repair" : 9
+      },
+      {
+        "level" : 5,
+        "cost" : 15000,
+        "activate" : 0,
+        "hydro" : 14,
+        "repair" : 10
+      },
+      {
+        "level" : 6,
+        "cost" : 17500,
+        "activate" : 0,
+        "hydro" : 17,
+        "repair" : 12
+      },
+      {
+        "level" : 7,
+        "cost" : 20000,
+        "activate" : 0,
+        "hydro" : 20,
+        "repair" : 14
+      },
+      {
+        "level" : 8,
+        "cost" : 22500,
+        "activate" : 0,
+        "hydro" : 23,
+        "repair" : 16
+      },
+      {
+        "level" : 9,
+        "cost" : 25000,
+        "activate" : 0,
+        "hydro" : 26,
+        "repair" : 28
+      },
+      {
+        "level" : 10,
+        "cost" : 27500,
+        "activate" : 0,
+        "hydro" : 29,
+        "repair" : 20
+      },
+      {
+        "level" : 11,
+        "cost" : 30000,
+        "activate" : 0,
+        "hydro" : 30,
+        "repair" : 22
+      },
+      {
+        "level" : 12,
+        "cost" : 32500,
+        "activate" : 0,
+        "hydro" : 32,
+        "repair" : 24
+      }
+    ]
+  },
+  {
+    "name" : "Suppress",
+    "type" : "support",
+    "unique" : [
+      {
+        "key" : "range",
+        "info" : "Effect range",
+        "append" : "AU"
+      },
+      {
+        "key" : "duration",
+        "info" : "Effect duration",
+        "append" : "s"
+      }
+    ],
+    "data" : [
+      {
+        "level" : 1,
+        "cost" : 5000,
+        "activate" : 100,
+        "hydro" : 0,
+        "range" : 200,
+        "duration" : 3
+      },
+      {
+        "level" : 2,
+        "cost" : 7500,
+        "activate" : 120,
+        "hydro" : 0,
+        "range" : 220,
+        "duration" : 4
+      },
+      {
+        "level" : 3,
+        "cost" : 10000,
+        "activate" : 144,
+        "hydro" : 0,
+        "range" : 240,
+        "duration" : 5
+      },
+      {
+        "level" : 4,
+        "cost" : 12500,
+        "activate" : 172,
+        "hydro" : 0,
+        "range" : 260,
+        "duration" : 6
+      },
+      {
+        "level" : 5,
+        "cost" : 15000,
+        "activate" : 206,
+        "hydro" : 0,
+        "range" : 300,
+        "duration" : 7
+      },
+      {
+        "level" : 6,
+        "cost" : 17500,
+        "activate" : 247,
+        "hydro" : 0,
+        "range" : 350,
+        "duration" : 9
+      },
+      {
+        "level" : 7,
+        "cost" : 20000,
+        "activate" : 296,
+        "hydro" : 0,
+        "range" : 400,
+        "duration" : 11
+      },
+      {
+        "level" : 8,
+        "cost" : 22500,
+        "activate" : 355,
+        "hydro" : 0,
+        "range" : 450,
+        "duration" : 13
+      },
+      {
+        "level" : 9,
+        "cost" : 25000,
+        "activate" : 426,
+        "hydro" : 0,
+        "range" : 500,
+        "duration" : 16
+      },
+      {
+        "level" : 10,
+        "cost" : 27500,
+        "activate" : 511,
+        "hydro" : 0,
+        "range" : 550,
+        "duration" : 20
+      },
+      {
+        "level" : 11,
+        "cost" : 30000,
+        "activate" : 750,
+        "hydro" : 0,
+        "range" : 600,
+        "duration" : 22
+      },
+      {
+        "level" : 12,
+        "cost" : 32500,
+        "activate" : 1000,
+        "hydro" : 0,
+        "range" : 650,
+        "duration" : 24
+      }
+    ]
+  },
+  {
+    "name" : "Destiny",
+    "type" : "support",
+    "unique" : [
+      {
+        "key" : "expdmg",
+        "info" : "Area damage",
+        "append" : ""
+      }
+    ],
+    "data" : [
+      {
+        "level" : 1,
+        "cost" : 15000,
+        "activate" : 1000,
+        "hydro" : 0,
+        "expdmg" : 5500
+      },
+      {
+        "level" : 2,
+        "cost" : 16000,
+        "activate" : 1300,
+        "hydro" : 0,
+        "expdmg" : 6500
+      },
+      {
+        "level" : 3,
+        "cost" : 17000,
+        "activate" : 1690,
+        "hydro" : 0,
+        "expdmg" : 7600
+      },
+      {
+        "level" : 4,
+        "cost" : 18000,
+        "activate" : 2197,
+        "hydro" : 0,
+        "expdmg" : 9000
+      },
+      {
+        "level" : 5,
+        "cost" : 20000,
+        "activate" : 2856,
+        "hydro" : 0,
+        "expdmg" : 10500
+      },
+      {
+        "level" : 6,
+        "cost" : 22000,
+        "activate" : 3712,
+        "hydro" : 0,
+        "expdmg" : 12600
+      },
+      {
+        "level" : 7,
+        "cost" : 24000,
+        "activate" : 4825,
+        "hydro" : 0,
+        "expdmg" : 15000
+      },
+      {
+        "level" : 8,
+        "cost" : 26000,
+        "activate" : 6272,
+        "hydro" : 0,
+        "expdmg" : 17500
+      },
+      {
+        "level" : 9,
+        "cost" : 28000,
+        "activate" : 8153,
+        "hydro" : 0,
+        "expdmg" : 20500
+      },
+      {
+        "level" : 10,
+        "cost" : 30000,
+        "activate" : 10598,
+        "hydro" : 0,
+        "expdmg" : 25000
+      },
+      {
+        "level" : 11,
+        "cost" : 32500,
+        "activate" : 12000,
+        "hydro" : 0,
+        "expdmg" : 30000
+      },
+      {
+        "level" : 12,
+        "cost" : 35000,
+        "activate" : 14000,
+        "hydro" : 0,
+        "expdmg" : 35000
+      }
+    ]
+  },
+  {
+    "name" : "Barrier",
+    "type" : "support",
+    "unique" : [
+      {
+        "key" : "duration",
+        "info" : "Effect duration",
+        "append" : "s"
+      },
+      {
+        "key" : "range",
+        "info" : "Effect range",
+        "append" : "AU"
+      }
+    ],
+    "data" : [
+      {
+        "level" : 1,
+        "cost" : 5000,
+        "activate" : 600,
+        "hydro" : 0,
+        "duration" : 30,
+        "range" : 150
+      },
+      {
+        "level" : 2,
+        "cost" : 7500,
+        "activate" : 800,
+        "hydro" : 0,
+        "duration" : 35,
+        "range" : 150
+      },
+      {
+        "level" : 3,
+        "cost" : 10000,
+        "activate" : 1000,
+        "hydro" : 0,
+        "duration" : 40,
+        "range" : 150
+      },
+      {
+        "level" : 4,
+        "cost" : 12500,
+        "activate" : 1250,
+        "hydro" : 0,
+        "duration" : 45,
+        "range" : 150
+      },
+      {
+        "level" : 5,
+        "cost" : 15000,
+        "activate" : 1500,
+        "hydro" : 0,
+        "duration" : 50,
+        "range" : 200
+      },
+      {
+        "level" : 6,
+        "cost" : 17500,
+        "activate" : 1750,
+        "hydro" : 0,
+        "duration" : 55,
+        "range" : 200
+      },
+      {
+        "level" : 7,
+        "cost" : 20000,
+        "activate" : 2000,
+        "hydro" : 0,
+        "duration" : 60,
+        "range" : 200
+      },
+      {
+        "level" : 8,
+        "cost" : 25000,
+        "activate" : 2500,
+        "hydro" : 0,
+        "duration" : 65,
+        "range" : 250
+      },
+      {
+        "level" : 9,
+        "cost" : 30000,
+        "activate" : 3000,
+        "hydro" : 0,
+        "duration" : 70,
+        "range" : 250
+      },
+      {
+        "level" : 10,
+        "cost" : 35000,
+        "activate" : 3500,
+        "hydro" : 0,
+        "duration" : 75,
+        "range" : 300
+      },
+      {
+        "level" : 11,
+        "cost" : 37500,
+        "activate" : 3750,
+        "hydro" : 0,
+        "duration" : 80,
+        "range" : 300
+      },
+      {
+        "level" : 12,
+        "cost" : 40000,
+        "activate" : 4000,
+        "hydro" : 0,
+        "duration" : 85,
+        "range" : 300
+      }
+    ]
+  },
+  {
+    "name" : "Vengeance",
+    "type" : "support",
+    "unique" : [
+      {
+        "key" : "expdmg",
+        "info" : "Explosion damage",
+        "append" : ""
+      },
+      {
+        "key" : "range",
+        "info" : "Effect range",
+        "append" : "AU"
+      }
+    ],
+    "data" : [
+      {
+        "level" : 1,
+        "cost" : 20000,
+        "activate" : 0,
+        "hydro" : 2.4,
+        "expdmg" : 6000,
+        "range" : 100
+      },
+      {
+        "level" : 2,
+        "cost" : 22000,
+        "activate" : 0,
+        "hydro" : 6.2,
+        "expdmg" : 7000,
+        "range" : 120
+      },
+      {
+        "level" : 3,
+        "cost" : 24000,
+        "activate" : 0,
+        "hydro" : 10,
+        "expdmg" : 8000,
+        "range" : 130
+      },
+      {
+        "level" : 4,
+        "cost" : 26000,
+        "activate" : 0,
+        "hydro" : 13.6,
+        "expdmg" : 9000,
+        "range" : 140
+      },
+      {
+        "level" : 5,
+        "cost" : 28000,
+        "activate" : 0,
+        "hydro" : 17.4,
+        "expdmg" : 10000,
+        "range" : 150
+      },
+      {
+        "level" : 6,
+        "cost" : 30000,
+        "activate" : 0,
+        "hydro" : 21.2,
+        "expdmg" : 12000,
+        "range" : 160
+      },
+      {
+        "level" : 7,
+        "cost" : 32000,
+        "activate" : 0,
+        "hydro" : 25,
+        "expdmg" : 14000,
+        "range" : 180
+      },
+      {
+        "level" : 8,
+        "cost" : 34000,
+        "activate" : 0,
+        "hydro" : 28.6,
+        "expdmg" : 16000,
+        "range" : 200
+      },
+      {
+        "level" : 9,
+        "cost" : 36000,
+        "activate" : 0,
+        "hydro" : 32.4,
+        "expdmg" : 18000,
+        "range" : 225
+      },
+      {
+        "level" : 10,
+        "cost" : 38000,
+        "activate" : 0,
+        "hydro" : 36.2,
+        "expdmg" : 20000,
+        "range" : 250
+      },
+      {
+        "level" : 11,
+        "cost" : 40000,
+        "activate" : 0,
+        "hydro" : 38,
+        "expdmg" : 22000,
+        "range" : 275
+      },
+      {
+        "level" : 12,
+        "cost" : 42000,
+        "activate" : 0,
+        "hydro" : 40,
+        "expdmg" : 30000,
+        "range" : 300
+      }
+    ]
+  },
+  {
+    "name" : "Delta Rocket",
+    "type" : "support",
+    "unique" : [
+      {
+        "key" : "expdmg",
+        "info" : "Explosion damage",
+        "append" : ""
+      },
+      {
+        "key" : "hull",
+        "info" : "Hull strength",
+        "append" : ""
+      }
+    ],
+    "data" : [
+      {
+        "level" : 1,
+        "cost" : 20000,
+        "activate" : 500,
+        "hydro" : 0,
+        "expdmg" : 1250,
+        "hull" : 100
+      },
+      {
+        "level" : 2,
+        "cost" : 22000,
+        "activate" : 600,
+        "hydro" : 0,
+        "expdmg" : 1500,
+        "hull" : 120
+      },
+      {
+        "level" : 3,
+        "cost" : 24000,
+        "activate" : 800,
+        "hydro" : 0,
+        "expdmg" : 1900,
+        "hull" : 140
+      },
+      {
+        "level" : 4,
+        "cost" : 26000,
+        "activate" : 1000,
+        "hydro" : 0,
+        "expdmg" : 2300,
+        "hull" : 160
+      },
+      {
+        "level" : 5,
+        "cost" : 28000,
+        "activate" : 1200,
+        "hydro" : 0,
+        "expdmg" : 2850,
+        "hull" : 180
+      },
+      {
+        "level" : 6,
+        "cost" : 30000,
+        "activate" : 1400,
+        "hydro" : 0,
+        "expdmg" : 3500,
+        "hull" : 200
+      },
+      {
+        "level" : 7,
+        "cost" : 35000,
+        "activate" : 1600,
+        "hydro" : 0,
+        "expdmg" : 4300,
+        "hull" : 220
+      },
+      {
+        "level" : 8,
+        "cost" : 40000,
+        "activate" : 1800,
+        "hydro" : 0,
+        "expdmg" : 5300,
+        "hull" : 240
+      },
+      {
+        "level" : 9,
+        "cost" : 45000,
+        "activate" : 2000,
+        "hydro" : 0,
+        "expdmg" : 6500,
+        "hull" : 260
+      },
+      {
+        "level" : 10,
+        "cost" : 50000,
+        "activate" : 2200,
+        "hydro" : 0,
+        "expdmg" : 8000,
+        "hull" : 280
+      },
+      {
+        "level" : 11,
+        "cost" : 52500,
+        "activate" : 2500,
+        "hydro" : 0,
+        "expdmg" : 10000,
+        "hull" : 300
+      },
+      {
+        "level" : 12,
+        "cost" : 55000,
+        "activate" : 2750,
+        "hydro" : 0,
+        "expdmg" : 13000,
+        "hull" : 320
+      }
+    ]
+  },
+  {
+    "name" : "Leap",
+    "type" : "support",
+    "data" : [
+      {
+        "level" : 1,
+        "cost" : 20000,
+        "activate" : 1200,
+        "hydro" : 0
+      },
+      {
+        "level" : 2,
+        "cost" : 22500,
+        "activate" : 1400,
+        "hydro" : 0
+      },
+      {
+        "level" : 3,
+        "cost" : 25000,
+        "activate" : 1600,
+        "hydro" : 0
+      },
+      {
+        "level" : 4,
+        "cost" : 27500,
+        "activate" : 1800,
+        "hydro" : 0
+      },
+      {
+        "level" : 5,
+        "cost" : 30000,
+        "activate" : 2000,
+        "hydro" : 0
+      },
+      {
+        "level" : 6,
+        "cost" : 32500,
+        "activate" : 2200,
+        "hydro" : 0
+      },
+      {
+        "level" : 7,
+        "cost" : 35000,
+        "activate" : 2400,
+        "hydro" : 0
+      },
+      {
+        "level" : 8,
+        "cost" : 37500,
+        "activate" : 2600,
+        "hydro" : 0
+      },
+      {
+        "level" : 9,
+        "cost" : 40000,
+        "activate" : 2800,
+        "hydro" : 0
+      },
+      {
+        "level" : 10,
+        "cost" : 45000,
+        "activate" : 3000,
+        "hydro" : 0
+      }
+    ]
+  },
+  {
+    "name" : "Bond",
+    "type" : "support",
+    "unique" : [
+      {
+        "key" : "duration",
+        "info" : "Effect duration",
+        "append" : "s"
+      },
+      {
+        "key" : "range",
+        "info" : "Effect range",
+        "append" : "AU"
+      }
+    ],
+    "data" : [
+      {
+        "level" : 1,
+        "cost" : 5000,
+        "activate" : 800,
+        "hydro" : 0,
+        "duration" : 15,
+        "range" : 160
+      },
+      {
+        "level" : 2,
+        "cost" : 7500,
+        "activate" : 960,
+        "hydro" : 0,
+        "duration" : 18,
+        "range" : 160
+      },
+      {
+        "level" : 3,
+        "cost" : 10000,
+        "activate" : 1150,
+        "hydro" : 0,
+        "duration" : 22,
+        "range" : 160
+      },
+      {
+        "level" : 4,
+        "cost" : 12500,
+        "activate" : 1350,
+        "hydro" : 0,
+        "duration" : 26,
+        "range" : 160
+      },
+      {
+        "level" : 5,
+        "cost" : 15000,
+        "activate" : 1650,
+        "hydro" : 0,
+        "duration" : 31,
+        "range" : 210
+      },
+      {
+        "level" : 6,
+        "cost" : 17500,
+        "activate" : 2000,
+        "hydro" : 0,
+        "duration" : 37,
+        "range" : 210
+      },
+      {
+        "level" : 7,
+        "cost" : 20000,
+        "activate" : 2400,
+        "hydro" : 0,
+        "duration" : 44,
+        "range" : 210
+      },
+      {
+        "level" : 8,
+        "cost" : 25000,
+        "activate" : 2800,
+        "hydro" : 0,
+        "duration" : 53,
+        "range" : 260
+      },
+      {
+        "level" : 9,
+        "cost" : 30000,
+        "activate" : 3400,
+        "hydro" : 0,
+        "duration" : 64,
+        "range" : 260
+      },
+      {
+        "level" : 10,
+        "cost" : 35000,
+        "activate" : 4100,
+        "hydro" : 0,
+        "duration" : 75,
+        "range" : 310
+      },
+      {
+        "level" : 11,
+        "cost" : 40000,
+        "activate" : 5000,
+        "hydro" : 0,
+        "duration" : 85,
+        "range" : 310
+      },
+      {
+        "level" : 12,
+        "cost" : 45000,
+        "activate" : 6000,
+        "hydro" : 0,
+        "duration" : 95,
+        "range" : 350
+      }
+    ]
+  },
+  {
+    "name" : "Alpha Drone",
+    "type" : "support",
+    "unique" : [
+      {
+        "key" : "dps",
+        "info" : "Damage per second",
+        "append" : ""
+      },
+      {
+        "key" : "hull",
+        "info" : "Hull strength",
+        "append" : ""
+      }
+    ],
+    "data" : [
+      {
+        "level" : 1,
+        "cost" : 40000,
+        "activate" : 1000,
+        "hydro" : 0,
+        "dps" : 140,
+        "hull" : 400
+      },
+      {
+        "level" : 2,
+        "cost" : 42000,
+        "activate" : 1250,
+        "hydro" : 0,
+        "dps" : 140,
+        "hull" : 1200
+      },
+      {
+        "level" : 3,
+        "cost" : 44000,
+        "activate" : 1500,
+        "hydro" : 0,
+        "dps" : 140,
+        "hull" : 2500
+      },
+      {
+        "level" : 4,
+        "cost" : 46000,
+        "activate" : 1750,
+        "hydro" : 0,
+        "dps" : 140,
+        "hull" : 3500
+      },
+      {
+        "level" : 5,
+        "cost" : 48000,
+        "activate" : 2000,
+        "hydro" : 0,
+        "dps" : 140,
+        "hull" : 4500
+      },
+      {
+        "level" : 6,
+        "cost" : 50000,
+        "activate" : 2250,
+        "hydro" : 0,
+        "dps" : 140,
+        "hull" : 5500
+      },
+      {
+        "level" : 7,
+        "cost" : 52000,
+        "activate" : 2500,
+        "hydro" : 0,
+        "dps" : 140,
+        "hull" : 6500
+      },
+      {
+        "level" : 8,
+        "cost" : 54000,
+        "activate" : 2750,
+        "hydro" : 0,
+        "dps" : 140,
+        "hull" : 7500
+      },
+      {
+        "level" : 9,
+        "cost" : 56000,
+        "activate" : 3000,
+        "hydro" : 0,
+        "dps" : 140,
+        "hull" : 8500
+      },
+      {
+        "level" : 10,
+        "cost" : 58000,
+        "activate" : 3250,
+        "hydro" : 0,
+        "dps" : 140,
+        "hull" : 10000
+      },
+      {
+        "level" : 11,
+        "cost" : 60000,
+        "activate" : 3500,
+        "hydro" : 0,
+        "dps" : 140,
+        "hull" : 12000
+      },
+      {
+        "level" : 12,
+        "cost" : 62000,
+        "activate" : 3750,
+        "hydro" : 0,
+        "dps" : 140,
+        "hull" : 14000
+      }
+    ]
+  },
+  {
+    "name" : "Suspend",
+    "type" : "support",
+    "unique" : [
+      {
+        "key" : "range",
+        "info" : "Effect range",
+        "append" : "AU"
+      },
+      {
+        "key" : "factor",
+        "info" : "Time factor",
+        "append" : "x"
+      }
+    ],
+    "data" : [
+      {
+        "level" : 1,
+        "cost" : 40000,
+        "activate" : 500,
+        "hydro" : 0,
+        "range" : 120,
+        "factor" : 0.9
+      },
+      {
+        "level" : 2,
+        "cost" : 42000,
+        "activate" : 600,
+        "hydro" : 0,
+        "range" : 140,
+        "factor" : 0.85
+      },
+      {
+        "level" : 3,
+        "cost" : 44000,
+        "activate" : 720,
+        "hydro" : 0,
+        "range" : 160,
+        "factor" : 0.8
+      },
+      {
+        "level" : 4,
+        "cost" : 46000,
+        "activate" : 850,
+        "hydro" : 0,
+        "range" : 180,
+        "factor" : 0.76
+      },
+      {
+        "level" : 5,
+        "cost" : 48000,
+        "activate" : 1000,
+        "hydro" : 0,
+        "range" : 200,
+        "factor" : 0.73
+      },
+      {
+        "level" : 6,
+        "cost" : 50000,
+        "activate" : 1250,
+        "hydro" : 0,
+        "range" : 220,
+        "factor" : 0.7
+      },
+      {
+        "level" : 7,
+        "cost" : 52000,
+        "activate" : 1500,
+        "hydro" : 0,
+        "range" : 230,
+        "factor" : 0.67
+      },
+      {
+        "level" : 8,
+        "cost" : 54000,
+        "activate" : 1800,
+        "hydro" : 0,
+        "range" : 240,
+        "factor" : 0.65
+      },
+      {
+        "level" : 9,
+        "cost" : 56000,
+        "activate" : 2150,
+        "hydro" : 0,
+        "range" : 250,
+        "factor" : 0.63
+      },
+      {
+        "level" : 10,
+        "cost" : 58000,
+        "activate" : 2500,
+        "hydro" : 0,
+        "range" : 260,
+        "factor" : 0.61
+      },
+      {
+        "level" : 11,
+        "cost" : 60000,
+        "activate" : 2750,
+        "hydro" : 0,
+        "range" : 270,
+        "factor" : 0.59
+      },
+      {
+        "level" : 12,
+        "cost" : 62000,
+        "activate" : 3000,
+        "hydro" : 0,
+        "range" : 280,
+        "factor" : 0.57
+      }
+    ]
+  },
+  {
+    "name" : "Omega Rocket",
+    "type" : "support",
+    "unique" : [
+      {
+        "key" : "expdmg",
+        "info" : "Explosion damage",
+        "append" : ""
+      },
+      {
+        "key" : "ntrdmg",
+        "info" : "Neutralized damage",
+        "append" : ""
+      },
+      {
+        "key" : "hull",
+        "info" : "Hull strength",
+        "append" : ""
+      }
+    ],
+    "data" : [
+      {
+        "level" : 1,
+        "cost" : 40000,
+        "activate" : 2000,
+        "hydro" : 0,
+        "expdmg" : 9000,
+        "ntrdmg" : 900,
+        "hull" : 1000
+      },
+      {
+        "level" : 2,
+        "cost" : 42000,
+        "activate" : 2300,
+        "hydro" : 0,
+        "expdmg" : 10000,
+        "ntrdmg" : 1000,
+        "hull" : 1100
+      },
+      {
+        "level" : 3,
+        "cost" : 44000,
+        "activate" : 2650,
+        "hydro" : 0,
+        "expdmg" : 11000,
+        "ntrdmg" : 1100,
+        "hull" : 1210
+      },
+      {
+        "level" : 4,
+        "cost" : 46000,
+        "activate" : 3050,
+        "hydro" : 0,
+        "expdmg" : 12000,
+        "ntrdmg" : 1200,
+        "hull" : 1330
+      },
+      {
+        "level" : 5,
+        "cost" : 48000,
+        "activate" : 3500,
+        "hydro" : 0,
+        "expdmg" : 13000,
+        "ntrdmg" : 1300,
+        "hull" : 1465
+      },
+      {
+        "level" : 6,
+        "cost" : 50000,
+        "activate" : 4000,
+        "hydro" : 0,
+        "expdmg" : 14500,
+        "ntrdmg" : 1450,
+        "hull" : 1611
+      },
+      {
+        "level" : 7,
+        "cost" : 52000,
+        "activate" : 4650,
+        "hydro" : 0,
+        "expdmg" : 16000,
+        "ntrdmg" : 1600,
+        "hull" : 1770
+      },
+      {
+        "level" : 8,
+        "cost" : 54000,
+        "activate" : 5000,
+        "hydro" : 0,
+        "expdmg" : 17500,
+        "ntrdmg" : 1750,
+        "hull" : 1950
+      },
+      {
+        "level" : 9,
+        "cost" : 56000,
+        "activate" : 5500,
+        "hydro" : 0,
+        "expdmg" : 19250,
+        "ntrdmg" : 1925,
+        "hull" : 2150
+      },
+      {
+        "level" : 10,
+        "cost" : 60000,
+        "activate" : 6000,
+        "hydro" : 0,
+        "expdmg" : 21000,
+        "ntrdmg" : 2100,
+        "hull" : 2350
+      },
+      {
+        "level" : 11,
+        "cost" : 62000,
+        "activate" : 6500,
+        "hydro" : 0,
+        "expdmg" : 23000,
+        "ntrdmg" : 2300,
+        "hull" : 2600
+      },
+      {
+        "level" : 12,
+        "cost" : 64000,
+        "activate" : 70000,
+        "hydro" : 0,
+        "expdmg" : 25000,
+        "ntrdmg" : 2500,
+        "hull" : 2900
+      }
+    ]
   }
 ]
