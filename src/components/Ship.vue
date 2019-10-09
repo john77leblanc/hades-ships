@@ -25,6 +25,8 @@
             <Module :type="'Weapon'" :modules=modules.weapons></Module>
             <Module :type="'Shield'" :modules=modules.shields></Module>
             <Module :type="'Mining'" :modules=modules.mining></Module>
+            <Module :type="'Trade'" :modules=modules.trade></Module>
+            <Module :type="'Support'" :modules=modules.support></Module>
             <div v-for="(mod, index) in support" :key=index>
                 <span>Support</span>
                 <span>{{mod.name}}</span>
@@ -84,47 +86,6 @@ export default {
               hull: 0,
               hydro: 0
           },
-          shipModules: [
-              {
-                  type: 'weapon',
-                  name: 'Battery',
-                  level: 9,
-                  damage: 315,
-                  cost: 20000,
-                  hydro: 16
-              },
-              {
-                  type: 'shield',
-                  name: 'Omega',
-                  level: 7,
-                  strength: 14000,
-                  cost: 20000,
-                  hydro: 0,
-                  activate: 2000
-              },
-              {
-                  type: 'support',
-                  name: 'Sanctuary',
-                  level: 1,
-                  cost: 5000,
-                  hydro: 2
-              },
-              {
-                  type: 'support',
-                  name: 'Salvage',
-                  level: 5,
-                  cost: 15000,
-                  hydro: 14
-              },
-              {
-                  type: 'support',
-                  name: 'EMP',
-                  level: 5,
-                  cost: 2500,
-                  hydro: 0,
-                  activate: 400
-              }
-          ]
       }
   },
   methods: {

@@ -18,7 +18,9 @@ export default {
       modules: {
         weapons: [],
         shields: [],
-        mining: []
+        mining: [],
+        trade: [],
+        support: []
       }
     }
   },
@@ -46,6 +48,18 @@ export default {
       axios.get(serverURL + '/modules?type=mining&name=all').then(res => {
         vm.modules.mining = res.data;
       });
+    },
+    getTradeModules() {
+      let vm = this;
+      axios.get(serverURL + '/modules?type=trade&name=all').then(res => {
+        vm.modules.trade = res.data;
+      });
+    },
+    getSupportModules() {
+      let vm = this;
+      axios.get(serverURL + '/modules?type=support&name=all').then(res => {
+        vm.modules.support = res.data;
+      });
     }
   },
   created() {
@@ -53,6 +67,8 @@ export default {
     this.getWeaponModules();
     this.getShieldModules();
     this.getMiningModules();
+    this.getTradeModules();
+    this.getSupportModules();
   }
 }
 </script>

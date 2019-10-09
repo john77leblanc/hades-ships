@@ -43,15 +43,21 @@ function getModByLevel(mod, level) {
     return mod.find(m => m.level == level);
 }
 
+function checkResponse(response) {
+    return typeof response != 'undefined' ? response : {data:false};
+}
+
 function handleQuery(modules, req) {
     let response = modules;
     if (req.query.name) {
-        response = req.query.name == "all" ? getAllModNames(response) : getModByName(response, req.query.name).data;
-        if (req.query.level) {
-            response = getModByLevel(response, req.query.level);
+        response = req.query.name.toLowerCase() == "all"
+            ? getAllModNames(response) 
+            : checkResponse(getModByName(response, req.query.name)).data;
+        if (response && req.query.level) {
+            response = checkResponse(getModByLevel(response, req.query.level));
         }
     }
-    return response;
+    return response ? response : 'Module not found. Please check your query.';
 }
 
 app.use(express.static(__dirname + "/public/"));
