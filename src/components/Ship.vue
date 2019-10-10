@@ -6,8 +6,15 @@
             <img :src=image height="200" class="d-block mx-auto">
         </div>
         <div :class=classes class="col-sm-9 grid-container">
+            <h4>Ship</h4>
             <div>
-                <select class="ship-type" v-model=ship.type v-on:change=updateShip>
+                <span><b>Ship Type</b></span>
+                <span><b>Level</b></span>
+                <span class="cost"><b>Cost</b></span>
+                <span class="hydro"><b>Hydro</b></span>
+            </div>
+            <div class="mb-3">
+                <select class="ship-type" v-model=ship.type v-on:change=changeShipType>
                     <option 
                         v-for="(ship, index) in shipTypes" 
                         :key=index 
@@ -24,7 +31,8 @@
                 <span class="cost">{{ship.cost}}</span>
                 <span class="hydro">{{ship.hydro}}/100AU</span>
             </div>
-            <div>
+            <h4 v-if="ship.type && ship.level">Modules</h4>
+            <div v-if="ship.type && ship.level">
                 <span><b>Type</b></span>
                 <span><b>Name</b></span>
                 <span class="cost"><b>Cost</b></span>
@@ -35,11 +43,17 @@
                 :key=mod+index 
                 :type=mod
                 :modules=modules[mod]
+                @updateMod=updateMod($event)
             ></Module>
             <div>
+                <span class="cost"><b>{{totalModCost}}</b></span>
+                <span class="hydro"><b>{{totalModHydro}}/AU</b></span>
+            </div>
+            <h4>Production Cost</h4>
+            <div>
                 <span>Total:</span>
-                <span class="cost total-cost">{{totalCost}}</span>
-                <span class="hydro total-hydro">{{totalHydro}}/100AU</span>
+                <span class="cost total-cost">{{totalProductionCost}}</span>
+                <span class="hydro total-hydro">{{totalProductionHydro}}/100AU</span>
             </div>
         </div>
         <button v-on:click.prevent=removeShip>Remove Ship</button>
@@ -69,6 +83,7 @@ export default {
           shipTypes: [],
           shipLevels: [],
           name: 'Tester',
+          modCosts: [],
           totalCost: 0,
           totalHydro: 0,
           ships: [],
@@ -80,6 +95,20 @@ export default {
               hydro: 0,
               modules: []
           },
+      }
+  },
+  computed: {
+      totalModCost() {
+          return this.modCosts.reduce((sum, mod) => sum + mod.cost, 0);
+      },
+      totalModHydro() {
+          return this.modCosts.reduce((sum, mod) => sum + mod.hydro, 0);
+      },
+      totalProductionCost() {
+          return this.totalModCost + this.ship.cost;
+      },
+      totalProductionHydro() {
+          return this.totalModHydro + this.ship.hydro;
       }
   },
   methods: {
@@ -99,6 +128,19 @@ export default {
       },
       getModAmount(mods) {
           return mods.map(m => Array.apply(null, Array(m.amount)).map(() => m.type)).flat();
+      },
+      changeShipType() {
+          this.updateShip();
+      },
+      updateMod(mod) {
+          let found = this.modCosts.length 
+            ? this.modCosts.find(m => m.key == mod.key) 
+            : false;
+          if (found) {
+              Object.assign(found, mod)
+          } else {
+              this.modCosts.push(Object.assign({},mod));
+          }
       },
       updateShip() {
           this.getShipByType();

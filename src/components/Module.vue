@@ -62,6 +62,12 @@ export default {
               axios.get(`${serverURL}/modules?type=${vm.modType}&name=${vm.name}&level=${vm.level}`)
                 .then(res => {
                     vm.data = Object.assign(vm.data, res.data);
+                    let send = {
+                        key : vm.$vnode.key,
+                        cost : vm.data.cost,
+                        hydro : vm.data.hydro
+                    }
+                    vm.$emit('updateMod', send);
                 });
           }
       },
