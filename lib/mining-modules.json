@@ -1,31 +1,5 @@
 [
   {
-    "name" : "Template",
-    "type" : "shield",
-    "unique" : [
-        {
-            "key" : "mirror",
-            "info" : "Damage reflect",
-            "append" : "%"
-        },
-        {
-            "key" : "speed",
-            "info" : "Speed increase",
-            "append" : "%"
-        }
-    ],
-    "data" : [
-        {
-            "level" : 1,
-            "cost" : 100,
-            "activate" : 100,
-            "hydro" : 0,
-            "strength" : 100,
-            "mirror" : 10
-        }
-    ]
-  },
-  {
     "name" : "Mining Boost",
     "type" : "mining",
     "unique" : [

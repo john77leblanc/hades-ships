@@ -16,8 +16,8 @@ export default {
     return {
       ships: [],
       modules: {
-        weapons: [],
-        shields: [],
+        weapon: [],
+        shield: [],
         mining: [],
         trade: [],
         support: []
@@ -31,44 +31,20 @@ export default {
         vm.ships = res.data;
       });
     },
-    getWeaponModules() {
+    getModules(type) {
       let vm = this;
-      axios.get(serverURL + '/modules?type=weapon&name=all').then(res => {
-        vm.modules.weapons = res.data;
-      });
-    },
-    getShieldModules() {
-      let vm = this;
-      axios.get(serverURL + '/modules?type=shield&name=all').then(res => {
-        vm.modules.shields = res.data;
-      });
-    },
-    getMiningModules() {
-      let vm = this;
-      axios.get(serverURL + '/modules?type=mining&name=all').then(res => {
-        vm.modules.mining = res.data;
-      });
-    },
-    getTradeModules() {
-      let vm = this;
-      axios.get(serverURL + '/modules?type=trade&name=all').then(res => {
-        vm.modules.trade = res.data;
-      });
-    },
-    getSupportModules() {
-      let vm = this;
-      axios.get(serverURL + '/modules?type=support&name=all').then(res => {
-        vm.modules.support = res.data;
+      axios.get(`${serverURL}/modules?type=${type}&name=all`).then(res => {
+        vm.modules[type] = res.data
       });
     }
   },
   created() {
     this.getShips();
-    this.getWeaponModules();
-    this.getShieldModules();
-    this.getMiningModules();
-    this.getTradeModules();
-    this.getSupportModules();
+    this.getModules('weapon');
+    this.getModules('shield');
+    this.getModules('mining');
+    this.getModules('trade');
+    this.getModules('support');
   }
 }
 </script>

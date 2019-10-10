@@ -3,15 +3,23 @@
     <input v-model=name class="bg-dark text-white border-left-0 border-top-0 border-right-0 border-bottom-1 ship-name" />
     <div class="row mt-3">
         <div class="col-sm-3">
-            <img v-if=image :src=image height="200" class="d-block mx-auto">
+            <img :src=image height="200" class="d-block mx-auto">
         </div>
         <div :class=classes class="col-sm-9 grid-container">
             <div>
-                <select name="ship" id="" class="ship-type" v-model=ship.type>
-                    <option v-for="(ship, index) in shipTypes" :key=index :value=ship>{{ship}}</option>
+                <select class="ship-type" v-model=ship.type v-on:change=updateShip>
+                    <option 
+                        v-for="(ship, index) in shipTypes" 
+                        :key=index 
+                        :value=ship
+                    >{{ship}}</option>
                 </select>
-                <select name="level" id="" class="ship-type" v-model=ship.level>
-                    <option v-for="(level, index) in shipLevels" :key=index :value=level>{{level}}</option>
+                <select v-if=ship.type class="ship-type" v-model=ship.level v-on:change=updateShip>
+                    <option 
+                        v-for="(level, index) in shipLevels" 
+                        :key=index 
+                        :value=level
+                    >{{level}}</option>
                 </select>
                 <span class="cost">{{ship.cost}}</span>
                 <span class="hydro">{{ship.hydro}}/100AU</span>
@@ -22,17 +30,12 @@
                 <span class="cost"><b>Cost</b></span>
                 <span class="hydro"><b>Hydro</b></span>
             </div>
-            <Module :type="'Weapon'" :modules=modules.weapons></Module>
-            <Module :type="'Shield'" :modules=modules.shields></Module>
-            <Module :type="'Mining'" :modules=modules.mining></Module>
-            <Module :type="'Trade'" :modules=modules.trade></Module>
-            <Module :type="'Support'" :modules=modules.support></Module>
-            <div v-for="(mod, index) in support" :key=index>
-                <span>Support</span>
-                <span>{{mod.name}}</span>
-                <span class="cost">{{mod.cost}}</span>
-                <span class="hydro">{{mod.hydro}}/100AU</span>
-            </div>
+            <Module
+                v-for="(mod, index) in modAmount" 
+                :key=mod+index 
+                :type=mod
+                :modules=modules[mod]
+            ></Module>
             <div>
                 <span>Total:</span>
                 <span class="cost total-cost">{{totalCost}}</span>
@@ -62,29 +65,20 @@ export default {
           classes: {
               collapse: false
           },
-          sample: {
-              type: 'Weapon',
-              name: 'Battery',
-              cost: 100,
-              hydro: 20
-          },
           image: '',
           shipTypes: [],
-          shipLevels: [1,2,3,4,5,6],
+          shipLevels: [],
           name: 'Tester',
-          weapon: {},
-          shield: {},
-          support: [],
-          modCost: 0,
-          modHydro: 0,
           totalCost: 0,
           totalHydro: 0,
+          ships: [],
+          modAmount: [],
           ship: {
               type: '',
-              level: 1,
+              level: 0,
               cost: 0,
-              hull: 0,
-              hydro: 0
+              hydro: 0,
+              modules: []
           },
       }
   },
@@ -92,20 +86,31 @@ export default {
       getShipTypes() {
           return this.shipData.map(ship => ship.type);
       },
-      getShipLevels(ship) {
-          return ship.map(data => data.level)
+      getShipByType() {
+        let vm = this;
+        axios.get(`${serverURL}/ships?type=${vm.ship.type}`)
+        .then(res => {
+            vm.ships = res.data;
+            vm.shipLevels = vm.ships.data.map(data => data.level);
+        });
+      },
+      getShipLevels() {
+          this.shipLevels = this.ship.data ? this.ship.data.map(item => item.level) : [];
+      },
+      getModAmount(mods) {
+          return mods.map(m => Array.apply(null, Array(m.amount)).map(() => m.type)).flat();
       },
       updateShip() {
+          this.getShipByType();
           if (this.ship.type && this.ship.level) {
               let vm = this;
-              axios.get(serverURL + `/ships?type=${vm.ship.type}&level=${vm.ship.level}`)
+              axios.get(`${serverURL}/ships?type=${vm.ship.type}&level=${vm.ship.level}`)
                 .then(res => {
-                    Object.assign(vm.ship, res.data);
+                    vm.ship = Object.assign(vm.ship, res.data);
+                    vm.modAmount = vm.getModAmount(vm.ship.modules);
+                    vm.image = require(`../assets/${vm.ship.image}.png`);
                 });
           }
-      },
-      updateShipImage() {
-          this.image = typeof this.ship.image != 'undefined' ? require('../assets/' + this.ship.image + '.png') : '';
       },
       updateTotalCost() {
           this.totalCost = this.ship.cost + this.modCost;
@@ -119,15 +124,6 @@ export default {
       getHydro(mod) {
           return mod.hydro;
       },
-      getModCost() {
-          return this.shipModules.map(this.getCost).reduce((sum, mod)=> {return sum + mod},0);
-      },
-      getModHydro() {
-          return this.shipModules.map(this.getHydro).reduce((sum, mod)=> {return sum + mod},0);
-      },
-      getModByType(type) {
-          return this.shipModules.find(mod=>mod.type==type);
-      },
       collapse() {
           this.classes.collapse = !this.classes.collapse;
       },
@@ -136,19 +132,8 @@ export default {
       }
   },
   created() {
-      this.shipTypes    = this.getShipTypes();
-      this.modCost      = this.getModCost();
-      this.modHydro     = this.getModHydro();
-      this.weapon       = this.getModByType('weapon');
-      this.shield       = this.getModByType('shield');
-      this.support      = this.getModByType('support');
+      this.shipTypes = this.getShipTypes();
   },
-  beforeUpdate() {
-      this.updateShip();
-      this.updateTotalCost();
-      this.updateTotalHydro();
-      this.updateShipImage();
-  }
 }
 </script>
 

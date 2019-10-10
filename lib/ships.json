@@ -1,120 +1,390 @@
 [
-    {
-        "type" : "Battleship",
-        "data" : [
-            {
-                "image" : "Battleship1",
-                "level" : 1,
-                "cost" : 750,
-                "hull" : 4000,
-                "hydro" : 2.8,
-                "supportmod" : 0
-            },
-            {
-                "image" : "Battleship2",
-                "level" : 2,
-                "cost" : 1500,
-                "hull" : 5000,
-                "hydro" : 4.2,
-                "supportmod" : 1
-            },
-            {
-                "image" : "Battleship3",
-                "level" : 3,
-                "cost" : 20000,
-                "hull" : 6000,
-                "hydro" : 12,
-                "supportmod" : 2
-            },
-            {
-                "image" : "Battleship4",
-                "level" : 4,
-                "cost" : 60000,
-                "hull" : 7500,
-                "hydro" : 24,
-                "supportmod" : 3
-            },
-            {
-                "image" : "Battleship5",
-                "level" : 5,
-                "cost" : 120000,
-                "hull" : 9000,
-                "hydro" : 40,
-                "supportmod" : 4
-            },
-            {
-                "image" : "Battleship6",
-                "level" : 6,
-                "cost" : 150000,
-                "hull" : 9500,
-                "hydro" : 44,
-                "supportmod" : 5
-            }
+  {
+    "type" : "Battleship",
+    "unique" : [
+      {
+        "key" : "hull",
+        "info" : "Ship HP",
+        "append" : ""
+      }
+    ],
+    "data" : [
+      {
+        "image" : "Battleship1",
+        "level" : 1,
+        "cost" : 750,
+        "hull" : 4000,
+        "hydro" : 2.8,
+        "modules" : [
+          {
+            "type" : "weapon",
+            "amount" : 1
+          },
+          {
+            "type" : "shield",
+            "amount" : 1
+          },
+          {
+            "type" : "support",
+            "amount" : 0
+          }
         ]
-    },
-    {
-        "type" : "Miner",
-        "data" : [
-            {
-                "level" : 1,
-                "cost" : 500,
-                "hydro" : 1,
-                "capacity" : 50,
-                "sectors" : 1,
-                "minespeed" : 6,
-                "minermod" : 1,
-                "supportmod" : 0
-            },
-            {
-                "level" : 2,
-                "cost" : 1000,
-                "hydro" : 1,
-                "capacity" : 250,
-                "sectors" : 2,
-                "minespeed" : 7.5,
-                "minermod" : 2,
-                "supportmod" : 0
-            },
-            {
-                "level" : 3,
-                "cost" : 10000,
-                "hydro" : 1,
-                "capacity" : 600,
-                "sectors" : 3,
-                "minespeed" : 12,
-                "minermod" : 2,
-                "supportmod" : 1
-            },
-            {
-                "level" : 4,
-                "cost" : 30000,
-                "hydro" : 1,
-                "capacity" : 1200,
-                "sectors" : 4,
-                "minespeed" : 24,
-                "minermod" : 3,
-                "supportmod" : 1
-            },
-            {
-                "level" : 5,
-                "cost" : 60000,
-                "hydro" : 1,
-                "capacity" : 2000,
-                "sectors" : 5,
-                "minespeed" : 60,
-                "minermod" : 4,
-                "supportmod" : 1
-            },
-            {
-                "level" : 6,
-                "cost" : 100000,
-                "hydro" : 1,
-                "capacity" : 2500,
-                "sectors" : 6,
-                "minespeed" : 80,
-                "minermod" : 5,
-                "supportmod" : 1
-            }
+      },
+      {
+        "image" : "Battleship2",
+        "level" : 2,
+        "cost" : 1500,
+        "hull" : 5000,
+        "hydro" : 4.2,
+        "modules" : [
+          {
+            "type" : "weapon",
+            "amount" : 1
+          },
+          {
+            "type" : "shield",
+            "amount" : 1
+          },
+          {
+            "type" : "support",
+            "amount" : 1
+          }
         ]
-    }
+      },
+      {
+        "image" : "Battleship3",
+        "level" : 3,
+        "cost" : 20000,
+        "hull" : 6000,
+        "hydro" : 12,
+        "modules" : [
+          {
+            "type" : "weapon",
+            "amount" : 1
+          },
+          {
+            "type" : "shield",
+            "amount" : 1
+          },
+          {
+            "type" : "support",
+            "amount" : 2
+          }
+        ]
+      },
+      {
+        "image" : "Battleship4",
+        "level" : 4,
+        "cost" : 60000,
+        "hull" : 7500,
+        "hydro" : 24,
+        "modules" : [
+          {
+            "type" : "weapon",
+            "amount" : 1
+          },
+          {
+            "type" : "shield",
+            "amount" : 1
+          },
+          {
+            "type" : "support",
+            "amount" : 3
+          }
+        ]
+      },
+      {
+        "image" : "Battleship5",
+        "level" : 5,
+        "cost" : 120000,
+        "hull" : 9000,
+        "hydro" : 40,
+        "modules" : [
+          {
+            "type" : "weapon",
+            "amount" : 1
+          },
+          {
+            "type" : "shield",
+            "amount" : 1
+          },
+          {
+            "type" : "support",
+            "amount" : 4
+          }
+        ]
+      },
+      {
+        "image" : "Battleship6",
+        "level" : 6,
+        "cost" : 150000,
+        "hull" : 9500,
+        "hydro" : 44,
+        "modules" : [
+          {
+            "type" : "weapon",
+            "amount" : 1
+          },
+          {
+            "type" : "shield",
+            "amount" : 1
+          },
+          {
+            "type" : "support",
+            "amount" : 5
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type" : "Miner",
+    "unique" : [
+      {
+        "key" : "capacity",
+        "info" : "Hydrogen capacity",
+        "append" : "H"
+      },
+      {
+        "key" : "minespeed",
+        "info" : "Miner speed",
+        "append" : "H/s"
+      },
+      {
+        "key" : "sectors",
+        "info" : "Mining sectors",
+        "append" : ""
+      }
+    ],
+    "data" : [
+      {
+        "image" : "Miner1",
+        "level" : 1,
+        "cost" : 500,
+        "hydro" : 1,
+        "capacity" : 50,
+        "sectors" : 1,
+        "minespeed" : 6,
+        "modules" : [
+          {
+            "type" : "mining",
+            "amount" : 1
+          },
+          {
+            "type" : "support",
+            "amount" : 0
+          }
+        ]
+      },
+      {
+        "image" : "Miner2",
+        "level" : 2,
+        "cost" : 1000,
+        "hydro" : 1,
+        "capacity" : 250,
+        "sectors" : 2,
+        "minespeed" : 7.5,
+        "modules" : [
+          {
+            "type" : "mining",
+            "amount" : 2
+          },
+          {
+            "type" : "support",
+            "amount" : 0
+          }
+        ]
+      },
+      {
+        "image" : "Miner3",
+        "level" : 3,
+        "cost" : 10000,
+        "hydro" : 1,
+        "capacity" : 600,
+        "sectors" : 3,
+        "minespeed" : 12,
+        "modules" : [
+          {
+            "type" : "mining",
+            "amount" : 2
+          },
+          {
+            "type" : "support",
+            "amount" : 1
+          }
+        ]
+      },
+      {
+        "image" : "Miner4",
+        "level" : 4,
+        "cost" : 30000,
+        "hydro" : 1,
+        "capacity" : 1200,
+        "sectors" : 4,
+        "minespeed" : 24,
+        "modules" : [
+          {
+            "type" : "mining",
+            "amount" : 3
+          },
+          {
+            "type" : "support",
+            "amount" : 1
+          }
+        ]
+      },
+      {
+        "image" : "Miner5",
+        "level" : 5,
+        "cost" : 60000,
+        "hydro" : 1,
+        "capacity" : 2000,
+        "sectors" : 5,
+        "minespeed" : 60,
+        "modules" : [
+          {
+            "type" : "mining",
+            "amount" : 4
+          },
+          {
+            "type" : "support",
+            "amount" : 1
+          }
+        ]
+      },
+      {
+        "image" : "Miner6",
+        "level" : 6,
+        "cost" : 100000,
+        "hydro" : 1,
+        "capacity" : 2500,
+        "sectors" : 6,
+        "minespeed" : 80,
+        "modules" : [
+          {
+            "type" : "mining",
+            "amount" : 5
+          },
+          {
+            "type" : "support",
+            "amount" : 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type" : "Transport",
+    "unique" : [
+      {
+        "key" : "cargo",
+        "info" : "Cargo capacity",
+        "append" : "T"
+      }
+    ],
+    "data" : [
+      {
+        "image" : "Transport1",
+        "level" : 1,
+        "cost" : 250,
+        "hydro" : 1.8,
+        "cargo" : 1,
+        "modules" : [
+          {
+            "type" : "trade",
+            "amount" : 1
+          },
+          {
+            "type" : "support",
+            "amount" : 0
+          }
+        ]
+      },
+      {
+        "image" : "Transport2",
+        "level" : 2,
+        "cost" : 1000,
+        "hydro" : 2.4,
+        "cargo" : 2,
+        "modules" : [
+          {
+            "type" : "trade",
+            "amount" : 2
+          },
+          {
+            "type" : "support",
+            "amount" : 0
+          }
+        ]
+      },
+      {
+        "image" : "Transport3",
+        "level" : 3,
+        "cost" : 8000,
+        "hydro" : 6,
+        "cargo" : 3,
+        "modules" : [
+          {
+            "type" : "trade",
+            "amount" : 3
+          },
+          {
+            "type" : "support",
+            "amount" : 1
+          }
+        ]
+      },
+      {
+        "image" : "Transport4",
+        "level" : 4,
+        "cost" : 20000,
+        "hydro" : 8,
+        "cargo" : 4,
+        "modules" : [
+          {
+            "type" : "trade",
+            "amount" : 4
+          },
+          {
+            "type" : "support",
+            "amount" : 1
+          }
+        ]
+      },
+      {
+        "image" : "Transport5",
+        "level" : 5,
+        "cost" : 50000,
+        "hydro" : 10,
+        "cargo" : 5,
+        "modules" : [
+          {
+            "type" : "trade",
+            "amount" : 5
+          },
+          {
+            "type" : "support",
+            "amount" : 1
+          }
+        ]
+      },
+      {
+        "image" : "Transport6",
+        "level" : 6,
+        "cost" : 60000,
+        "hydro" : 11,
+        "cargo" : 8,
+        "modules" : [
+          {
+            "type" : "trade",
+            "amount" : 6
+          },
+          {
+            "type" : "support",
+            "amount" : 1
+          }
+        ]
+      }
+    ]
+  }
 ]
