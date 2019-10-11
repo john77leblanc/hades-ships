@@ -83,6 +83,9 @@ export default {
       this.getNames();
       this.getLevels();
       this.getModule();
+  },
+  beforeDestroy() {
+      this.$emit('remove', this.$vnode.key);
   }
 }
 </script>

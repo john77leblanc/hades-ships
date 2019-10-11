@@ -44,6 +44,7 @@
                 :type=mod
                 :modules=modules[mod]
                 @updateMod=updateMod($event)
+                @remove=removeMod($event)
             ></Module>
             <div>
                 <span class="cost"><b>{{totalModCost}}</b></span>
@@ -84,8 +85,6 @@ export default {
           shipLevels: [],
           name: 'Tester',
           modCosts: [],
-          totalCost: 0,
-          totalHydro: 0,
           ships: [],
           modAmount: [],
           ship: {
@@ -142,6 +141,10 @@ export default {
               this.modCosts.push(Object.assign({},mod));
           }
       },
+      removeMod(key) {
+          let index = this.modCosts.map(i => i.key).indexOf(key);
+          if (index > -1) this.modCosts.splice(index, 1);
+      },
       updateShip() {
           this.getShipByType();
           if (this.ship.type && this.ship.level) {
@@ -153,18 +156,6 @@ export default {
                     vm.image = require(`../assets/${vm.ship.image}.png`);
                 });
           }
-      },
-      updateTotalCost() {
-          this.totalCost = this.ship.cost + this.modCost;
-      },
-      updateTotalHydro() {
-          this.totalHydro   = this.ship.hydro + this.modHydro;
-      },
-      getCost(mod) {
-          return mod.cost;
-      },
-      getHydro(mod) {
-          return mod.hydro;
       },
       collapse() {
           this.classes.collapse = !this.classes.collapse;
