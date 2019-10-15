@@ -1,5 +1,5 @@
 <template>
-  <nav class="navbar navbar-expand-sm bg-dark text-light sticky-top">
+  <nav class="navbar navbar-expand-sm bg-dark text-light">
     <h3>{{title}}</h3>
     <ul class="navbar-nav ml-auto">
         <li class="nav-item">
