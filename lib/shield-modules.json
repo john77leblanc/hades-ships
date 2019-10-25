@@ -2,6 +2,7 @@
     {
         "name" : "Alpha Shield",
         "type" : "shield",
+        "image" : "AlphaShield",
         "data" : [
             {
                 "level" : 1,
@@ -43,6 +44,7 @@
     {
         "name" : "Delta Shield",
         "type" : "shield",
+        "image" : "DeltaShield",
         "unique" : [
             {
                 "key" : "speed",
@@ -152,6 +154,7 @@
     {
         "name" : "Passive Shield",
         "type" : "shield",
+        "image" : "PassiveShield",
         "data" : [
             {
                 "level" : 1,
@@ -242,6 +245,7 @@
     {
         "name" : "Omega Shield",
         "type" : "shield",
+        "image" : "OmegaShield",
         "data" : [
             {
                 "level" : 1,
@@ -332,6 +336,7 @@
     {
         "name" : "Mirror Shield",
         "type" : "shield",
+        "image" : "MirrorShield",
         "unique" : [
             {
                 "key" : "mirror",
@@ -439,8 +444,107 @@
         ]
     },
     {
+        "name" : "Blast Shield",
+        "type" : "shield",
+        "image" : "BlastShield",
+        "unique" : [
+            {
+                "key" : "blast",
+                "info" : "Blast Strength",
+                "append" : ""
+            }
+        ],
+        "data" : [
+            {
+                "level" : 1,
+                "cost" : 25000,
+                "hydro" : 0,
+                "activate" : 500,
+                "blast" : 15000
+            },
+            {
+                "level" : 2,
+                "cost" : 28000,
+                "hydro" : 0,
+                "activate" : 600,
+                "blast" : 20000
+            },
+            {
+                "level" : 3,
+                "cost" : 32000,
+                "hydro" : 0,
+                "activate" : 750,
+                "blast" : 25000
+            },
+            {
+                "level" : 4,
+                "cost" : 36000,
+                "hydro" : 0,
+                "activate" : 900,
+                "blast" : 32000
+            },
+            {
+                "level" : 5,
+                "cost" : 40000,
+                "hydro" : 0,
+                "activate" : 1100,
+                "blast" : 40000
+            },
+            {
+                "level" : 6,
+                "cost" : 45000,
+                "hydro" : 0,
+                "activate" : 1350,
+                "blast" : 50000
+            },
+            {
+                "level" : 7,
+                "cost" : 50000,
+                "hydro" : 0,
+                "activate" : 1650,
+                "blast" : 60000
+            },
+            {
+                "level" : 8,
+                "cost" : 55000,
+                "hydro" : 0,
+                "activate" : 2000,
+                "blast" : 70000
+            },
+            {
+                "level" : 9,
+                "cost" : 60000,
+                "hydro" : 0,
+                "activate" : 2500,
+                "blast" : 85000
+            },
+            {
+                "level" : 10,
+                "cost" : 65000,
+                "hydro" : 0,
+                "activate" : 3000,
+                "blast" : 100000
+            },
+            {
+                "level" : 11,
+                "cost" : 70000,
+                "hydro" : 0,
+                "activate" : 3500,
+                "blast" : 120000
+            },
+            {
+                "level" : 12,
+                "cost" : 75000,
+                "hydro" : 0,
+                "activate" : 4000,
+                "blast" : 140000
+            }
+        ]
+    },
+    {
         "name" : "Area Shield",
         "type" : "shield",
+        "image" : "AreaShield",
         "data" : [
             {
                 "level" : 1,

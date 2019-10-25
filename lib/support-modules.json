@@ -2,6 +2,7 @@
   {
     "name" : "EMP",
     "type" : "support",
+    "image" : "Emp",
     "unique" : [
       {
         "key" : "duration",
@@ -99,6 +100,7 @@
   {
     "name" : "Teleport",
     "type" : "support",
+    "image" : "Teleport",
     "unique" : [
       {
         "key" : "range",
@@ -196,6 +198,7 @@
   {
     "name" : "Red Star Life Extender",
     "type" : "support",
+    "image" : "RedStarLifeExtender",
     "unique" : [
       {
         "key" : "extension",
@@ -279,6 +282,7 @@
   {
     "name" : "Remote Repair",
     "type" : "support",
+    "image" : "RemoteRepair",
     "unique" : [
       {
         "key" : "range",
@@ -410,6 +414,7 @@
   {
     "name" : "Timewarp",
     "type" : "support",
+    "image" : "TimeWarp",
     "unique" : [
       {
         "key" : "factor",
@@ -507,6 +512,7 @@
   {
     "name" : "Unity",
     "type" : "support",
+    "image" : "Unity",
     "unique" : [
       {
         "key" : "increase",
@@ -604,6 +610,7 @@
   {
     "name" : "Sanctuary",
     "type" : "support",
+    "image" : "Sanctuary",
     "data" : [
       {
         "level" : 1,
@@ -616,6 +623,7 @@
   {
     "name" : "Stealth",
     "type" : "support",
+    "image" : "Stealth",
     "unique" : [
       {
         "key" : "duration",
@@ -713,6 +721,7 @@
   {
     "name" : "Fortify",
     "type" : "support",
+    "image" : "Fortify",
     "unique" : [
       {
         "key" : "reduction",
@@ -810,6 +819,7 @@
   {
     "name" : "Impulse",
     "type" : "support",
+    "image" : "Impulse",
     "unique" : [
       {
         "key" : "duration",
@@ -907,6 +917,7 @@
   {
     "name" : "Alpha Rocket",
     "type" : "support",
+    "image" : "AlphaRocket",
     "unique" : [
       {
         "key" : "expdmg",
@@ -1021,6 +1032,7 @@
   {
     "name" : "Salvage",
     "type" : "support",
+    "image" : "Salvage",
     "unique" : [
       {
         "key" : "repair",
@@ -1118,6 +1130,7 @@
   {
     "name" : "Suppress",
     "type" : "support",
+    "image" : "Suppress",
     "unique" : [
       {
         "key" : "range",
@@ -1232,6 +1245,7 @@
   {
     "name" : "Destiny",
     "type" : "support",
+    "image" : "Destiny",
     "unique" : [
       {
         "key" : "expdmg",
@@ -1329,6 +1343,7 @@
   {
     "name" : "Barrier",
     "type" : "support",
+    "image" : "Barrier",
     "unique" : [
       {
         "key" : "duration",
@@ -1443,6 +1458,7 @@
   {
     "name" : "Vengeance",
     "type" : "support",
+    "image" : "Vengeance",
     "unique" : [
       {
         "key" : "expdmg",
@@ -1557,6 +1573,7 @@
   {
     "name" : "Delta Rocket",
     "type" : "support",
+    "image" : "DeltaRocket",
     "unique" : [
       {
         "key" : "expdmg",
@@ -1671,6 +1688,7 @@
   {
     "name" : "Leap",
     "type" : "support",
+    "image" : "Leap",
     "data" : [
       {
         "level" : 1,
@@ -1737,6 +1755,7 @@
   {
     "name" : "Bond",
     "type" : "support",
+    "image" : "Bond",
     "unique" : [
       {
         "key" : "duration",
@@ -1851,6 +1870,7 @@
   {
     "name" : "Alpha Drone",
     "type" : "support",
+    "image" : "AlphaDrone",
     "unique" : [
       {
         "key" : "dps",
@@ -1965,6 +1985,7 @@
   {
     "name" : "Suspend",
     "type" : "support",
+    "image" : "Suspend",
     "unique" : [
       {
         "key" : "range",
@@ -2079,6 +2100,7 @@
   {
     "name" : "Omega Rocket",
     "type" : "support",
+    "image" : "OmegaRocket",
     "unique" : [
       {
         "key" : "expdmg",

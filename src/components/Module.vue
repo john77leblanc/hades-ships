@@ -1,6 +1,7 @@
 <template>
-  <div>
+  <div class="mb-2">
     <span>{{modType}}</span>
+    <img :src=image height="25" class="d-block mx-auto" />
     <select v-model=name>
         <option 
             v-for="(name, index) in names" 
@@ -17,14 +18,26 @@
             v-on:change=updateModule
         >{{level}}</option>
     </select>
+    <button class="modal-button" v-if=level @click.prevent=setSelected>Data</button>
     <span v-if=!!data.cost class="cost">{{data.cost}}</span>
     <span v-if=!!data.hydro class="hydro">{{data.hydro}}/100AU</span>
+    <DataPanel
+        v-if=modSelected
+        :classes=classes
+        :selected=selected
+        @closeModal=closeModal()
+    ></DataPanel>
   </div>
 </template>
 
 <script>
+import DataPanel from './FullDataPanel.vue';
+
 export default {
   name: 'Module',
+  components: {
+      DataPanel
+  },
   props: {
     type: String,
     modules: Array
@@ -32,13 +45,18 @@ export default {
   data() {
       return {
           name: '',
-          level: '',
+          image: '',
+          level: 0,
           names: [],
           levels: [],
           data: {
               cost: 0,
               hydro: 0
-          }
+          },
+          classes: {
+              modal: false
+          },
+          selected: {}
       }
   },
   computed: {
@@ -47,9 +65,25 @@ export default {
       },
       modModules() {
           return this.modules;
+      },
+      modSelected() {
+          return !!Object.keys(this.selected).length;
       }
   },
   methods: {
+      setSelected() {
+        this.selected = {
+            type : this.type,
+            name : this.name,
+            level : this.level.toString(),
+            image : this.image
+        };
+        this.classes.modal = true;
+      },
+      closeModal() {
+          this.selected = {};
+          this.classes.modal=false;
+      },
       getNames() {
           this.names = this.modModules.map(m => m.name);
       },
@@ -71,6 +105,15 @@ export default {
                 });
           }
       },
+      getImage() {
+          if (this.modType && this.name) {
+            let vm = this;
+            axios.get(`${serverURL}/modules?type=${vm.modType}&name=${vm.name}&key=image`)
+                .then(res => {
+                    vm.image = require(`../assets/${res.data}.png`);
+                });
+          }
+      },
       updateModule() {
           this.getLevels();
           this.getModule();
@@ -83,6 +126,7 @@ export default {
       this.getNames();
       this.getLevels();
       this.getModule();
+      this.getImage();
   },
   beforeDestroy() {
       this.$emit('remove', this.$vnode.key);
@@ -92,11 +136,11 @@ export default {
 
 <style scoped>
 .cost {
-    grid-column-start: 4;
+    grid-column-start: 6;
 }
 
 .hydro {
-    grid-column-start: 5;
+    grid-column-start: 7;
 }
 
 .cost,

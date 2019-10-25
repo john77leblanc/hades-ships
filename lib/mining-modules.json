@@ -2,6 +2,7 @@
   {
     "name" : "Mining Boost",
     "type" : "mining",
+    "image" : "MiningBoost",
     "unique" : [
         {
             "key" : "speed",
@@ -87,6 +88,7 @@
   {
     "name" : "Hydrogen Bay Extension",
     "type" : "mining",
+    "image" : "HydrogenBayExtension",
     "unique" : [
       {
         "key" : "storage",
@@ -160,6 +162,7 @@
   {
     "name" : "Enrich",
     "type" : "mining",
+    "image" : "Enrich",
     "unique" : [
       {
         "key" : "increase",
@@ -245,6 +248,7 @@
   {
     "name" : "Remote Mining",
     "type" : "mining",
+    "image" : "RemoteMining",
     "unique" : [
       {
         "key" : "speed",
@@ -318,6 +322,7 @@
   {
     "name" : "Hydrogen Upload",
     "type" : "mining",
+    "image" : "HydrogenUpload",
     "unique" : [
       {
         "key" : "upload",
@@ -403,6 +408,7 @@
   {
     "name" : "Mining Unity",
     "type" : "mining",
+    "image" : "MiningUnity",
     "unique" : [
       {
         "key" : "speed",
@@ -476,6 +482,7 @@
   {
     "name" : "Crunch",
     "type" : "mining",
+    "image" : "Crunch",
     "unique" : [
       {
         "key" : "amount",
@@ -561,6 +568,7 @@
   {
     "name" : "Genesis",
     "type" : "mining",
+    "image" : "Genesis",
     "unique" : [
       {
         "key" : "asteroids",
@@ -663,6 +671,7 @@
   {
     "name" : "Hydrogen Rocket",
     "type" : "mining",
+    "image" : "HydrogenRocket",
     "unique" : [
       {
         "key" : "hull",
@@ -765,6 +774,7 @@
   {
     "name" : "Mining Drone",
     "type" : "mining",
+    "image" : "MiningDrone",
     "unique" : [
       {
         "key" : "capacity",

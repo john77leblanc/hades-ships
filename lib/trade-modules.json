@@ -2,6 +2,7 @@
   {
     "name" : "Cargo Bay Extension",
     "type" : "trade",
+    "image" : "CargoBayExtension",
     "unique" : [
         {
             "key" : "cargo",
@@ -99,6 +100,7 @@
   {
     "name" : "Shipment Computer",
     "type" : "trade",
+    "image" : "ShipmentComputer",
     "unique" : [
       {
         "key" : "bonus",
@@ -196,6 +198,7 @@
   {
     "name" : "Trade Boost",
     "type" : "trade",
+    "image" : "TradeBoost",
     "unique" : [
       {
         "key" : "bonus",
@@ -293,6 +296,7 @@
   {
     "name" : "Rush",
     "type" : "trade",
+    "image" : "Rush",
     "unique" : [
       {
         "key" : "speed",
@@ -390,6 +394,7 @@
   {
     "name" : "Trade Burst",
     "type" : "trade",
+    "image" : "TradeBurst",
     "unique" : [
       {
         "key" : "bonus",
@@ -504,6 +509,7 @@
   {
     "name" : "Shipment Drone",
     "type" : "trade",
+    "image" : "ShipmentDrone",
     "unique" : [
       {
         "key" : "cargo",
@@ -618,6 +624,7 @@
   {
     "name" : "Offload",
     "type" : "trade",
+    "image" : "Offload",
     "unique" : [
       {
         "key" : "bonus",
@@ -701,6 +708,7 @@
   {
     "name" : "Shipment Beam",
     "type" : "trade",
+    "image" : "ShipmentBeam",
     "unique" : [
       {
         "key" : "shipments",
@@ -798,6 +806,7 @@
   {
     "name" : "Entrust",
     "type" : "trade",
+    "image" : "Entrust",
     "unique" : [
       {
         "key" : "range",
@@ -895,6 +904,7 @@
   {
     "name" : "Dispatch",
     "type" : "trade",
+    "image" : "Dispatch",
     "unique" : [
       {
         "key" : "time",
@@ -978,6 +988,7 @@
   {
     "name" : "Recall",
     "type" : "trade",
+    "image" : "Recall",
     "data" : [
       {
         "level" : 1,

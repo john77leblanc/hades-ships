@@ -1,6 +1,7 @@
 <template>
   <div class="col-12 card bg-dark text-light">
     <input v-model=name class="bg-dark text-white border-left-0 border-top-0 border-right-0 border-bottom-1 ship-name" />
+    
     <div class="row mt-3">
         <div class="col-sm-3">
             <img :src=image height="200" class="d-block mx-auto">
@@ -34,7 +35,10 @@
             <h4 v-if="ship.type && ship.level">Modules</h4>
             <div v-if="ship.type && ship.level">
                 <span><b>Type</b></span>
+                <span></span>
                 <span><b>Name</b></span>
+                <span><b>Level</b></span>
+                <span><b>Data</b></span>
                 <span class="cost"><b>Cost</b></span>
                 <span class="hydro"><b>Hydro</b></span>
             </div>
@@ -64,6 +68,7 @@
 
 <script>
 import Module from './Module.vue';
+import DataPanel from './FullDataPanel.vue';
 
 export default {
   name: 'Ship',
@@ -83,7 +88,7 @@ export default {
           image: '',
           shipTypes: [],
           shipLevels: [],
-          name: 'Tester',
+          name: 'Battleship',
           modCosts: [],
           ships: [],
           modAmount: [],
@@ -107,7 +112,7 @@ export default {
           return this.totalModCost + this.ship.cost;
       },
       totalProductionHydro() {
-          return this.totalModHydro + this.ship.hydro;
+          return (this.totalModHydro + this.ship.hydro).toFixed(1);
       }
   },
   methods: {
@@ -178,7 +183,7 @@ export default {
 
 .grid-container > div {
     display: grid;
-    grid-template-columns: 20% 20% 20% 20% 20%;
+    grid-template-columns: 10% 10% 20% 20% 10% 15% 15%;
 }
 
 .grid-container .cost,
@@ -187,10 +192,10 @@ export default {
 }
 
 .grid-container .cost {
-    grid-column-start: 4;
+    grid-column-start: 6;
 }
 
 .grid-container .hydro {
-    grid-column-start: 5;
+    grid-column-start: 7;
 }
 </style>

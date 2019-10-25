@@ -2,6 +2,19 @@
     {
         "name" : "Battery",
         "type" : "weapon",
+        "image" : "Battery",
+        "unique" : [
+            {
+                "key" : "dps",
+                "info" : "Damage per second",
+                "append" : ""
+            },
+            {
+                "key" : "targets",
+                "info" : "Targets",
+                "append" : ""
+            }
+        ],
         "data" : [
             {
                 "level" : 1,
@@ -92,6 +105,24 @@
     {
         "name" : "Laser",
         "type" : "weapon",
+        "image" : "Laser",
+        "unique" : [
+            {
+                "key" : "dps",
+                "info" : "Damage per second",
+                "append" : ""
+            },
+            {
+                "key" : "maxdps",
+                "info" : "Max damage per second",
+                "append" : ""
+            },
+            {
+                "key" : "targets",
+                "info" : "Targets",
+                "append" : ""
+            }
+        ],
         "data" : [
             {
                 "level" : 1,
@@ -194,6 +225,19 @@
     {
         "name" : "Mass Battery",
         "type" : "weapon",
+        "image" : "MassBattery",
+        "unique" : [
+            {
+                "key" : "dps",
+                "info" : "Damage per second",
+                "append" : ""
+            },
+            {
+                "key" : "targets",
+                "info" : "Targets",
+                "append" : ""
+            }
+        ],
         "data" : [
             {
                 "level" : 1,
@@ -284,6 +328,24 @@
     {
         "name" : "Dual Laser",
         "type" : "weapon",
+        "image" : "DualLaser",
+        "unique" : [
+            {
+                "key" : "dps",
+                "info" : "Damage per second",
+                "append" : ""
+            },
+            {
+                "key" : "maxdps",
+                "info" : "Max damage per second",
+                "append" : ""
+            },
+            {
+                "key" : "targets",
+                "info" : "Targets",
+                "append" : ""
+            }
+        ],
         "data" : [
             {
                 "level" : 1,
@@ -386,6 +448,29 @@
     {
         "name" : "Barrage",
         "type" : "weapon",
+        "image" : "Barrage",
+        "unique" : [
+            {
+                "key" : "dps",
+                "info" : "Damage per second",
+                "append" : ""
+            },
+            {
+                "key" : "adddps",
+                "info" : "Additional damage per second per enemy",
+                "append" : ""
+            },
+            {
+                "key" : "maxdps",
+                "info" : "Max damage per second",
+                "append" : ""
+            },
+            {
+                "key" : "targets",
+                "info" : "Targets",
+                "append" : ""
+            }
+        ],
         "data" : [
             {
                 "level" : 1,
@@ -500,6 +585,19 @@
     {
         "name" : "Dart Launcher",
         "type" : "weapon",
+        "image" : "DartLauncher",
+        "unique" : [
+            {
+                "key" : "expdmg",
+                "info" : "Explosion damage",
+                "append" : ""
+            },
+            {
+                "key" : "targets",
+                "info" : "Targets",
+                "append" : ""
+            }
+        ],
         "data" : [
             {
                 "level" : 1,
