@@ -1,8 +1,12 @@
 <template>
   <div class="grid-container h-auto w-50 mx-auto" :class=classes>
-    <img :src=selected.image />
-    <h4>{{selected.name}}</h4>
-    <h5>{{selected.type}}</h5>
+    <div>
+      <img :src=selected.image class="d-inline-block"/>
+      <div class="d-inline-block">
+        <h4>{{selected.name}}</h4>
+        <h6>{{selected.type}} module</h6>
+      </div>
+    </div>
     <div>
       <span>Level</span><span>{{data.level}}</span>
     </div>

@@ -1,7 +1,7 @@
 <template>
   <div class="mb-2">
     <span>{{modType}}</span>
-    <img :src=image height="25" class="d-block mx-auto" />
+    <img :src=modImage height="25" class="d-block mx-auto" />
     <select v-model=name>
         <option 
             v-for="(name, index) in names" 
@@ -56,7 +56,7 @@ export default {
           classes: {
               modal: false
           },
-          selected: {}
+          selected: {},
       }
   },
   computed: {
@@ -68,6 +68,9 @@ export default {
       },
       modSelected() {
           return !!Object.keys(this.selected).length;
+      },
+      modImage() {
+          return this.name ? require(`../assets/${this.name.replace(/ /g,'')}.png`) : '';
       }
   },
   methods: {
@@ -76,7 +79,7 @@ export default {
             type : this.type,
             name : this.name,
             level : this.level.toString(),
-            image : this.image
+            image : this.modImage
         };
         this.classes.modal = true;
       },
@@ -105,15 +108,6 @@ export default {
                 });
           }
       },
-      getImage() {
-          if (this.modType && this.name) {
-            let vm = this;
-            axios.get(`${serverURL}/modules?type=${vm.modType}&name=${vm.name}&key=image`)
-                .then(res => {
-                    vm.image = require(`../assets/${res.data}.png`);
-                });
-          }
-      },
       updateModule() {
           this.getLevels();
           this.getModule();
@@ -126,7 +120,6 @@ export default {
       this.getNames();
       this.getLevels();
       this.getModule();
-      this.getImage();
   },
   beforeDestroy() {
       this.$emit('remove', this.$vnode.key);

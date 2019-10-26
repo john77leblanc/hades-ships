@@ -1,13 +1,12 @@
 <template>
   <div class="col-12 card bg-dark text-light">
-    <input v-model=name class="bg-dark text-white border-left-0 border-top-0 border-right-0 border-bottom-1 ship-name" />
-    
     <div class="row mt-3">
         <div class="col-sm-3">
+            <input v-model=name placeholder="Name" class="d-inline-block w-100 bg-dark text-white text-center border-left-0 border-top-0 border-right-0 border-bottom-1 mb-3" />
             <img :src=image height="200" class="d-block mx-auto">
         </div>
         <div :class=classes class="col-sm-9 grid-container">
-            <h4>Ship</h4>
+            <h4>{{shipType}}</h4>
             <div>
                 <span><b>Ship Type</b></span>
                 <span><b>Level</b></span>
@@ -88,7 +87,7 @@ export default {
           image: '',
           shipTypes: [],
           shipLevels: [],
-          name: 'Battleship',
+          name: '',
           modCosts: [],
           ships: [],
           modAmount: [],
@@ -102,6 +101,9 @@ export default {
       }
   },
   computed: {
+      shipType() {
+          return this.ship.type ? this.ship.type : "Select Ship";
+      },
       totalModCost() {
           return this.modCosts.reduce((sum, mod) => sum + mod.cost, 0);
       },
