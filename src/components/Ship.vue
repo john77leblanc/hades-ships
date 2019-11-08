@@ -3,10 +3,17 @@
     <div class="row mt-3">
         <div class="col-sm-3">
             <input v-model=name placeholder="Name" class="d-inline-block w-100 bg-dark text-white text-center border-left-0 border-top-0 border-right-0 border-bottom-1 mb-3" />
-            <img :src=image height="200" class="d-block mx-auto">
+            <div id="ship" :class=ownerClass>
+                <img :src=image height="200" class="d-block mx-auto mb-2">
+            </div>
+            <ul class="owner-tabs">
+                <li v-for="(owner, index) in ownerTypes" :key=index>
+                    <button @click.prevent=setOwner(owner)>{{owner}}</button>
+                </li>
+            </ul>
         </div>
         <div :class=classes class="col-sm-9 grid-container">
-            <h4>{{shipType}}</h4>
+            <h4>{{shipType}} ({{ownerType}})</h4>
             <div>
                 <span><b>Ship Type</b></span>
                 <span><b>Level</b></span>
@@ -67,7 +74,6 @@
 
 <script>
 import Module from './Module.vue';
-import DataPanel from './FullDataPanel.vue';
 
 export default {
   name: 'Ship',
@@ -98,11 +104,20 @@ export default {
               hydro: 0,
               modules: []
           },
+          ownerType: '',
+          ownerTypes: [
+              'Player',
+              'Ally',
+              'Enemy'
+          ]
       }
   },
   computed: {
       shipType() {
           return this.ship.type ? this.ship.type : "Select Ship";
+      },
+      ownerClass() {
+          return this.ownerType.toLowerCase();
       },
       totalModCost() {
           return this.modCosts.reduce((sum, mod) => sum + mod.cost, 0);
@@ -137,6 +152,9 @@ export default {
       },
       changeShipType() {
           this.updateShip();
+      },
+      setOwner(owner) {
+          this.ownerType = owner;
       },
       updateMod(mod) {
           let found = this.modCosts.length 
@@ -173,7 +191,8 @@ export default {
   },
   created() {
       this.shipTypes = this.getShipTypes();
-  },
+      this.ownerType = this.ownerTypes[0];
+  }
 }
 </script>
 
@@ -181,6 +200,18 @@ export default {
 <style scoped>
 .collapse {
     max-height: 0;
+}
+
+#ship.player {
+    filter: sepia(50%) saturate(500%) hue-rotate(159deg) brightness(90%) contrast(100%);
+}
+
+#ship.ally {
+    filter: sepia(50%) saturate(500%) hue-rotate(50deg) brightness(90%) contrast(100%);
+}
+
+#ship.enemy {
+    filter: sepia(90%) saturate(500%) hue-rotate(295deg) brightness(75%) contrast(200%);
 }
 
 .grid-container > div {
@@ -199,5 +230,16 @@ export default {
 
 .grid-container .hydro {
     grid-column-start: 7;
+}
+
+.owner-tabs {
+    display: grid;
+    grid-template-columns: 33% 34% 33%;
+    list-style: none;
+    padding: 0;
+}
+
+.owner-tabs button {
+    width: 100%;
 }
 </style>

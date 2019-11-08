@@ -1,33 +1,40 @@
 <template>
-  <div class="mb-2">
-    <span>{{modType}}</span>
-    <img :src=modImage height="25" class="d-block mx-auto" />
-    <select v-model=name>
-        <option 
-            v-for="(name, index) in names" 
-            :value=name 
-            :key=index
-            v-on:change=updateModule
-        >{{name}}</option>
-    </select>
-    <select v-if=name v-model=level>
-        <option 
-            v-for="(level, index) in levels" 
-            :value=level 
-            :key=index
-            v-on:change=updateModule
-        >{{level}}</option>
-    </select>
-    <button class="modal-button" v-if=level @click.prevent=setSelected>Data</button>
-    <span v-if=!!data.cost class="cost">{{data.cost}}</span>
-    <span v-if=!!data.hydro class="hydro">{{data.hydro}}/100AU</span>
-    <DataPanel
-        v-if=modSelected
-        :classes=classes
-        :selected=selected
-        @closeModal=closeModal()
-    ></DataPanel>
-  </div>
+    <div class="mb-3">
+        <span>{{modType}}</span>
+        <div class="image-holder">
+            <svg width="40" height="35" class="hexagon">
+                <polygon 
+                    points="0,17.5 10,0 30,0 40,17.5 30,35 10,35" 
+                />
+            </svg>
+            <img :src=modImage class="d-block mx-auto" />
+        </div>
+        <select v-model=name>
+            <option 
+                v-for="(name, index) in names" 
+                :value=name 
+                :key=index
+                v-on:change=updateModule
+            >{{name}}</option>
+        </select>
+        <select v-if=name v-model=level>
+            <option 
+                v-for="(level, index) in levels" 
+                :value=level 
+                :key=index
+                v-on:change=updateModule
+            >{{level}}</option>
+        </select>
+        <button class="modal-button" v-if=level @click.prevent=setSelected>Data</button>
+        <span v-if=!!data.cost class="cost">{{data.cost}}</span>
+        <span v-if=!!data.hydro class="hydro">{{data.hydro}}/100AU</span>
+        <DataPanel
+            v-if=modSelected
+            :classes=dataPanelClasses
+            :selected=selected
+            @closeModal=closeModal()
+        ></DataPanel>
+    </div>
 </template>
 
 <script>
@@ -53,7 +60,7 @@ export default {
               cost: 0,
               hydro: 0
           },
-          classes: {
+          dataPanelClasses: {
               modal: false
           },
           selected: {},
@@ -81,11 +88,11 @@ export default {
             level : this.level.toString(),
             image : this.modImage
         };
-        this.classes.modal = true;
+        this.dataPanelClasses.modal = true;
       },
       closeModal() {
           this.selected = {};
-          this.classes.modal=false;
+          this.dataPanelClasses.modal=false;
       },
       getNames() {
           this.names = this.modModules.map(m => m.name);
@@ -128,6 +135,32 @@ export default {
 </script>
 
 <style scoped>
+.image-holder {
+    position: relative;
+}
+
+.hexagon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.hexagon polygon {
+    fill:none;
+    stroke:yellow;
+    stroke-width:1;
+}
+
+.image-holder img {
+    max-height: 20px;
+    max-width: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
 .cost {
     grid-column-start: 6;
 }
