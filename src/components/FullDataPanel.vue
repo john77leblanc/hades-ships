@@ -1,7 +1,7 @@
 <template>
   <div class="grid-container h-auto w-50 mx-auto" :class=classes>
     <div>
-      <img :src=selected.image class="d-inline-block"/>
+      <module-icon :name=selected.name :level=parseInt(selected.level)></module-icon>
       <div class="d-inline-block">
         <h4>{{selected.name}}</h4>
         <h6>{{selected.type}} module</h6>
@@ -27,8 +27,13 @@
 </template>
 
 <script>
+import ModuleIcon from './ModuleIcon.vue';
+
 export default {
   name: 'FullDataPanel',
+  components: {
+    ModuleIcon
+  },
   props: {
     classes: Object,
     selected: Object

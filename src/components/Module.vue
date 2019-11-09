@@ -1,14 +1,15 @@
 <template>
     <div class="mb-3">
         <span>{{modType}}</span>
-        <div class="image-holder">
+        <!-- <div class="image-holder">
             <svg width="40" height="35" class="hexagon">
                 <polygon 
                     points="0,17.5 10,0 30,0 40,17.5 30,35 10,35" 
                 />
             </svg>
             <img :src=modImage class="d-block mx-auto" />
-        </div>
+        </div> -->
+        <module-icon :name=name :level=level></module-icon>
         <select v-model=name>
             <option 
                 v-for="(name, index) in names" 
@@ -38,11 +39,13 @@
 </template>
 
 <script>
+import ModuleIcon from './ModuleIcon.vue';
 import DataPanel from './FullDataPanel.vue';
 
 export default {
   name: 'Module',
   components: {
+      ModuleIcon,
       DataPanel
   },
   props: {
@@ -147,8 +150,8 @@ export default {
 }
 
 .hexagon polygon {
-    fill:none;
-    stroke:yellow;
+    fill: #212a2f;
+    stroke: #58676c;
     stroke-width:1;
 }
 
