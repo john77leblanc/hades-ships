@@ -2,19 +2,25 @@
   <div>
     <h2 v-on:click=collapse>Fleet: {{name}}</h2>
     <div class="row" :class=classes>
-      <Ship v-on:removeShip=removeShip($event) v-for="(ship, index) in ships" :key=index :modules=modules :ship-data=shipData></Ship>
+      <ship-detail 
+        v-on:removeShip=removeShip($event) 
+        v-for="(ship, index) in ships" 
+        :key=index 
+        :modules=modules 
+        :ship-data=shipData
+      ></ship-detail>
     </div>
     <button class="btn btn-primary" v-on:click.prevent=newShip>Add Ship</button>
   </div>
 </template>
 
 <script>
-import Ship from './Ship.vue';
+import ShipDetail from './ShipDetail.vue';
 
 export default {
   name: 'Fleet',
   components: {
-      Ship
+      ShipDetail
   },
   props: {
     shipData: Array,

@@ -1,5 +1,5 @@
 <template>
-    <div class="mb-3">
+    <div class="mb-2">
         <span>{{modType}}</span>
         <!-- <div class="image-holder">
             <svg width="40" height="35" class="hexagon">
@@ -33,7 +33,7 @@
             v-if=modSelected
             :classes=dataPanelClasses
             :selected=selected
-            @closeModal=closeModal()
+            @closeModal=closeModal
         ></DataPanel>
     </div>
 </template>
@@ -111,6 +111,9 @@ export default {
                     vm.data = Object.assign(vm.data, res.data);
                     let send = {
                         key : vm.$vnode.key,
+                        name: vm.name,
+                        level: vm.level,
+                        image: vm.image,
                         cost : vm.data.cost,
                         hydro : vm.data.hydro
                     }

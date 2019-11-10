@@ -1,6 +1,7 @@
 <template>
   <div class="image-holder">
-      <svg width="40" height="35" class="hexagon">
+      <!-- <svg width="40" height="35" class="hexagon"> -->
+        <svg width="100%" viewBox="0 0 40 35" class="hexagon">
           <polygon 
               points="0,17.5 10,0 30,0 40,17.5 30,35 10,35" 
           />
@@ -27,7 +28,7 @@ export default {
           return this.name ? require(`../assets/${this.name.replace(/ /g,'')}.png`) : '';
       },
       modLevel() {
-        return !!this.level ? this.level : '';
+        return this.level ? this.level : '';
       }
   },
   methods: {
@@ -38,9 +39,12 @@ export default {
 
 <style scoped>
 .image-holder {
+    --hex-width: 50px;
+    --hex-height: calc(var(--hex-width) * 1.12);
+
     position: relative;
-    width: 40px;
-    height: 45px;
+    width: var(--hex-width);
+    height: var(--hex-height);
     margin: auto;
 }
 
@@ -58,8 +62,8 @@ export default {
 }
 
 .image-holder img {
-    max-height: 20px;
-    max-width: 20px;
+    max-width: calc(var(--hex-width) * 0.5);
+    max-height: calc(var(--hex-height) * 0.5);
     position: absolute;
     top: 50%;
     left: 50%;
@@ -70,7 +74,7 @@ export default {
   position: absolute;
   right: 0;
   bottom: 0;
-  color: yellow;
+  color: #72a89a;
   text-shadow: 0 0 4px 4px;
 }
 </style>

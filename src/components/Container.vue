@@ -1,5 +1,5 @@
 <template>
-  <div class="container-fluid">
+  <div class="container-fluid fill" :style="`background-image: url(${background})`">
     <Fleet :ship-data=ships :modules=modules></Fleet>
   </div>
 </template>
@@ -14,6 +14,7 @@ export default {
   },
   data() {
     return {
+      background: require(`../assets/background-1.jpg`),
       ships: [],
       modules: {
         weapon: [],
@@ -51,5 +52,10 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-
+.fill {
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+}
 </style>

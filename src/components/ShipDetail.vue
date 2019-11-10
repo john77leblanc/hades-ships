@@ -1,11 +1,32 @@
 <template>
-  <div class="col-12 card bg-dark text-light">
+  <div class="col-12">
+    <ship-brief 
+      :name=name 
+      :modules=ship.modules 
+      :cost=parseInt(totalProductionCost)
+      :hydro=parseInt(totalProductionHydro)
+    >
+      <template v-slot:image>
+        <ship-image
+          :src=image
+          :owner=ownerClass
+          :shipClass="'brief'"
+        ></ship-image>
+      </template>
+    </ship-brief>
+  <div class="col-12 card text-light ship-detail">
     <div class="row mt-3">
         <div class="col-sm-3">
-            <input v-model=name placeholder="Name" class="d-inline-block w-100 bg-dark text-white text-center border-left-0 border-top-0 border-right-0 border-bottom-1 mb-3" />
-            <div id="ship" :class=ownerClass>
-                <img :src=image height="200" class="d-block mx-auto mb-2">
-            </div>
+            <input 
+              v-model=name 
+              placeholder="Name" 
+              class="d-inline-block w-100 text-white text-center mb-3 ship-name" 
+            />
+            <ship-image 
+                :src=image 
+                :owner=ownerClass
+                :shipClass="'detail'"
+            ></ship-image>
             <ul class="owner-tabs">
                 <li v-for="(owner, index) in ownerTypes" :key=index>
                     <button @click.prevent=setOwner(owner)>{{owner}}</button>
@@ -57,6 +78,7 @@
                 @remove=removeMod($event)
             ></Module>
             <div>
+              <span>Subtotal:</span>
                 <span class="cost"><b>{{totalModCost}}</b></span>
                 <span class="hydro"><b>{{totalModHydro}}/AU</b></span>
             </div>
@@ -70,14 +92,19 @@
         <button v-on:click.prevent=removeShip>Remove Ship</button>
     </div>
   </div>
+  </div>
 </template>
 
 <script>
+import ShipBrief from './ShipBrief.vue';
+import ShipImage from './ShipImage.vue';
 import Module from './Module.vue';
 
 export default {
-  name: 'Ship',
+  name: 'ShipDetail',
   components: {
+      ShipBrief,
+      ShipImage,
       Module
   },
   props: {
@@ -94,7 +121,6 @@ export default {
           shipTypes: [],
           shipLevels: [],
           name: '',
-          modCosts: [],
           ships: [],
           modAmount: [],
           ship: {
@@ -102,6 +128,7 @@ export default {
               level: 0,
               cost: 0,
               hydro: 0,
+              modAllowance: [],
               modules: []
           },
           ownerType: '',
@@ -120,10 +147,10 @@ export default {
           return this.ownerType.toLowerCase();
       },
       totalModCost() {
-          return this.modCosts.reduce((sum, mod) => sum + mod.cost, 0);
+          return this.ship.modules.reduce((sum, mod) => sum + mod.cost, 0);
       },
       totalModHydro() {
-          return this.modCosts.reduce((sum, mod) => sum + mod.hydro, 0);
+          return this.ship.modules.reduce((sum, mod) => sum + mod.hydro, 0);
       },
       totalProductionCost() {
           return this.totalModCost + this.ship.cost;
@@ -157,18 +184,18 @@ export default {
           this.ownerType = owner;
       },
       updateMod(mod) {
-          let found = this.modCosts.length 
-            ? this.modCosts.find(m => m.key == mod.key) 
+          let found = this.ship.modules.length 
+            ? this.ship.modules.find(m => m.key == mod.key) 
             : false;
           if (found) {
               Object.assign(found, mod)
           } else {
-              this.modCosts.push(Object.assign({},mod));
+              this.ship.modules.push(Object.assign({},mod));
           }
       },
       removeMod(key) {
-          let index = this.modCosts.map(i => i.key).indexOf(key);
-          if (index > -1) this.modCosts.splice(index, 1);
+          let index = this.ship.modules.map(i => i.key).indexOf(key);
+          if (index > -1) this.ship.modules.splice(index, 1);
       },
       updateShip() {
           this.getShipByType();
@@ -177,7 +204,7 @@ export default {
               axios.get(`${serverURL}/ships?type=${vm.ship.type}&level=${vm.ship.level}`)
                 .then(res => {
                     vm.ship = Object.assign(vm.ship, res.data);
-                    vm.modAmount = vm.getModAmount(vm.ship.modules);
+                    vm.modAmount = vm.getModAmount(vm.ship.modAllowance);
                     vm.image = require(`../assets/${vm.ship.image}.png`);
                 });
           }
@@ -198,25 +225,29 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+:focus {
+  outline: none;
+}
+
+.ship-detail {
+  background-color: rgba(20,20,20,0.6);
+  backdrop-filter: blur(10px);
+}
+
+.ship-name {
+  background-color: transparent;
+  border-width: 0;
+  border-bottom: 2px solid #58676c;
+}
+
 .collapse {
     max-height: 0;
-}
-
-#ship.player {
-    filter: sepia(50%) saturate(500%) hue-rotate(159deg) brightness(90%) contrast(100%);
-}
-
-#ship.ally {
-    filter: sepia(50%) saturate(500%) hue-rotate(50deg) brightness(90%) contrast(100%);
-}
-
-#ship.enemy {
-    filter: sepia(90%) saturate(500%) hue-rotate(295deg) brightness(75%) contrast(200%);
 }
 
 .grid-container > div {
     display: grid;
     grid-template-columns: 10% 10% 20% 20% 10% 15% 15%;
+    align-items: center;
 }
 
 .grid-container .cost,

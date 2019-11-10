@@ -1,5 +1,5 @@
 <template>
-  <div class="grid-container h-auto w-50 mx-auto" :class=classes>
+  <div class="grid-container h-auto w-50 p-3 mx-auto" :class=classes>
     <div>
       <module-icon :name=selected.name :level=parseInt(selected.level)></module-icon>
       <div class="d-inline-block">
@@ -44,9 +44,6 @@ export default {
         data: {}
       }
   },
-  computed: {
-      
-  },
   methods: {
       closeModal() {
         this.$emit('closeModal');
@@ -69,10 +66,6 @@ export default {
   created() {
     this.getUnique();
     this.getData();
-  },
-  updated() {
-    this.getUnique();
-    this.getData();
   }
 }
 </script>
@@ -86,6 +79,8 @@ export default {
   display: block;
   position: fixed;
   background-color: #111111;
+  opacity: 0.9;
+  backdrop-filter: blur(10px);
 }
 
 .grid-container > div {

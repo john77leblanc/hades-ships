@@ -15,7 +15,7 @@
         "cost" : 750,
         "hull" : 4000,
         "hydro" : 2.8,
-        "modules" : [
+        "modAllowance" : [
           {
             "type" : "weapon",
             "amount" : 1
@@ -36,7 +36,7 @@
         "cost" : 1500,
         "hull" : 5000,
         "hydro" : 4.2,
-        "modules" : [
+        "modAllowance" : [
           {
             "type" : "weapon",
             "amount" : 1
@@ -57,7 +57,7 @@
         "cost" : 20000,
         "hull" : 6000,
         "hydro" : 12,
-        "modules" : [
+        "modAllowance" : [
           {
             "type" : "weapon",
             "amount" : 1
@@ -78,7 +78,7 @@
         "cost" : 60000,
         "hull" : 7500,
         "hydro" : 24,
-        "modules" : [
+        "modAllowance" : [
           {
             "type" : "weapon",
             "amount" : 1
@@ -99,7 +99,7 @@
         "cost" : 120000,
         "hull" : 9000,
         "hydro" : 40,
-        "modules" : [
+        "modAllowance" : [
           {
             "type" : "weapon",
             "amount" : 1
@@ -120,7 +120,7 @@
         "cost" : 150000,
         "hull" : 9500,
         "hydro" : 44,
-        "modules" : [
+        "modAllowance" : [
           {
             "type" : "weapon",
             "amount" : 1
@@ -165,7 +165,7 @@
         "capacity" : 50,
         "sectors" : 1,
         "minespeed" : 6,
-        "modules" : [
+        "modAllowance" : [
           {
             "type" : "mining",
             "amount" : 1
@@ -184,7 +184,7 @@
         "capacity" : 250,
         "sectors" : 2,
         "minespeed" : 7.5,
-        "modules" : [
+        "modAllowance" : [
           {
             "type" : "mining",
             "amount" : 2
@@ -203,7 +203,7 @@
         "capacity" : 600,
         "sectors" : 3,
         "minespeed" : 12,
-        "modules" : [
+        "modAllowance" : [
           {
             "type" : "mining",
             "amount" : 2
@@ -222,7 +222,7 @@
         "capacity" : 1200,
         "sectors" : 4,
         "minespeed" : 24,
-        "modules" : [
+        "modAllowance" : [
           {
             "type" : "mining",
             "amount" : 3
@@ -241,7 +241,7 @@
         "capacity" : 2000,
         "sectors" : 5,
         "minespeed" : 60,
-        "modules" : [
+        "modAllowance" : [
           {
             "type" : "mining",
             "amount" : 4
@@ -260,7 +260,7 @@
         "capacity" : 2500,
         "sectors" : 6,
         "minespeed" : 80,
-        "modules" : [
+        "modAllowance" : [
           {
             "type" : "mining",
             "amount" : 5
@@ -289,7 +289,7 @@
         "cost" : 250,
         "hydro" : 1.8,
         "cargo" : 1,
-        "modules" : [
+        "modAllowance" : [
           {
             "type" : "trade",
             "amount" : 1
@@ -306,7 +306,7 @@
         "cost" : 1000,
         "hydro" : 2.4,
         "cargo" : 2,
-        "modules" : [
+        "modAllowance" : [
           {
             "type" : "trade",
             "amount" : 2
@@ -323,7 +323,7 @@
         "cost" : 8000,
         "hydro" : 6,
         "cargo" : 3,
-        "modules" : [
+        "modAllowance" : [
           {
             "type" : "trade",
             "amount" : 3
@@ -340,7 +340,7 @@
         "cost" : 20000,
         "hydro" : 8,
         "cargo" : 4,
-        "modules" : [
+        "modAllowance" : [
           {
             "type" : "trade",
             "amount" : 4
@@ -357,7 +357,7 @@
         "cost" : 50000,
         "hydro" : 10,
         "cargo" : 5,
-        "modules" : [
+        "modAllowance" : [
           {
             "type" : "trade",
             "amount" : 5
@@ -374,7 +374,7 @@
         "cost" : 60000,
         "hydro" : 11,
         "cargo" : 8,
-        "modules" : [
+        "modAllowance" : [
           {
             "type" : "trade",
             "amount" : 6
