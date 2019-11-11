@@ -1,10 +1,9 @@
 <template>
   <div class="image-holder">
-      <!-- <svg width="40" height="35" class="hexagon"> -->
-        <svg width="100%" viewBox="0 0 40 35" class="hexagon">
-          <polygon 
-              points="0,17.5 10,0 30,0 40,17.5 30,35 10,35" 
-          />
+      <svg width="100%" viewBox="0 0 40 35" class="hexagon">
+        <polygon 
+            points="0,17.5 10,0 30,0 40,17.5 30,35 10,35" 
+        />
       </svg>
       <img :src=modImage class="d-block mx-auto" />
       <span class="level">{{modLevel}}</span>
@@ -18,11 +17,6 @@ export default {
     name: String,
     level: Number
   },
-  data() {
-      return {
-          
-      }
-  },
   computed: {
       modImage() {
           return this.name ? require(`../assets/${this.name.replace(/ /g,'')}.png`) : '';
@@ -30,9 +24,6 @@ export default {
       modLevel() {
         return this.level ? this.level : '';
       }
-  },
-  methods: {
-      
   }
 }
 </script>

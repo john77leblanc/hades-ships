@@ -5,6 +5,8 @@
       :modules=ship.modules 
       :cost=parseInt(totalProductionCost)
       :hydro=parseInt(totalProductionHydro)
+      :active=expandCollapseButton
+      @expandCollapse=expandCollapse
     >
       <template v-slot:image>
         <ship-image
@@ -14,7 +16,7 @@
         ></ship-image>
       </template>
     </ship-brief>
-  <div class="col-12 card text-light ship-detail">
+  <div class="col-12 card text-light ship-detail" :class=shipDetailClass>
     <div class="row mt-3">
         <div class="col-sm-3">
             <input 
@@ -117,6 +119,10 @@ export default {
           classes: {
               collapse: false
           },
+          shipDetailClass: {
+            expand: true,
+            collapse: false
+          },
           image: '',
           shipTypes: [],
           shipLevels: [],
@@ -140,6 +146,9 @@ export default {
       }
   },
   computed: {
+      expandCollapseButton() {
+        return this.shipDetailClass.expand ? "Collapse" : "Expand";
+      },
       shipType() {
           return this.ship.type ? this.ship.type : "Select Ship";
       },
@@ -160,6 +169,9 @@ export default {
       }
   },
   methods: {
+      expandCollapse() {
+        this.shipDetailClass.collapse = !(this.shipDetailClass.expand = !this.shipDetailClass.expand);
+      },
       getShipTypes() {
           return this.shipData.map(ship => ship.type);
       },
@@ -232,6 +244,15 @@ export default {
 .ship-detail {
   background-color: rgba(20,20,20,0.6);
   backdrop-filter: blur(10px);
+  overflow: hidden;
+}
+
+.ship-detail.collapse {
+  max-height: 0;
+}
+
+.ship-detail.expand {
+  max-height: 100%;
 }
 
 .ship-name {
