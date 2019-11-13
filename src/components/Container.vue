@@ -1,6 +1,12 @@
 <template>
   <div class="container-fluid fill" :style="`background-image: url(${background})`">
-    <Fleet :ship-data=ships :modules=modules></Fleet>
+    <Fleet 
+      v-for="(ship, index) in ships"
+      :key=index
+      :single-ship-data=ship
+      :ship-data=ships 
+      :modules=modules
+    ></Fleet>
   </div>
 </template>
 
@@ -16,6 +22,7 @@ export default {
     return {
       background: require(`../assets/background-1.jpg`),
       ships: [],
+      shipTypes: [],
       modules: {
         weapon: [],
         shield: [],
@@ -30,7 +37,11 @@ export default {
       let vm = this;
       axios.get(serverURL + '/ships').then(res => {
         vm.ships = res.data;
+        vm.shipTypes = vm.getShipTypes();
       });
+    },
+    getShipTypes() {
+      return this.ships.map(ship => ship.type);
     },
     getModules(type) {
       let vm = this;

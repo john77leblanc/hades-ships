@@ -36,21 +36,13 @@
             </ul>
         </div>
         <div :class=classes class="col-sm-9 grid-container">
-            <h4>{{shipType}} ({{ownerType}})</h4>
+            <h4>{{ship.type}} ({{ownerType}})</h4>
             <div>
-                <span><b>Ship Type</b></span>
                 <span><b>Level</b></span>
                 <span class="cost"><b>Cost</b></span>
                 <span class="hydro"><b>Hydro</b></span>
             </div>
             <div class="mb-3">
-                <select class="ship-type" v-model=ship.type v-on:change=changeShipType>
-                    <option 
-                        v-for="(ship, index) in shipTypes" 
-                        :key=index 
-                        :value=ship
-                    >{{ship}}</option>
-                </select>
                 <select v-if=ship.type class="ship-type" v-model=ship.level v-on:change=updateShip>
                     <option 
                         v-for="(level, index) in shipLevels" 
@@ -111,7 +103,8 @@ export default {
   },
   props: {
       index: Number,
-      shipData: Array,
+      singleShipData: Object,
+      //shipData: Array,
       modules: Object
   },
   data() {
@@ -124,7 +117,6 @@ export default {
             collapse: false
           },
           image: '',
-          shipTypes: [],
           shipLevels: [],
           name: '',
           ships: [],
@@ -149,9 +141,6 @@ export default {
       expandCollapseButton() {
         return this.shipDetailClass.expand ? "Collapse" : "Expand";
       },
-      shipType() {
-          return this.ship.type ? this.ship.type : "Select Ship";
-      },
       ownerClass() {
           return this.ownerType.toLowerCase();
       },
@@ -172,9 +161,6 @@ export default {
       expandCollapse() {
         this.shipDetailClass.collapse = !(this.shipDetailClass.expand = !this.shipDetailClass.expand);
       },
-      getShipTypes() {
-          return this.shipData.map(ship => ship.type);
-      },
       getShipByType() {
         let vm = this;
         axios.get(`${serverURL}/ships?type=${vm.ship.type}`)
@@ -183,14 +169,8 @@ export default {
             vm.shipLevels = vm.ships.data.map(data => data.level);
         });
       },
-      getShipLevels() {
-          this.shipLevels = this.ship.data ? this.ship.data.map(item => item.level) : [];
-      },
       getModAmount(mods) {
           return mods.map(m => Array.apply(null, Array(m.amount)).map(() => m.type)).flat();
-      },
-      changeShipType() {
-          this.updateShip();
       },
       setOwner(owner) {
           this.ownerType = owner;
@@ -229,7 +209,8 @@ export default {
       }
   },
   created() {
-      this.shipTypes = this.getShipTypes();
+      this.ship.type = this.singleShipData.type;
+      this.shipLevels = this.singleShipData.data.map(item => item.level);;
       this.ownerType = this.ownerTypes[0];
   }
 }

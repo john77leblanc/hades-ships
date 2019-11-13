@@ -1,12 +1,13 @@
 <template>
   <div>
-    <h2 v-on:click=collapse>Fleet: {{name}}</h2>
+    <h2 v-on:click=collapse>{{singleShipData.type}}</h2>
     <div class="row" :class=classes>
       <ship-detail 
         v-on:removeShip=removeShip($event) 
         v-for="(ship, index) in ships" 
         :key=index 
-        :modules=modules 
+        :modules=modules
+        :single-ship-data=singleShipData
         :ship-data=shipData
       ></ship-detail>
     </div>
@@ -23,6 +24,7 @@ export default {
       ShipDetail
   },
   props: {
+    singleShipData: Object,
     shipData: Array,
     modules: Object
   },
