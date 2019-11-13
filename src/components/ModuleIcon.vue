@@ -19,7 +19,7 @@ export default {
   },
   computed: {
       modImage() {
-          return this.name ? require(`../assets/${this.name.replace(/ /g,'')}.png`) : '';
+          return this.name ? require(`../assets/images/${this.name.replace(/ /g,'')}.png`) : '';
       },
       modLevel() {
         return this.level ? this.level : '';

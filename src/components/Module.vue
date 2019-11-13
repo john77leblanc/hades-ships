@@ -80,7 +80,7 @@ export default {
           return !!Object.keys(this.selected).length;
       },
       modImage() {
-          return this.name ? require(`../assets/${this.name.replace(/ /g,'')}.png`) : '';
+          return this.name ? require(`../assets/images/${this.name.replace(/ /g,'')}.png`) : '';
       }
   },
   methods: {

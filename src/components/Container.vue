@@ -3,8 +3,7 @@
     <Fleet 
       v-for="(ship, index) in ships"
       :key=index
-      :single-ship-data=ship
-      :ship-data=ships 
+      :ship-data=ship
       :modules=modules
     ></Fleet>
   </div>
@@ -20,7 +19,7 @@ export default {
   },
   data() {
     return {
-      background: require(`../assets/background-1.jpg`),
+      background: require(`../assets/images/background-1.jpg`),
       ships: [],
       shipTypes: [],
       modules: {

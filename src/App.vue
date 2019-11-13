@@ -6,6 +6,7 @@
 </template>
 
 <script>
+import './assets/style.css'
 import VueHeader from './components/VueHeader.vue';
 import Container from './components/Container.vue';
 

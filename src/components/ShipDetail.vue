@@ -16,12 +16,12 @@
         ></ship-image>
       </template>
     </ship-brief>
-  <div class="col-12 card text-light ship-detail" :class=shipDetailClass>
+  <div class="col-12 pb-2 card text-light ship-detail" :class=shipDetailClass>
     <div class="row mt-3">
         <div class="col-sm-3">
             <input 
               v-model=name 
-              placeholder="Name" 
+              placeholder="Ship name" 
               class="d-inline-block w-100 text-white text-center mb-3 ship-name" 
             />
             <ship-image 
@@ -30,8 +30,8 @@
                 :shipClass="'detail'"
             ></ship-image>
             <ul class="owner-tabs">
-                <li v-for="(owner, index) in ownerTypes" :key=index>
-                    <button @click.prevent=setOwner(owner)>{{owner}}</button>
+                <li class="mx-1" v-for="(owner, index) in ownerTypes" :key=index>
+                    <button class="hades-button" @click.prevent=setOwner(owner)>{{owner}}</button>
                 </li>
             </ul>
         </div>
@@ -83,7 +83,7 @@
                 <span class="hydro total-hydro">{{totalProductionHydro}}/100AU</span>
             </div>
         </div>
-        <button v-on:click.prevent=removeShip>Remove Ship</button>
+        <button class="d-block mx-auto hades-button" @click.prevent=removeShip>Remove Ship</button>
     </div>
   </div>
   </div>
@@ -103,8 +103,7 @@ export default {
   },
   props: {
       index: Number,
-      singleShipData: Object,
-      //shipData: Array,
+      shipData: Object,
       modules: Object
   },
   data() {
@@ -197,7 +196,7 @@ export default {
                 .then(res => {
                     vm.ship = Object.assign(vm.ship, res.data);
                     vm.modAmount = vm.getModAmount(vm.ship.modAllowance);
-                    vm.image = require(`../assets/${vm.ship.image}.png`);
+                    vm.image = require(`../assets/images/${vm.ship.image}.png`);
                 });
           }
       },
@@ -209,8 +208,8 @@ export default {
       }
   },
   created() {
-      this.ship.type = this.singleShipData.type;
-      this.shipLevels = this.singleShipData.data.map(item => item.level);;
+      this.ship.type = this.shipData.type;
+      this.shipLevels = this.shipData.data.map(item => item.level);;
       this.ownerType = this.ownerTypes[0];
   }
 }

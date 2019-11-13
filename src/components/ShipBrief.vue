@@ -2,7 +2,11 @@
   <div class="bg-dark text-light p-2 ship-brief">
     <slot name="image"></slot>
     <div>
-      <h5 class="mb-1">White-Mane</h5>
+      <input 
+        v-model=playerName
+        placeholder="Player name"
+        class="d-inline-block text-white player-name"
+      />
       <span><i>{{name}}</i></span>
     </div>
     <div class="modules">
@@ -24,7 +28,7 @@
       </div>
     </div>
     <div>
-      <button @click.prevent=expandCollapse>{{active}}</button>
+      <button class="d-block mx-auto hades-button" @click.prevent=expandCollapse>{{active}}</button>
     </div>
   </div>
 </template>
@@ -36,6 +40,11 @@ export default {
   name: 'ShipBrief',
   components: {
       ModuleIcon
+  },
+  data() {
+    return {
+      playerName: ''
+    }
   },
   props: {
       name: String,
@@ -58,10 +67,18 @@ export default {
   outline: none;
 }
 
+.player-name {
+  font-size: 1.2em;
+  text-align: left;
+  background-color: transparent;
+  border: none;
+}
+
 .ship-brief {
   display: grid;
   grid-template-columns: 8% 17% 50% 15% 10%;
   align-items: center;
+  border-bottom: 1px solid #6f9aaa;
 }
 
 .modules {
@@ -80,16 +97,5 @@ export default {
 
 .details div .amount {
   justify-self: end;
-}
-
-button {
-  display: block;
-  color: #6f9aaa;
-  background-color: #212a2f;
-  border-width: 1px;
-  border-style: solid;
-  border-color: #58676c;
-  border-radius: 10px;
-  margin: auto;
 }
 </style>
