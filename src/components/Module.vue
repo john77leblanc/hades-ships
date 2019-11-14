@@ -1,36 +1,30 @@
 <template>
     <div class="mb-2">
-        <span>{{modType}}</span>
-        <!-- <div class="image-holder">
-            <svg width="40" height="35" class="hexagon">
-                <polygon 
-                    points="0,17.5 10,0 30,0 40,17.5 30,35 10,35" 
-                />
-            </svg>
-            <img :src=modImage class="d-block mx-auto" />
-        </div> -->
-        <module-icon :name=name :level=level></module-icon>
-        <select v-model=name>
-            <option 
-                v-for="(name, index) in names" 
-                :value=name 
-                :key=index
-                v-on:change=updateModule
-            >{{name}}</option>
-        </select>
-        <select v-if=name v-model=level>
-            <option 
-                v-for="(level, index) in levels" 
-                :value=level 
-                :key=index
-                v-on:change=updateModule
-            >{{level}}</option>
-        </select>
-        <button class="modal-button" v-if=level @click.prevent=setSelected>Data</button>
-        <span v-if=!!data.cost class="cost">{{data.cost}}</span>
-        <span v-if=!!data.hydro class="hydro">{{data.hydro}}/100AU</span>
+        <div class="grid-container">
+            <span>{{modType}}</span>
+            <module-icon :name=selected.name :level=selected.level></module-icon>
+            <select v-model=selected.name>
+                <option 
+                    v-for="(name, index) in names" 
+                    :value=name 
+                    :key=index
+                    @change=updateModule
+                >{{name}}</option>
+            </select>
+            <select v-if=selected.name v-model=selected.level>
+                <option 
+                    v-for="(level, index) in levels" 
+                    :value=level 
+                    :key=index
+                    @change=updateModule
+                >{{level}}</option>
+            </select>
+            <button class="hades-button modal-button" v-if=selected.level @click.prevent=toggleModal>Data</button>
+            <span v-if=!!data.cost class="cost">{{data.cost}}</span>
+            <span v-if=!!data.hydro class="hydro">{{data.hydro}}/100AU</span>
+        </div>
         <DataPanel
-            v-if=modSelected
+            v-if="selected.name && selected.level"
             :classes=dataPanelClasses
             :selected=selected
             @closeModal=closeModal
@@ -54,9 +48,6 @@ export default {
   },
   data() {
       return {
-          name: '',
-          image: '',
-          level: 0,
           names: [],
           levels: [],
           data: {
@@ -64,69 +55,74 @@ export default {
               hydro: 0
           },
           dataPanelClasses: {
-              modal: false
+              fullDataPanel: false
           },
-          selected: {},
+          selected: {
+              type: '',
+              name: '',
+              level: 0,
+          },
       }
   },
   computed: {
       modType() {
-        return this.type[0].toUpperCase() + this.type.slice(1);
+        return this.selected.type[0].toUpperCase() + this.selected.type.slice(1);
       },
       modModules() {
           return this.modules;
       },
       modSelected() {
           return !!Object.keys(this.selected).length;
-      },
-      modImage() {
-          return this.name ? require(`../assets/images/${this.name.replace(/ /g,'')}.png`) : '';
       }
   },
   methods: {
       setSelected() {
-        this.selected = {
-            type : this.type,
-            name : this.name,
-            level : this.level.toString(),
-            image : this.modImage
-        };
-        this.dataPanelClasses.modal = true;
+        this.selected = Object.assign(
+            {},
+            {
+                type : this.type,
+                name : this.name,
+                level : this.level.toString(),
+            }
+        );
+        this.dataPanelClasses.fullDataPanel = true;
+      },
+      toggleModal() {
+          this.dataPanelClasses.fullDataPanel = !this.dataPanelClasses.fullDataPanel;
       },
       closeModal() {
-          this.selected = {};
-          this.dataPanelClasses.modal=false;
+          this.dataPanelClasses.fullDataPanel=false;
       },
       getNames() {
           this.names = this.modModules.map(m => m.name);
       },
       getLevels() {
-          this.levels = this.modModules.find(m => m.name == this.name).levels;
+          this.levels = this.modModules.find(m => m.name == this.selected.name).levels;
       },
       getModule() {
-          if (this.name && this.level) {
+          if (this.selected.name && this.selected.level) {
               let vm = this;
-              axios.get(`${serverURL}/modules?type=${vm.modType}&name=${vm.name}&level=${vm.level}`)
+              axios.get(`${serverURL}/modules?type=${vm.selected.type}&name=${vm.selected.name}&level=${vm.selected.level}`)
                 .then(res => {
                     vm.data = Object.assign(vm.data, res.data);
                     let send = {
                         key : vm.$vnode.key,
                         name: vm.name,
                         level: vm.level,
-                        image: vm.image,
                         cost : vm.data.cost,
                         hydro : vm.data.hydro
-                    }
+                    };
                     vm.$emit('updateMod', send);
                 });
           }
       },
       updateModule() {
-          this.getLevels();
-          this.getModule();
+        this.getLevels();
+        this.getModule();
       }
   },
   created() {
+      this.selected.type = this.type;
       this.getNames();
   },
   beforeUpdate() {
@@ -165,6 +161,12 @@ export default {
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 10% 10% 20% 20% 10% 15% 15%;
+    align-items: center;
 }
 
 .cost {

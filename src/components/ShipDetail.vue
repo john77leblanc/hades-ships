@@ -35,14 +35,14 @@
                 </li>
             </ul>
         </div>
-        <div :class=classes class="col-sm-9 grid-container">
+        <div :class=classes class="col-sm-9">
             <h4>{{ship.type}} ({{ownerType}})</h4>
-            <div>
+            <div class="grid-container">
                 <span><b>Level</b></span>
                 <span class="cost"><b>Cost</b></span>
                 <span class="hydro"><b>Hydro</b></span>
             </div>
-            <div class="mb-3">
+            <div class="grid-container mb-3">
                 <select v-if=ship.type class="ship-type" v-model=ship.level v-on:change=updateShip>
                     <option 
                         v-for="(level, index) in shipLevels" 
@@ -54,7 +54,7 @@
                 <span class="hydro">{{ship.hydro}}/100AU</span>
             </div>
             <h4 v-if="ship.type && ship.level">Modules</h4>
-            <div v-if="ship.type && ship.level">
+            <div class="grid-container" v-if="ship.type && ship.level">
                 <span><b>Type</b></span>
                 <span></span>
                 <span><b>Name</b></span>
@@ -71,14 +71,13 @@
                 @updateMod=updateMod($event)
                 @remove=removeMod($event)
             ></Module>
-            <div>
+            <div class="grid-container">
               <span>Subtotal:</span>
-                <span class="cost"><b>{{totalModCost}}</b></span>
-                <span class="hydro"><b>{{totalModHydro}}/AU</b></span>
+                <span class="cost">{{totalModCost}}</span>
+                <span class="hydro">{{totalModHydro}}/100AU</span>
             </div>
-            <h4>Production Cost</h4>
-            <div>
-                <span>Total:</span>
+            <div class="grid-container">
+                <span class="h4">Total:</span>
                 <span class="cost total-cost">{{totalProductionCost}}</span>
                 <span class="hydro total-hydro">{{totalProductionHydro}}/100AU</span>
             </div>
@@ -209,7 +208,7 @@ export default {
   },
   created() {
       this.ship.type = this.shipData.type;
-      this.shipLevels = this.shipData.data.map(item => item.level);;
+      this.shipLevels = this.shipData.data.map(item => item.level);
       this.ownerType = this.ownerTypes[0];
   }
 }
@@ -245,7 +244,7 @@ export default {
     max-height: 0;
 }
 
-.grid-container > div {
+.grid-container {
     display: grid;
     grid-template-columns: 10% 10% 20% 20% 10% 15% 15%;
     align-items: center;

@@ -1,28 +1,35 @@
 <template>
-  <div class="grid-container h-auto w-50 p-3 mx-auto" :class=classes>
-    <div>
-      <module-icon :name=selected.name :level=parseInt(selected.level)></module-icon>
+  <div class="holder p-3" :class=classes>
+    <div class="icon-name pb-2 mb-2">
+      <div class="d-inline-block icon mx-3">
+        <module-icon :name=selected.name :level=parseInt(selected.level)></module-icon>
+      </div>
       <div class="d-inline-block">
         <h4>{{selected.name}}</h4>
-        <h6>{{selected.type}} module</h6>
+        <span>{{selected.type}} module</span>
       </div>
     </div>
-    <div>
-      <span>Level</span><span>{{data.level}}</span>
+    <div class="description">
+      <p>{{description}}</p>
     </div>
-    <div>
-      <span>Cost</span><span>{{data.cost}}</span>
+    <div class="stats">
+      <div>
+        <span>Level</span><span>{{data.level}}</span>
+      </div>
+      <div>
+        <span>Cost</span><span>{{data.cost}}</span>
+      </div>
+      <div>
+        <span>Activate</span><span>{{data.activate}}</span>
+      </div>
+      <div>
+        <span>Hydro</span><span>{{data.hydro}}</span>
+      </div>
+      <div v-for="(u, index) in unique" :key=index>
+        <span>{{u.info}}</span><span>{{data[u.key]}}{{u.append}}</span>
+      </div>
     </div>
-    <div>
-      <span>Activate</span><span>{{data.activate}}</span>
-    </div>
-    <div>
-      <span>Hydro</span><span>{{data.hydro}}</span>
-    </div>
-    <div v-for="(u, index) in unique" :key=index>
-      <span>{{u.info}}</span><span>{{data[u.key]}}{{u.append}}</span>
-    </div>
-    <button @click.prevent=closeModal>Close</button>
+    <button class="hades-button" @click.prevent=closeModal>Close</button>
   </div>
 </template>
 
@@ -41,12 +48,20 @@ export default {
   data() {
       return {
         unique: [],
+        description: '',
         data: {}
       }
   },
   methods: {
       closeModal() {
         this.$emit('closeModal');
+      },
+      getDescription() {
+        let vm = this;
+        axios.get(`${serverURL}/modules?type=${vm.selected.type}&name=${vm.selected.name}&key=description`)
+            .then(res => {
+              vm.description = res.data;
+            });
       },
       getUnique() {
         let vm = this;
@@ -61,31 +76,50 @@ export default {
           .then(res => {
             vm.data = res.data;
           });
+      },
+      updateMod() {
+        this.getUnique();
+        this.getData();
       }
   },
+  watch: {
+    "selected.name" : function() {
+      this.getUnique();
+      this.getDescription();
+      this.getData();
+    },
+    "selected.level" : function() {
+      this.getData();
+    }
+  },
   created() {
-    this.getUnique();
-    this.getData();
+    this.updateMod();
   }
 }
 </script>
 
 <style scoped>
-.grid-container {
+.holder {
   display: none;
 }
 
-.modal {
+.fullDataPanel {
   display: block;
-  position: fixed;
-  background-color: #111111;
-  opacity: 0.9;
+  background-color: rgba(20,20,20,0.4);
   backdrop-filter: blur(10px);
 }
 
-.grid-container > div {
+.icon-name {
+  border-bottom: 1px solid #212a2f;
+}
+
+.icon {
+  justify-self: center;
+}
+
+.stats > div {
   display: grid;
-  grid-template-columns: 50% 50%;
+  grid-template-columns: 20% 80%;
 }
 
 .data {

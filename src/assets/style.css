@@ -1,3 +1,7 @@
+:focus {
+  outline: none !important;
+}
+
 .hades-button {
   color: #6f9aaa;
   background-color: #212a2f;

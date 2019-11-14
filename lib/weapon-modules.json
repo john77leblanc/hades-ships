@@ -1,8 +1,36 @@
 [
     {
+        "name" : "Weak Battery",
+        "type" : "weapon",
+        "image" : "WeakBattery",
+        "description" : "A weak weapon that does damage to a single target at a time.",
+        "unique" : [
+            {
+                "key" : "dps",
+                "info" : "Damage per second",
+                "append" : ""
+            },
+            {
+                "key" : "targets",
+                "info" : "Targets",
+                "append" : ""
+            }
+        ],
+        "data" : [
+            {
+                "level" : 1,
+                "cost" : 0,
+                "hydro" : 0,
+                "dps" : 80,
+                "targets" : 1
+            }
+        ]
+    },
+    {
         "name" : "Battery",
         "type" : "weapon",
         "image" : "Battery",
+        "description" : "Does damage to a single target at a time.",
         "unique" : [
             {
                 "key" : "dps",
@@ -106,6 +134,7 @@
         "name" : "Laser",
         "type" : "weapon",
         "image" : "Laser",
+        "description" : "A powerful weapon that does increasingly higher damage the longer it stays focused on a single target.",
         "unique" : [
             {
                 "key" : "dps",
@@ -226,6 +255,7 @@
         "name" : "Mass Battery",
         "type" : "weapon",
         "image" : "MassBattery",
+        "description" : "Simultaneously fires on multiple enemies within firing range.",
         "unique" : [
             {
                 "key" : "dps",
@@ -329,6 +359,7 @@
         "name" : "Dual Laser",
         "type" : "weapon",
         "image" : "DualLaser",
+        "description" : "Fires a laser beam against up to two enemies within range. Damage ramps up over time if both beams are active.",
         "unique" : [
             {
                 "key" : "dps",
@@ -449,6 +480,7 @@
         "name" : "Barrage",
         "type" : "weapon",
         "image" : "Barrage",
+        "description" : "A battery that does additional damage to its single target when there are more enemy ships in the sector.",
         "unique" : [
             {
                 "key" : "dps",
@@ -586,6 +618,7 @@
         "name" : "Dart Launcher",
         "type" : "weapon",
         "image" : "DartLauncher",
+        "description" : "Launches a DART missile against the targeted enemy ship at regular intervals.\n\nThe missile can be neutralized by any enemy ship using normal targeting rules.\n\nWhen the missile reaches its destination it will apply direct weapon damage to the target ship only, and only if the target ship is still within the impact area.",
         "unique" : [
             {
                 "key" : "expdmg",

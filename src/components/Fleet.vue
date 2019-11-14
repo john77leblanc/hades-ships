@@ -3,8 +3,9 @@
     <div class="row">
       <div class="col-12">
         <div class="row p-2 fleet-name-holder">
-          <h2 v-on:click=collapse class="fleet-name">{{shipData.type}}</h2>
+          <h2 class="fleet-name mb-0">{{shipData.type}}</h2>
           <div class="button-holder">
+            <span class="text-white mx-1 ship-count">{{shipCount}}</span>
             <button class="d-inline-block mx-1 hades-button" @click.prevent=newShip>Add Ship</button>
             <button class="d-inline-block mx-1 hades-button" @click.prevent=collapse>{{active}}</button>
           </div>
@@ -48,6 +49,10 @@ export default {
   computed: {
     active() {
       return this.classes.collapse ? "Expand" : "Collapse";
+    },
+    shipCount() {
+      if (this.ships) return this.ships == 1 ? `${this.ships} ship` : `${this.ships} ships`;
+      else return '';
     }
   },
   methods: {
@@ -76,7 +81,7 @@ export default {
   background-color: rgba(33,47,50,0.5);
   backdrop-filter: blur(10px);
   display: grid;
-  grid-template-columns: 70% 30%;
+  grid-template-columns: 40% 60%;
   align-items: center;
   border-bottom: 1px solid #6f9aaa;
 }
@@ -88,6 +93,26 @@ export default {
 
 .button-holder {
   justify-self: end;
+}
+
+@media only screen and (max-width: 420px) {
+  .fleet-name-holder {
+    grid-template-columns:  100%;
+  }
+
+  .fleet-name {
+    text-align: center;
+  }
+
+  .ship-count {
+    width: 100%;
+    display: block;
+    text-align: center;
+  }
+
+  .button-holder {
+    justify-self: center;
+  }
 }
 
 .collapse {
