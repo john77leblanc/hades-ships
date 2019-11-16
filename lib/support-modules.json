@@ -3,6 +3,7 @@
     "name" : "EMP",
     "type" : "support",
     "image" : "Emp",
+    "description" : "Disables all ships, rockets and Cerberus Stations within the affected area for a short period of time, including the ship that triggered the EMP. Disabled ships do not move or fire, but can still activate Modules.",
     "unique" : [
       {
         "key" : "duration",
@@ -101,6 +102,7 @@
     "name" : "Teleport",
     "type" : "support",
     "image" : "Teleport",
+    "description" : "After the Activation Delay, the ship teleports to the designated target, which must e within teleportation radius. Cannot teleport inside Barrier areas created by enemy ships.",
     "unique" : [
       {
         "key" : "range",
@@ -197,6 +199,7 @@
   },
   {
     "name" : "Red Star Life Extender",
+    "description" : "Adds a small amount of time to a Red Star's life when activated near the star.",
     "type" : "support",
     "image" : "RedStarLifeExtender",
     "unique" : [
@@ -283,6 +286,7 @@
     "name" : "Remote Repair",
     "type" : "support",
     "image" : "RemoteRepair",
+    "description" : "Repairs a constant amount of hitpoints per second, shared among all damaged non-enemy ships within range.",
     "unique" : [
       {
         "key" : "range",
@@ -415,6 +419,7 @@
     "name" : "Time Warp",
     "type" : "support",
     "image" : "TimeWarp",
+    "description" : "Speeds up time in a radius around the ship. Affects travel times, combat and artifact pickup speed.\n\nAn object in range of multiple Time Warps is only affected by the highest level one.",
     "unique" : [
       {
         "key" : "factor",
@@ -513,6 +518,7 @@
     "name" : "Unity",
     "type" : "support",
     "image" : "Unity",
+    "description" : "Increases Damage Per Second for the owner ship when other allied players have ships present in the same sector. The increase is propotional to the number of allied players with ships in the sector.",
     "unique" : [
       {
         "key" : "increase",
@@ -611,6 +617,7 @@
     "name" : "Sanctuary",
     "type" : "support",
     "image" : "Sanctuary",
+    "description" : "When the owner ship is about to be destroyed during combat or Supernova, it jumps back to its home system instead. Any cargo on the ship will be lost.\n\nBattleships that get destroyed in a Red Star with Sanctuary equipped will not be able to return to the same star.",
     "data" : [
       {
         "level" : 1,
@@ -624,6 +631,7 @@
     "name" : "Stealth",
     "type" : "support",
     "image" : "Stealth",
+    "description" : "Activating ship evades enemy ship fire completely. It will not fire on enemies, or be fired on, for the duration of the effect.",
     "unique" : [
       {
         "key" : "duration",
@@ -722,6 +730,7 @@
     "name" : "Fortify",
     "type" : "support",
     "image" : "Fortify",
+    "description" : "Reduces direct weapon damage received. All Cerberus ships in the sector move towards the owner. Enemy ships and bases prefer firing on the owner over all other potential targets.",
     "unique" : [
       {
         "key" : "reduction",
@@ -820,6 +829,7 @@
     "name" : "Impulse",
     "type" : "support",
     "image" : "Impulse",
+    "description" : "Provides the owner a quick boost that helps it travel faster along its current route.",
     "unique" : [
       {
         "key" : "duration",
@@ -918,6 +928,7 @@
     "name" : "Alpha Rocket",
     "type" : "support",
     "image" : "AlphaRocket",
+    "description" : "A fast but weak Rocket that can be launched towards a single fixed target. The Rocket explodes and does Area damage to all enemy ships when it reaches its destination.\n\nEnemy ships can fire on the Rocket using normal targeting rules. No damage is applied if the rocket is destroyed before it reaches its destination.",
     "unique" : [
       {
         "key" : "expdmg",
@@ -1033,6 +1044,7 @@
     "name" : "Salvage",
     "type" : "support",
     "image" : "Salvage",
+    "description" : "Instantly restores a percentage of hull strength each time any ship (other than Cerberus Ghost) is destroyed in the same sector.",
     "unique" : [
       {
         "key" : "repair",
@@ -1131,6 +1143,7 @@
     "name" : "Suppress",
     "type" : "support",
     "image" : "Suppress",
+    "description" : "Prevents a single enemy ship from firing for a small period of time.",
     "unique" : [
       {
         "key" : "range",
@@ -1246,6 +1259,7 @@
     "name" : "Destiny",
     "type" : "support",
     "image" : "Destiny",
+    "description" : "Does massive area damage to all enemy ships in range. Initiator ship instantly jumps to a rangom sector in the star system. After the jump, the ship stays disabled for a short period of time.",
     "unique" : [
       {
         "key" : "expdmg",
@@ -1344,6 +1358,7 @@
     "name" : "Barrier",
     "type" : "support",
     "image" : "Barrier",
+    "description" : "Creates a force field around the ship. Enemy ships and rockets cannot move while inside the force field. Enemy ships cannot use any object inside the effect area as a target for the Teleport module.",
     "unique" : [
       {
         "key" : "duration",
@@ -1459,6 +1474,7 @@
     "name" : "Vengeance",
     "type" : "support",
     "image" : "Vengeance",
+    "description" : "Starts activating automatically when the owner ship drops below the Hull Strength Threshold. Once the Activation Delay passes, and if the owner ship is still not destroyed, a massive explosion will apply Area damage to all enemy ships in range.",
     "unique" : [
       {
         "key" : "expdmg",
@@ -1574,6 +1590,7 @@
     "name" : "Delta Rocket",
     "type" : "support",
     "image" : "DeltaRocket",
+    "description" : "A very fast Rocket that does Area damage to all enemy ships when it reaches its final destination the owner can optionally set a second waypoint after the launch.\n\nEnemy ships can fire on the Rocket using normal targeting rules. No damage is applied if the rocket is destroyed before it reaches its destination.\n\nDoes not work on sectors with Jump Gates on White Stars.",
     "unique" : [
       {
         "key" : "expdmg",
@@ -1689,6 +1706,7 @@
     "name" : "Leap",
     "type" : "support",
     "image" : "Leap",
+    "description" : "The owner ship initiates teleportation to the closest ally ship engaged in combat, anywhere in the current star system. After the activation delay period, and if the targeted ally is still alive, the owner ship will jump to the object closest to the ally ship. After the jump, both the owner ship and the ally ship are disabled for a small period of time.",
     "data" : [
       {
         "level" : 1,
@@ -1756,6 +1774,7 @@
     "name" : "Bond",
     "type" : "support",
     "image" : "Bond",
+    "description" : "Creates a movement link with the targeted enemy ship. While the link is active, the enemy ship is unable to move independently. Any movement from the owner ship will be reflected on the enemy ship, so that the distance between the two ships always remains the same.\n\nThe owner ship will not be affected by a Barrier field activated by the enemy ship.\n\nThe enemy ship can break free from the link earlier by using Bond on the original ship, or a module that causes teleportation.",
     "unique" : [
       {
         "key" : "duration",
@@ -1871,6 +1890,7 @@
     "name" : "Alpha Drone",
     "type" : "support",
     "image" : "AlphaDrone",
+    "description" : "Launches a single combat drone towards a destination anywhere in the Star System. The drone will automatically travel to the destination and stay there until destroyed or the activation timer runs out.\n\nDoes not work on sectors with Jump Gates on White Stars.",
     "unique" : [
       {
         "key" : "dps",
@@ -1986,6 +2006,7 @@
     "name" : "Suspend",
     "type" : "support",
     "image" : "Suspend",
+    "description" : "Slows down time in a large area around the ship. Overrides any effect of Time Warp within the effect area.\n\nAn object in range of multiple Suspend areas is only affected by the highest level one.",
     "unique" : [
       {
         "key" : "range",
@@ -2101,6 +2122,7 @@
     "name" : "Omega Rocket",
     "type" : "support",
     "image" : "OmegaRocket",
+    "description" : "A strong, slow Rocket that can be launched within a limited range and does massive Area damage to all enemy ships when it reaches its destination.\n\nEnemy ships can fire on the Rocket using normal targeting rules. The Rocket still delivers a small amount of Area damage on a smaller radius to enemy ships if neutralized before reaching its destination.",
     "unique" : [
       {
         "key" : "expdmg",

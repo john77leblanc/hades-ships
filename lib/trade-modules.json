@@ -3,6 +3,7 @@
     "name" : "Cargo Bay Extension",
     "type" : "trade",
     "image" : "CargoBayExtension",
+    "description" : "Increases the total storage of the Transport ship, allowing more Shipments or Artifacts to be carried at once.",
     "unique" : [
         {
             "key" : "cargo",
@@ -101,6 +102,7 @@
     "name" : "Shipment Computer",
     "type" : "trade",
     "image" : "ShipmentComputer",
+    "description" : "Automatically picks up shipments from intermediate waypoints, if those shipments' destination matches any of the ship's subsequent waypoints. Automatically picked up shipments add a bonus to their reward.",
     "unique" : [
       {
         "key" : "bonus",
@@ -199,6 +201,7 @@
     "name" : "Trade Boost",
     "type" : "trade",
     "image" : "TradeBoost",
+    "description" : "While active, increases the payout on shipment delivery.",
     "unique" : [
       {
         "key" : "bonus",
@@ -297,6 +300,7 @@
     "name" : "Rush",
     "type" : "trade",
     "image" : "Rush",
+    "description" : "Increases the speed of the owner Transport ship when it carries any shipments destined to the ship's next waypoint. The speed increase is propotional to the number of shipments destined to the next waypoint.",
     "unique" : [
       {
         "key" : "speed",
@@ -395,6 +399,7 @@
     "name" : "Trade Burst",
     "type" : "trade",
     "image" : "TradeBurst",
+    "description" : "Counts shipments delivered during the activation period. After a minimum threshold is met, every new Credits shipment delivered by the owner ship while the module is still active wil yield a bonus reward.",
     "unique" : [
       {
         "key" : "bonus",
@@ -510,6 +515,7 @@
     "name" : "Shipment Drone",
     "type" : "trade",
     "image" : "ShipmentDrone",
+    "description" : "Lunches a drone that will automatically pick up and deliver shipments when possible. The drone can only cross sectors if they are connected with an active Warp Lane.\n\nThe drone loads shipments to a single destination at a time. When it drops off more than one shipment, the entire delivery will yield a credit reward bonus proportional to the numner of additional shipments delivered.",
     "unique" : [
       {
         "key" : "cargo",
@@ -625,6 +631,7 @@
     "name" : "Offload",
     "type" : "trade",
     "image" : "Offload",
+    "description" : "When active, the Transport ship will deliver all of its shipments upon arriving on a Trade Station, regardless of the shipments' actual destination. Shipments not originally destined to the Trade Station will yield a reduced payoff.",
     "unique" : [
       {
         "key" : "bonus",
@@ -709,6 +716,7 @@
     "name" : "Shipment Beam",
     "type" : "trade",
     "image" : "ShipmentBeam",
+    "description" : "Instantly loads the lowest value shipments from any target outpost in the system. Does not work with Artifacts or Relics.",
     "unique" : [
       {
         "key" : "shipments",
@@ -807,6 +815,7 @@
     "name" : "Entrust",
     "type" : "trade",
     "image" : "Entrust",
+    "description" : "Allows the owner transport ship to instantly teleport its cargo to another transport ship in range. Works with Shipments and fully loaded Artifacts and Relics.",
     "unique" : [
       {
         "key" : "range",
@@ -905,6 +914,7 @@
     "name" : "Dispatch",
     "type" : "trade",
     "image" : "Dispatch",
+    "description" : "The Transport ship initiates teleport to the planet with the most items (Shipments, Artifacts or Relics) in the star system. If more than one planets have the same amount of items, the farthest planet is picked.\n\nThe Teleport completes after the preparation time elapses. The preparation time is proportional to the amount of items on the target planet at the time of activation.",
     "unique" : [
       {
         "key" : "time",
@@ -989,6 +999,7 @@
     "name" : "Recall",
     "type" : "trade",
     "image" : "Recall",
+    "description" : "Allows the Transport ship to teleport to any Trade Station in the current star system.",
     "data" : [
       {
         "level" : 1,

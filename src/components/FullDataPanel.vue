@@ -58,6 +58,7 @@ export default {
       },
       getDescription() {
         let vm = this;
+        // eslint-disable-next-line
         axios.get(`${serverURL}/modules?type=${vm.selected.type}&name=${vm.selected.name}&key=description`)
             .then(res => {
               vm.description = res.data;
@@ -65,6 +66,7 @@ export default {
       },
       getUnique() {
         let vm = this;
+        // eslint-disable-next-line
         axios.get(`${serverURL}/modules?type=${vm.selected.type}&name=${vm.selected.name}&key=unique`)
           .then(res => {
             vm.unique = res.data;
@@ -72,6 +74,7 @@ export default {
       },
       getData() {
         let vm = this;
+        // eslint-disable-next-line
         axios.get(`${serverURL}/modules?type=${vm.selected.type}&name=${vm.selected.name}&level=${vm.selected.level}`)
           .then(res => {
             vm.data = res.data;
@@ -80,6 +83,7 @@ export default {
       updateMod() {
         this.getUnique();
         this.getData();
+        this.getDescription();
       }
   },
   watch: {

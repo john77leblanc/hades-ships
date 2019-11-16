@@ -3,6 +3,7 @@
     "name" : "Mining Boost",
     "type" : "mining",
     "image" : "MiningBoost",
+    "description" : "Provide a temporary boost to Hydrogen collection speed.",
     "unique" : [
         {
             "key" : "speed",
@@ -89,6 +90,7 @@
     "name" : "Hydrogen Bay Extension",
     "type" : "mining",
     "image" : "HydrogenBayExtension",
+    "description" : "Increase the maximum amount of Hydrogen that a Miner ship can carry.",
     "unique" : [
       {
         "key" : "storage",
@@ -163,6 +165,7 @@
     "name" : "Enrich",
     "type" : "mining",
     "image" : "Enrich",
+    "description" : "Instantly increases the amount of Hydrogen stored on all asteroids in the sector. Cannot be used on the same sector more frequently than once per day.",
     "unique" : [
       {
         "key" : "increase",
@@ -249,6 +252,7 @@
     "name" : "Remote Mining",
     "type" : "mining",
     "image" : "RemoteMining",
+    "description" : "Simultaneously mines Hydrogen from all asteroid fields in the same sector, at reduced speed.",
     "unique" : [
       {
         "key" : "speed",
@@ -323,6 +327,7 @@
     "name" : "Hydrogen Upload",
     "type" : "mining",
     "image" : "HydrogenUpload",
+    "description" : "Instantly uploads a percentage of collected Hydrogen to your Empire's reserves, without needing to return to a planet.",
     "unique" : [
       {
         "key" : "upload",
@@ -409,6 +414,7 @@
     "name" : "Mining Unity",
     "type" : "mining",
     "image" : "MiningUnity",
+    "description" : "Increases mining speed for the activating ship, if other players are also mining in the same sector. The increase is proportional to the number of other players mining in the sector.",
     "unique" : [
       {
         "key" : "speed",
@@ -483,6 +489,7 @@
     "name" : "Crunch",
     "type" : "mining",
     "image" : "Crunch",
+    "description" : "Instantly collects Hydrogen from all asteroid fields in the current sector (limited by the Max Amount and the Miner ship's total capacity.",
     "unique" : [
       {
         "key" : "amount",
@@ -569,6 +576,7 @@
     "name" : "Genesis",
     "type" : "mining",
     "image" : "Genesis",
+    "description" : "Instantly creates new asteroid fields on the Miner's current sector.\n\nDoes not work on sectors with Jump Gates on White Stars.",
     "unique" : [
       {
         "key" : "asteroids",
@@ -672,6 +680,7 @@
     "name" : "Hydrogen Rocket",
     "type" : "mining",
     "image" : "HydrogenRocket",
+    "description" : "Allows the Miner ship to launch a powerful Rocket, anywhere in the star system.\n\nTo activate, the Miner ship must have collected at least the Required Hydrogen amount. The Hydrogen is consumed on activation.",
     "unique" : [
       {
         "key" : "hull",
@@ -775,6 +784,7 @@
     "name" : "Mining Drone",
     "type" : "mining",
     "image" : "MiningDrone",
+    "description" : "Launches an independent ship towards the target asteroid, which must be within range of miner ship. The drone will keep mining from the asteroid until it is depleted or its capacity fills up. After the mining is done, the drone will deposit the Hydrogen to the closest planet.\n\nDoes not work on sectors with Jumps Gates on White Stars.",
     "unique" : [
       {
         "key" : "capacity",

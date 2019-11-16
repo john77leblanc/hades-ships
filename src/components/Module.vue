@@ -102,13 +102,14 @@ export default {
       getModule() {
           if (this.selected.name && this.selected.level) {
               let vm = this;
+              // eslint-disable-next-line
               axios.get(`${serverURL}/modules?type=${vm.selected.type}&name=${vm.selected.name}&level=${vm.selected.level}`)
                 .then(res => {
                     vm.data = Object.assign(vm.data, res.data);
                     let send = {
                         key : vm.$vnode.key,
-                        name: vm.name,
-                        level: vm.level,
+                        name: vm.selected.name,
+                        level: vm.selected.level,
                         cost : vm.data.cost,
                         hydro : vm.data.hydro
                     };
